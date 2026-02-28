@@ -1086,67 +1086,6 @@ const RECIPES = [
   },
 
   {
-    id: 'tagliolini-tartufo',
-    title: 'Tagliolini al Tartufo Bianco',
-    titleEn: 'Tagliolini with White Truffle',
-    subtitle: 'Durante el Covid… un plato elegantísimo con pocos ingredientes y la trufa blanca como protagonista.',
-    subtitleEn: 'During Covid... an extremely elegant dish with few ingredients and white truffle as the star.',
-    servings: 2,
-    category: 'pasta',
-    page: 20,
-    ingredientGroups: [
-      {
-        name: 'Ingredientes',
-        items: [
-          '250 g de tagliolini frescos',
-          '1 trufa blanca (tartufo bianco) fresca, ~20-30 g',
-          '2 cucharadas de mantequilla sin sal',
-          '½ taza de queso Parmigiano-Reggiano rallado',
-          'Sal al gusto',
-        ],
-      },
-    ],
-    ingredientGroupsEn: [
-      {
-        name: 'Ingredients',
-        items: [
-          '250 g fresh tagliolini',
-          '1 fresh white truffle (tartufo bianco), ~20-30 g',
-          '2 tbsp unsalted butter',
-          '½ cup grated Parmigiano-Reggiano',
-          'Salt to taste',
-        ],
-      },
-    ],
-    steps: [
-      'Llena una olla con agua abundante y añade sal generosa. Lleva a ebullición.',
-      'Mientras esperas, lava y seca la trufa blanca. Rállala en láminas finas con un rallador de trufa y reserva.',
-      'Añade los tagliolini frescos al agua hirviendo y cocínalos según las instrucciones del paquete, generalmente 2-3 minutos.',
-      'Mientras la pasta se cocina, derrite la mantequilla en una sartén grande a fuego medio.',
-      'Cuando la pasta esté cocida, escúrrela y añádela a la sartén con la mantequilla derretida. Mezcla bien para que la pasta quede completamente cubierta.',
-      'Espolvorea el queso Parmigiano-Reggiano rallado sobre la pasta y mezcla nuevamente.',
-      'Sirve la pasta en platos individuales y adereza con las láminas finas de trufa blanca. Sirve inmediatamente.',
-    ],
-    stepsEn: [
-      'Fill a large pot with plenty of water and add a generous amount of salt. Bring to a boil.',
-      'Meanwhile, wash and dry the white truffle. Shave it into thin slices with a truffle slicer and set aside.',
-      'Add the fresh tagliolini to the boiling water and cook according to the packet instructions, usually 2-3 minutes.',
-      'While the pasta cooks, melt the butter in a large frying pan over medium heat.',
-      'When the pasta is cooked, drain it and add it to the pan with the melted butter. Toss well so the pasta is fully coated.',
-      'Sprinkle the grated Parmigiano-Reggiano over the pasta and toss again.',
-      'Serve the pasta on individual plates and top with the thin white truffle shavings. Serve immediately.',
-    ],
-    tip: {
-      text: 'La sencillez es la clave de este plato. No le añadas nada más —ni ajo, ni aceite extra— para que la trufa sea la verdadera protagonista. Sirve en platos precalentados.',
-      author: 'Truco de Jaime',
-    },
-    tipEn: {
-      text: 'Simplicity is the key to this dish. Don\'t add anything else - no garlic, no extra oil - so the truffle is the true star. Serve on pre-warmed plates.',
-      author: 'Jaime\'s tip',
-    },
-  },
-
-  {
     id: 'spaghetti-carbonara',
     title: 'Spaghetti alla Carbonara',
     titleEn: 'Spaghetti alla Carbonara',
