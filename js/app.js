@@ -86,7 +86,7 @@
   // Sort alphabetically, ignoring leading articles
   function sortKey(title) {
     return title
-      .replace(/^(El|La|Los|Las|Un|Una|Y también)\s+/i, '')
+      .replace(/^(El|La|Los|Las|Un|Una|Y también Dos|Y también)\s+/i, '')
       .toLowerCase();
   }
 

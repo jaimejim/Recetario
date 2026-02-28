@@ -396,7 +396,7 @@ const RECIPES = [
       'Corta finamente la cebolla y sofríela a fuego lento en una olla con un generoso chorro de aceite de oliva virgen extra. Añade la zanahoria rallada fina.',
       'Agrega la carne picada y desmenúzala con una cuchara de madera, sazona al gusto y sofríe. Cuando la carne esté bien dorada, sube el fuego y cocina con el vino blanco.',
       'Una vez que el vino se haya evaporado, añade el tomate Mutti. Reduce el fuego, cubre con una tapa y cocina unos minutos removiendo de vez en cuando.',
-      'Agrega los tomates pelados, sazona con sal y pimienta, y continúa cocinando durante aproximadamente 25 minutos. Una vez que el ragú esté listo, apaga el fuego y deja reposar.',
+      'Agrega los tomates pelados, sazona con sal y pimienta, y continúa cocinando durante aproximadamente 3 horas a fuego muy lento. Una vez que el ragú esté listo, apaga el fuego y deja reposar.',
       'Cocina los ñoquis en abundante agua hirviendo. Cuando comiencen a flotar, retíralos con una espumadera y agrégales el ragú caliente. Mezcla para integrar y sirve bien calientes.',
       'Espolvorea con parmesano o grana al gusto. Puedes poner unas hojitas de albahaca para decorar.',
     ],
