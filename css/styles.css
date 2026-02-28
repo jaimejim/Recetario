@@ -121,13 +121,6 @@ body {
   margin-bottom: 0.25rem;
 }
 
-.site-author {
-  font-family: var(--font-body);
-  font-size: 0.78rem;
-  color: var(--ink-light);
-  letter-spacing: 0.08em;
-}
-
 /* ============================================================
    LIST VIEW — MAIN
    ============================================================ */
@@ -163,6 +156,38 @@ body {
 }
 
 #search:focus {
+  border-color: var(--accent);
+}
+
+/* ---- Category filter ---- */
+
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 2rem;
+}
+
+.cat-btn {
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-mid);
+  padding: 0.25rem 0.6rem;
+  transition: all 0.15s;
+}
+
+.cat-btn:hover {
+  color: var(--ink);
+  border-color: var(--ink-light);
+}
+
+.cat-btn.active {
+  color: var(--accent);
   border-color: var(--accent);
 }
 
@@ -252,6 +277,13 @@ body {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 1.8rem 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lang-toggle-recipe {
+  margin-bottom: 0;
 }
 
 .back-link {

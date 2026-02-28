@@ -6,6 +6,11 @@
   /* -------------------------------------------------------
      Translations
   ------------------------------------------------------- */
+  const CATEGORY_ORDER = [
+    'aperitivos', 'sopas', 'verduras', 'pasta',
+    'pescados', 'carnes', 'arroces', 'basicos', 'bebidas',
+  ];
+
   const STRINGS = {
     es: {
       subtitle:          'Recuerdos y sabores de los Jiménez',
@@ -17,6 +22,7 @@
       servings:          n => `${n} persona${n !== 1 ? 's' : ''}`,
       incomplete:        'Esta receta se añadirá próximamente al recetario.',
       footer:            'Familia Jiménez \u00b7 2018\u20132024',
+      all:               'Todas',
       categories: {
         aperitivos: 'Aperitivos',
         pasta:      'Pasta',
@@ -39,6 +45,7 @@
       servings:          n => `${n} serving${n !== 1 ? 's' : ''}`,
       incomplete:        'This recipe will be added to the book soon.',
       footer:            'Jiménez Family \u00b7 2018\u20132024',
+      all:               'All',
       categories: {
         aperitivos: 'Starters',
         pasta:      'Pasta',
@@ -57,6 +64,7 @@
      Language state
   ------------------------------------------------------- */
   let lang = localStorage.getItem('lang') || 'es';
+  let activeCategory = null; // null = all
 
   function t(key) {
     return STRINGS[lang][key];
@@ -69,21 +77,19 @@
   /* -------------------------------------------------------
      DOM references
   ------------------------------------------------------- */
-  const viewList   = document.getElementById('view-list');
-  const viewRecipe = document.getElementById('view-recipe');
-  const indexEl    = document.getElementById('recipe-index');
-  const searchEl   = document.getElementById('search');
-  const detailEl   = document.getElementById('recipe-detail');
-  const backLink   = document.getElementById('back-link');
-  const subtitleEl = document.getElementById('site-subtitle');
-  const footerList = document.getElementById('footer-list');
+  const viewList     = document.getElementById('view-list');
+  const viewRecipe   = document.getElementById('view-recipe');
+  const indexEl      = document.getElementById('recipe-index');
+  const searchEl     = document.getElementById('search');
+  const detailEl     = document.getElementById('recipe-detail');
+  const backLink     = document.getElementById('back-link');
+  const subtitleEl   = document.getElementById('site-subtitle');
+  const footerList   = document.getElementById('footer-list');
   const footerRecipe = document.getElementById('footer-recipe');
 
   /* -------------------------------------------------------
      Pre-process data
   ------------------------------------------------------- */
-
-  // Sort alphabetically, ignoring leading articles
   function sortKey(title) {
     return title
       .replace(/^(El|La|Los|Las|Un|Una|Y también Dos|Y también)\s+/i, '')
@@ -108,25 +114,59 @@
     footerList.textContent         = t('footer');
     footerRecipe.textContent       = t('footer');
 
-    // Update lang button active state
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+
+    renderCategoryFilter();
+  }
+
+  /* -------------------------------------------------------
+     Category filter
+  ------------------------------------------------------- */
+  function renderCategoryFilter() {
+    let filterEl = document.getElementById('category-filter');
+    if (!filterEl) {
+      filterEl = document.createElement('div');
+      filterEl.id = 'category-filter';
+      filterEl.className = 'category-filter';
+      const searchWrapper = document.querySelector('.search-wrapper');
+      searchWrapper.parentNode.insertBefore(filterEl, searchWrapper.nextSibling);
+    }
+
+    const buttons = [`<button class="cat-btn${activeCategory === null ? ' active' : ''}" data-cat="">${t('all')}</button>`];
+    CATEGORY_ORDER.forEach(c => {
+      buttons.push(`<button class="cat-btn${activeCategory === c ? ' active' : ''}" data-cat="${c}">${cat(c)}</button>`);
+    });
+    filterEl.innerHTML = buttons.join('');
+
+    filterEl.querySelectorAll('.cat-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        activeCategory = btn.dataset.cat || null;
+        renderCategoryFilter();
+        renderIndex(searchEl.value);
+      });
     });
   }
 
   /* -------------------------------------------------------
-     Render: alphabetical index
+     Render: index (alphabetical or by category)
   ------------------------------------------------------- */
-
   function renderIndex(query) {
     const q = (query || '').toLowerCase().trim();
 
-    const list = q
-      ? sorted.filter(r =>
-          r.title.toLowerCase().includes(q) ||
-          r.subtitle.toLowerCase().includes(q)
-        )
-      : sorted;
+    let list = sorted;
+    if (q) {
+      list = list.filter(r =>
+        r.title.toLowerCase().includes(q) ||
+        r.subtitle.toLowerCase().includes(q) ||
+        (r.titleEn && r.titleEn.toLowerCase().includes(q)) ||
+        (r.subtitleEn && r.subtitleEn.toLowerCase().includes(q))
+      );
+    }
+    if (activeCategory) {
+      list = list.filter(r => r.category === activeCategory);
+    }
 
     indexEl.innerHTML = '';
 
@@ -135,48 +175,55 @@
       return;
     }
 
-    // Group by first letter
-    const groups = {};
-    list.forEach(r => {
-      const letter = sortKey(r.title)[0].toUpperCase();
-      (groups[letter] = groups[letter] || []).push(r);
-    });
-
-    Object.keys(groups).sort().forEach(letter => {
-      const group = document.createElement('div');
-      group.className = 'letter-group';
-
-      const heading = document.createElement('div');
-      heading.className = 'letter-heading';
-      heading.textContent = letter;
-      group.appendChild(heading);
-
-      groups[letter].forEach(recipe => {
-        const row = document.createElement('a');
-        row.className = 'recipe-row' + (recipe.incomplete ? ' recipe-row-incomplete' : '');
-        row.href = '#' + recipe.id;
-
-        const titleSpan = document.createElement('span');
-        titleSpan.className = 'recipe-row-title';
-        titleSpan.textContent = recipe.title;
-
-        const metaSpan = document.createElement('span');
-        metaSpan.className = 'recipe-row-meta';
-        metaSpan.textContent = cat(recipe.category);
-
-        row.appendChild(titleSpan);
-        row.appendChild(metaSpan);
-        group.appendChild(row);
+    if (activeCategory) {
+      // Flat list when filtering by category
+      list.forEach(r => {
+        indexEl.appendChild(makeRow(r));
+      });
+    } else {
+      // Group by first letter
+      const groups = {};
+      list.forEach(r => {
+        const letter = sortKey(loc(r, 'title'))[0].toUpperCase();
+        (groups[letter] = groups[letter] || []).push(r);
       });
 
-      indexEl.appendChild(group);
-    });
+      Object.keys(groups).sort().forEach(letter => {
+        const group = document.createElement('div');
+        group.className = 'letter-group';
+
+        const heading = document.createElement('div');
+        heading.className = 'letter-heading';
+        heading.textContent = letter;
+        group.appendChild(heading);
+
+        groups[letter].forEach(r => group.appendChild(makeRow(r)));
+        indexEl.appendChild(group);
+      });
+    }
+  }
+
+  function makeRow(recipe) {
+    const row = document.createElement('a');
+    row.className = 'recipe-row' + (recipe.incomplete ? ' recipe-row-incomplete' : '');
+    row.href = '#' + recipe.id;
+
+    const titleSpan = document.createElement('span');
+    titleSpan.className = 'recipe-row-title';
+    titleSpan.textContent = loc(recipe, 'title');
+
+    const metaSpan = document.createElement('span');
+    metaSpan.className = 'recipe-row-meta';
+    metaSpan.textContent = cat(recipe.category);
+
+    row.appendChild(titleSpan);
+    row.appendChild(metaSpan);
+    return row;
   }
 
   /* -------------------------------------------------------
      Render: recipe detail
   ------------------------------------------------------- */
-
   function renderRecipe(recipe) {
     if (recipe.incomplete) {
       detailEl.innerHTML = `
@@ -236,7 +283,6 @@
   /* -------------------------------------------------------
      Routing
   ------------------------------------------------------- */
-
   function route() {
     const id = decodeURIComponent(window.location.hash.slice(1));
 
@@ -245,18 +291,17 @@
       viewRecipe.classList.remove('hidden');
       renderRecipe(byId[id]);
       window.scrollTo(0, 0);
-      document.title = loc(byId[id], 'title') + ' · Recetario';
+      document.title = loc(byId[id], 'title') + ' \u00b7 Recetario';
     } else {
       viewRecipe.classList.add('hidden');
       viewList.classList.remove('hidden');
-      document.title = 'Recetario · Jiménez Bolonio';
+      document.title = 'Recetario \u00b7 Jiménez Bolonio';
     }
   }
 
   /* -------------------------------------------------------
      Events
   ------------------------------------------------------- */
-
   backLink.addEventListener('click', e => {
     e.preventDefault();
     history.back();
@@ -274,7 +319,6 @@
       localStorage.setItem('lang', lang);
       applyLang();
       renderIndex(searchEl.value);
-      // Re-render detail view if visible
       const id = decodeURIComponent(window.location.hash.slice(1));
       if (id && byId[id]) renderRecipe(byId[id]);
     });
@@ -283,8 +327,6 @@
   /* -------------------------------------------------------
      Utility
   ------------------------------------------------------- */
-
-  // Return language-specific field if available, otherwise fall back to base field
   function loc(recipe, field) {
     const key = field + 'En';
     return (lang === 'en' && recipe[key] !== undefined) ? recipe[key] : recipe[field];

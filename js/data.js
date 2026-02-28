@@ -1491,7 +1491,7 @@ const RECIPES = [
     subtitle: 'Plato completo que puede durar varios días. Se lleva haciendo en España desde antes del s. XV y en mi casa toda la vida.',
     subtitleEn: 'A complete meal that can last several days. It has been made in Spain since before the 15th century, and in my family all our lives.',
     servings: 4,
-    category: 'arroces',
+    category: 'sopas',
     page: 31,
     ingredientGroups: [
       {
@@ -1578,7 +1578,7 @@ const RECIPES = [
     subtitle: 'Es una receta sencilla y digna de reyes. Nada más rico que las lentejas para el comienzo del frío y además son súper nutritivas.',
     subtitleEn: 'A simple recipe fit for royalty. Nothing tastier than lentils when the cold sets in, and they are incredibly nutritious.',
     servings: 4,
-    category: 'arroces',
+    category: 'sopas',
     page: 32,
     ingredientGroups: [
       {
