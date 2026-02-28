@@ -1028,6 +1028,73 @@ const RECIPES = [
   },
 
   {
+    id: 'ensalada-espinacas-datiles',
+    title: 'Ensalada de Espinacas con Dátiles y Almendras',
+    titleEn: 'Baby Spinach Salad with Dates & Almonds',
+    subtitle: 'En Jerusalén, la pita tiene la vida útil más corta de todos los alimentos. Lo ideal es comerla pocas horas después de hornearla. Los crutones de pita crujiente dan buen uso a la pita sobrante. Los usamos en sopas y los esparcimos sobre ensaladas y otros mezzes. Aguantan al menos una semana en un recipiente hermético. Sirve esta ensalada como entrante; su frescor intenso abre el apetito.',
+    subtitleEn: 'Pitas are allotted the shortest of shelf lives in Jerusalem. Ideally, you\'d eat them within a couple of hours of baking. Crunchy pita croutons make good use of leftover pita. We use them for soups and scatter them over salads and other mezes. They will keep for at least a week in an airtight container. Serve this salad as a starter; its sharp freshness really whets the appetite.',
+    servings: 4,
+    category: 'aperitivos',
+    page: 38,
+    ingredientGroups: [
+      {
+        name: 'Ingredientes',
+        items: [
+          '1 cucharada de vinagre de vino blanco',
+          '½ cebolla roja mediana, en rodajas finas',
+          '100 g de dátiles Medjool deshuesados, en cuartos a lo largo',
+          '30 g de mantequilla sin sal',
+          '2 cucharadas de aceite de oliva',
+          '2 pitas pequeñas (~100 g), troceadas en trozos de 4 cm',
+          '75 g de almendras enteras sin sal, picadas en trozos grandes',
+          '2 cucharaditas de sumac',
+          '½ cucharadita de copos de guindilla',
+          '150 g de hojas de espinacas baby',
+          '2 cucharadas de zumo de limón recién exprimido',
+          'Sal',
+        ],
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '1 tbsp white wine vinegar',
+          '½ medium red onion, thinly sliced',
+          '100 g pitted Medjool dates, quartered lengthwise',
+          '30 g unsalted butter',
+          '2 tbsp olive oil',
+          '2 small pitas (~100 g), roughly torn into 4 cm pieces',
+          '75 g whole unsalted almonds, coarsely chopped',
+          '2 tsp sumac',
+          '½ tsp chile flakes',
+          '150 g baby spinach leaves',
+          '2 tbsp freshly squeezed lemon juice',
+          'Salt',
+        ],
+      },
+    ],
+    steps: [
+      'Pon el vinagre, la cebolla y los dátiles en un bol pequeño. Añade una pizca de sal y mezcla bien con las manos. Deja marinar 20 minutos y escurre el vinagre sobrante.',
+      'Mientras tanto, calienta la mantequilla y la mitad del aceite de oliva en una sartén mediana a fuego medio. Añade la pita y las almendras y cocina 4–6 minutos, removiendo constantemente, hasta que la pita esté crujiente y dorada. Retira del fuego e incorpora el sumac, los copos de guindilla y ¼ de cucharadita de sal. Deja enfriar.',
+      'Cuando vayas a servir, mezcla las hojas de espinacas con la mezcla de pita en un bol grande. Añade los dátiles y la cebolla escurridos, el aceite de oliva restante, el zumo de limón y otra pizca de sal. Comprueba el punto de sal y sirve inmediatamente.',
+    ],
+    stepsEn: [
+      'Put the vinegar, onion, and dates in a small bowl. Add a pinch of salt and mix well with your hands. Leave to marinate for 20 minutes, then drain any residual vinegar.',
+      'Meanwhile, heat the butter and half the olive oil in a medium frying pan over medium heat. Add the pita and almonds and cook for 4–6 minutes, stirring all the time, until the pita is crunchy and golden brown. Remove from the heat and mix in the sumac, chile flakes, and ¼ tsp salt. Set aside to cool.',
+      'When ready to serve, toss the spinach leaves with the pita mix in a large bowl. Add the drained dates and onion, the remaining olive oil, the lemon juice, and another pinch of salt. Taste for seasoning and serve immediately.',
+    ],
+    tip: {
+      text: 'El sumac es una especia rojiza con sabor ácido y afrutado, muy usada en la cocina de Oriente Próximo. Se encuentra en tiendas especializadas o en línea. La pita crujiente se puede preparar con antelación y aguanta una semana en un tarro hermético.',
+      author: 'Receta de Ottolenghi',
+    },
+    tipEn: {
+      text: 'Sumac is a dark red, tangy spice common in Middle Eastern cooking. It can be found at specialty food stores or online. The crunchy pita can be made ahead and keeps well in an airtight jar for up to a week.',
+      author: 'Ottolenghi recipe',
+    },
+  },
+
+  {
     id: 'dos-huevos-duros',
     title: 'Y También Dos Huevos Duros',
     subtitle: 'Frase de la película "Una noche en la ópera" de los Hermanos Marx y una de las frases favoritas de mi padre cuando pedíamos demasiado.',
