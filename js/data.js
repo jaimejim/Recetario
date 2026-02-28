@@ -1233,16 +1233,100 @@ const RECIPES = [
   {
     id: 'minihamburguesas-pavo',
     title: 'Minihamburguesas de Pavo',
-    titleEn: 'Turkey Sliders',
-    subtitle: 'Pequeñas hamburguesas de pavo, perfectas como aperitivo o para los más pequeños.',
-    subtitleEn: 'Small turkey burgers, perfect as a snack or for the little ones.',
+    titleEn: 'Turkey & Zucchini Burgers',
+    subtitle: 'Receta de Ottolenghi. Hamburguesas de pavo con calabacín, comino y cebolleta, servidas con salsa de nata agria y sumac.',
+    subtitleEn: 'Ottolenghi recipe. Turkey burgers with zucchini, cumin, and green onion, served with a sour cream and sumac sauce.',
     servings: 4,
     category: 'carnes',
     page: 24,
-    incomplete: true,
-    ingredientGroups: [],
-    steps: [],
-    tip: null,
+    ingredientGroups: [
+      {
+        name: 'Hamburguesas',
+        items: [
+          '500 g de pavo picado',
+          '1 calabacín grande rallado grueso (200 g)',
+          '3 cebolletas en rodajas finas',
+          '1 huevo grande',
+          '2 cucharadas de menta fresca picada',
+          '2 cucharadas de cilantro fresco picado',
+          '2 dientes de ajo machacados',
+          '1 cucharadita de comino molido',
+          '1 cucharadita de sal',
+          '½ cucharadita de pimienta negra',
+          '½ cucharadita de cayena',
+          '100 ml de aceite de girasol para sellar',
+        ],
+      },
+      {
+        name: 'Salsa de nata agria y sumac',
+        items: [
+          '100 g de nata agria',
+          '150 g de yogur griego',
+          '1 cucharadita de ralladura de limón',
+          '1 cucharada de zumo de limón',
+          '1 diente de ajo pequeño machacado',
+          '1½ cucharadas de aceite de oliva',
+          '1 cucharada de sumac',
+          '½ cucharadita de sal',
+          '¼ cucharadita de pimienta negra',
+        ],
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Burgers',
+        items: [
+          '500 g ground turkey',
+          '1 large zucchini, coarsely grated (200 g)',
+          '3 green onions, thinly sliced',
+          '1 large free-range egg',
+          '2 tbsp chopped mint',
+          '2 tbsp chopped cilantro',
+          '2 cloves garlic, crushed',
+          '1 tsp ground cumin',
+          '1 tsp salt',
+          '½ tsp freshly ground black pepper',
+          '½ tsp cayenne pepper',
+          '100 ml sunflower oil for searing',
+        ],
+      },
+      {
+        name: 'Sour cream & sumac sauce',
+        items: [
+          '100 g sour cream',
+          '150 g Greek yogurt',
+          '1 tsp grated lemon zest',
+          '1 tbsp freshly squeezed lemon juice',
+          '1 small clove garlic, crushed',
+          '1½ tbsp olive oil',
+          '1 tbsp sumac',
+          '½ tsp salt',
+          '¼ tsp freshly ground black pepper',
+        ],
+      },
+    ],
+    steps: [
+      'Prepara primero la salsa mezclando todos sus ingredientes en un bol pequeño. Remueve bien y reserva en la nevera.',
+      'Precalienta el horno a 220 °C. En un bol grande, mezcla todos los ingredientes de las hamburguesas excepto el aceite de girasol. Amasa con las manos y forma unas 18 hamburguesas de unos 45 g cada una.',
+      'Vierte aceite de girasol en una sartén grande hasta formar una capa de 2 mm en el fondo. Calienta a fuego medio y sella las hamburguesas por tandas, unos 4 minutos por tanda, hasta que estén doradas. Añade más aceite si es necesario.',
+      'Pasa las hamburguesas selladas a una bandeja de horno con papel vegetal y hornea 5-7 minutos hasta que estén hechas por dentro.',
+      'Sirve templadas o a temperatura ambiente con la salsa de sumac por encima o a un lado.',
+    ],
+    stepsEn: [
+      'First make the sour cream sauce by mixing all its ingredients in a small bowl. Stir well and set aside or chill until needed.',
+      'Preheat the oven to 220 °C / 425 °F. In a large bowl, combine all the burger ingredients except the sunflower oil. Mix with your hands and shape into about 18 burgers, each weighing about 45 g.',
+      'Pour enough sunflower oil into a large frying pan to form a 2 mm layer on the bottom. Heat over medium heat and sear the burgers in batches, about 4 minutes per batch, until golden brown. Add more oil as needed.',
+      'Transfer the seared burgers to a baking sheet lined with parchment paper and bake for 5-7 minutes, or until just cooked through.',
+      'Serve warm or at room temperature, with the sumac sauce spooned over or on the side.',
+    ],
+    tip: {
+      text: 'La salsa de sumac se puede preparar con antelación y aguanta bien en la nevera. Después de un día los sabores se suavizan, así que puedes añadir más sumac y zumo de limón al servir.',
+      author: 'Receta de Ottolenghi',
+    },
+    tipEn: {
+      text: 'The sumac sauce can be made in advance and keeps well in the fridge. After a day the flavours will mellow, so you may want to add extra sumac and lemon juice when serving.',
+      author: 'Ottolenghi recipe',
+    },
   },
 
   {
@@ -1470,6 +1554,124 @@ const RECIPES = [
   },
 
   {
+    id: 'caldo-rapido',
+    title: 'Caldo Rápido (Fumet)',
+    titleEn: 'Quick Stock (Fumet)',
+    subtitle: 'Receta 163 de "1080 recetas de cocina". Una forma rápida de preparar ¼ l de caldo, bien para un enfermo, bien para obtener una salsa más sabrosa.',
+    subtitleEn: 'Recipe 163 from "1080 recetas de cocina". A quick way to prepare ¼ l of stock, either for someone unwell or to make a tastier sauce.',
+    servings: 2,
+    category: 'sopas',
+    ingredientGroups: [
+      {
+        name: 'Ingredientes',
+        items: [
+          '100 g de carne de vaca magra picada',
+          '1 cebolla pequeña picada (70 g)',
+          '2 zanahorias medianas en rodajas (100 g)',
+          'Un ramillete de perejil',
+          '1 diente de ajo',
+          'Laurel (⅓ hoja)',
+          '1½ cucharadas soperas de aceite',
+          '1½ cucharadas soperas de vino blanco',
+          '½ l de agua hirviendo',
+          'Sal',
+        ],
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '100 g lean minced beef',
+          '1 small onion, chopped (70 g)',
+          '2 medium carrots, sliced (100 g)',
+          'A small bunch of parsley',
+          '1 clove garlic',
+          'Bay leaf (⅓ leaf)',
+          '1½ tbsp oil',
+          '1½ tbsp white wine',
+          '500 ml boiling water',
+          'Salt',
+        ],
+      },
+    ],
+    steps: [
+      'Pon en una ollita o cazo el aceite; cuando esté caliente, rehoga la carne y las verduras picadas.',
+      'A los 5 minutos añade el ½ l de agua hirviendo, el vino y la sal.',
+      'Deja cocer ½ hora a fuego medio. Obtendrás así ¼ l de caldo muy fino.',
+    ],
+    stepsEn: [
+      'Heat the oil in a small pot; when hot, sauté the meat and chopped vegetables.',
+      'After 5 minutes, add the 500 ml of boiling water, the wine, and the salt.',
+      'Simmer for 30 minutes over medium heat. You will obtain about 250 ml of very fine stock.',
+    ],
+    tip: {
+      text: 'Si lo preparas para un enfermo, suprime la cucharada de aceite y pon la carne en el agua fría; cuando rompa a hervir, retira la espuma y añade las verduras, el vino (si se quiere) y la sal.',
+      author: 'Receta de 1080',
+    },
+    tipEn: {
+      text: 'If preparing for someone unwell, skip the oil and place the meat in cold water; when it comes to a boil, skim the foam and add the vegetables, wine (if desired), and salt.',
+      author: '1080 recipe',
+    },
+  },
+
+  {
+    id: 'sopa-verduras',
+    title: 'Sopa de Verduras',
+    titleEn: 'Vegetable Soup',
+    subtitle: 'Receta 227 de "1080 recetas de cocina". Sopa sencilla y reconfortante con verduras y hueso de codillo.',
+    subtitleEn: 'Recipe 227 from "1080 recetas de cocina". A simple and comforting soup with vegetables and a ham bone.',
+    servings: 6,
+    category: 'sopas',
+    ingredientGroups: [
+      {
+        name: 'Ingredientes',
+        items: [
+          '½ kg de verduras frescas o congeladas para sopa',
+          '1 hueso de codillo con poca grasa (125 g)',
+          '1 cucharada sopera de aceite',
+          '2 l de agua fría',
+          '1 cucharada sopera rasa de maicena',
+          'Sal',
+          '1 cucharadita de extracto de carne',
+        ],
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '500 g fresh or frozen soup vegetables',
+          '1 ham hock bone with little fat (125 g)',
+          '1 tbsp oil',
+          '2 l cold water',
+          '1 level tbsp cornstarch',
+          'Salt',
+          '1 tsp meat extract',
+        ],
+      },
+    ],
+    steps: [
+      'Pon en un cazo con 2 l de agua fría la verdura (previamente lavada), el codillo, el aceite y la sal. Deja cocer más o menos ½ hora a fuego lento desde que rompa a hervir.',
+      'Cuando la vayas a servir, deslía la maicena primero con un poco de agua fría y después con caldo de la sopa; viértala en el cazo dando vueltas con una cuchara de madera y deja que cueza unos 5 minutos.',
+      'Retira el hueso de codillo, añade el extracto de carne y sirve en sopera.',
+    ],
+    stepsEn: [
+      'Place the washed vegetables, ham bone, oil, and salt in a pot with 2 l of cold water. Simmer for about 30 minutes from when it starts to boil.',
+      'When ready to serve, dissolve the cornstarch first in a little cold water, then with some soup broth; pour it into the pot, stirring with a wooden spoon, and let it cook for about 5 minutes.',
+      'Remove the ham bone, add the meat extract, and serve in a tureen.',
+    ],
+    tip: {
+      text: 'Para una versión ligera, emplea extracto de carne desgrasado. Las verduras congeladas para sopa se venden en bolsas preparadas y funcionan perfectamente.',
+      author: 'Receta de 1080',
+    },
+    tipEn: {
+      text: 'For a lighter version, use defatted meat extract. Frozen soup vegetables come in ready-made bags and work perfectly.',
+      author: '1080 recipe',
+    },
+  },
+
+  {
     id: 'pan-casero',
     title: 'Pan Casero',
     titleEn: 'Homemade Bread',
@@ -1516,6 +1718,19 @@ const RECIPES = [
         name: 'Sopa',
         items: ['Caldo de cocido', 'Fideos finos'],
       },
+      {
+        name: 'Bola (opcional)',
+        items: [
+          '150 g de miga de pan del día anterior',
+          '2 huevos',
+          '50 g de tocino',
+          '1 diente de ajo',
+          '1 cucharada de perejil picado',
+          '2-3 cucharadas de caldo del cocido',
+          '1 vaso de aceite',
+          'Sal',
+        ],
+      },
     ],
     steps: [
       'Se dejan remojar los garbanzos desde la noche anterior (unas 12 horas).',
@@ -1553,6 +1768,19 @@ const RECIPES = [
       {
         name: 'Soup',
         items: ['Stew broth', 'Thin vermicelli noodles'],
+      },
+      {
+        name: 'Bola (optional)',
+        items: [
+          '150 g day-old bread crumb',
+          '2 eggs',
+          '50 g bacon',
+          '1 clove garlic',
+          '1 tbsp chopped parsley',
+          '2-3 tbsp cocido broth',
+          '1 glass oil',
+          'Salt',
+        ],
       },
     ],
     stepsEn: [
