@@ -304,7 +304,7 @@
   ------------------------------------------------------- */
   backLink.addEventListener('click', e => {
     e.preventDefault();
-    history.back();
+    window.location.hash = '';
   });
 
   searchEl.addEventListener('input', () => {
