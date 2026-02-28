@@ -347,17 +347,59 @@ const RECIPES = [
 
   {
     id: 'cerdo-navidad',
-    title: 'Cerdo de Navidad',
-    titleEn: 'Christmas Pork',
-    subtitle: 'Plato especial para el invierno en la sierra.',
-    subtitleEn: 'A special dish for winter in the mountains.',
-    servings: 4,
+    title: 'Kinkku (Cerdo de Navidad)',
+    titleEn: 'Kinkku (Christmas Ham)',
+    subtitle: 'El plato estrella de la mesa navideña finlandesa. La clave es cocinar a temperatura muy baja durante muchas horas para que quede jugoso.',
+    subtitleEn: 'The star of the Finnish Christmas table. The key is cooking at a very low temperature for many hours so it stays juicy.',
+    servings: 8,
     category: 'carnes',
     page: 8,
-    incomplete: true,
-    ingredientGroups: [],
-    steps: [],
-    tip: null,
+    ingredientGroups: [
+      {
+        name: 'Ingredientes',
+        items: [
+          '1 pieza de jamón de cerdo con hueso (~4-5 kg)',
+          'Mostaza (para cubrir)',
+          'Pan rallado (para cubrir)',
+        ],
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '1 bone-in gammon joint (~4-5 kg)',
+          'Mustard (for coating)',
+          'Breadcrumbs (for coating)',
+        ],
+      },
+    ],
+    steps: [
+      'Precalienta el horno a 80 °C. Coloca el jamón en una bandeja de horno con la grasa hacia arriba.',
+      'Cocina a 80 °C durante 10-12 horas (toda la noche es perfecto). La temperatura interna debe alcanzar 77 °C.',
+      'Saca el jamón del horno y deja enfriar sobre una rejilla durante media hora o una hora.',
+      'Retira la piel y la mayor parte de la grasa con un cuchillo afilado.',
+      'Unta toda la superficie con mostaza y cubre con pan rallado presionando bien.',
+      'Sube el horno a 250 °C y hornea el jamón durante 10 minutos hasta que el pan rallado esté dorado.',
+      'Deja enfriar completamente. Se puede servir templado el mismo día o frío al día siguiente.',
+    ],
+    stepsEn: [
+      'Preheat the oven to 80 °C / 175 °F. Place the gammon on a roasting tray with the fat side up.',
+      'Cook at 80 °C for 10-12 hours (overnight is perfect). The internal temperature should reach 77 °C / 170 °F.',
+      'Remove the gammon from the oven and let it cool on a rack for half an hour to an hour.',
+      'Remove the skin and most of the fat with a sharp knife.',
+      'Coat the entire surface with mustard and cover with breadcrumbs, pressing them on firmly.',
+      'Raise the oven to 250 °C / 480 °F and cook the gammon for 10 minutes until the breadcrumbs are golden.',
+      'Let it cool completely. It can be served warm on the same day or cold the next day.',
+    ],
+    tip: {
+      text: 'En Finlandia se sirve frío en la mesa de Navidad, pero recién hecho está buenísimo caliente. La cocción lenta a baja temperatura es lo que lo hace tan jugoso. Acompañar con mostaza y ensalada de remolacha (rosolli).',
+      author: 'Truco de Jaime',
+    },
+    tipEn: {
+      text: 'In Finland it is served cold on the Christmas table, but freshly made it is wonderful warm. The slow low-temperature cooking is what makes it so juicy. Serve with mustard and beetroot salad (rosolli).',
+      author: 'Jaime\'s tip',
+    },
   },
 
   {
@@ -1405,21 +1447,6 @@ const RECIPES = [
   },
 
   {
-    id: 'trucha-calabacin',
-    title: 'Trucha con Calabacín',
-    titleEn: 'Trout with Courgette',
-    subtitle: 'Plato ligero y saludable de trucha con calabacín, perfecto para el verano.',
-    subtitleEn: 'A light and healthy trout dish with courgette, perfect for summer.',
-    servings: 4,
-    category: 'pescados',
-    page: 26,
-    incomplete: true,
-    ingredientGroups: [],
-    steps: [],
-    tip: null,
-  },
-
-  {
     id: 'gazpacho',
     title: 'Gazpacho',
     titleEn: 'Gazpacho',
@@ -1675,15 +1702,63 @@ const RECIPES = [
     id: 'pan-casero',
     title: 'Pan Casero',
     titleEn: 'Homemade Bread',
-    subtitle: 'El placer de hornear tu propio pan en casa. Durante el Covid descubrimos lo reconfortante que es.',
-    subtitleEn: 'The pleasure of baking your own bread at home. During Covid we discovered how comforting it is.',
-    servings: 4,
+    subtitle: 'El placer de hornear tu propio pan en casa. Durante el Covid descubrimos lo reconfortante que es. No necesita amasado, solo paciencia.',
+    subtitleEn: 'The pleasure of baking your own bread at home. During Covid we discovered how comforting it is. No kneading needed, just patience.',
+    servings: 8,
     category: 'basicos',
     page: 30,
-    incomplete: true,
-    ingredientGroups: [],
-    steps: [],
-    tip: null,
+    ingredientGroups: [
+      {
+        name: 'Ingredientes',
+        items: [
+          '570 g de harina de trigo (4¾ tazas)',
+          '7 g de levadura seca instantánea (1 sobre)',
+          '2 cucharaditas de sal marina',
+          '470 ml de agua muy caliente (~48 °C)',
+          '2 cucharaditas de sirope de arce o azúcar',
+          '1 cucharadita de aceite de oliva',
+        ],
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '570 g all-purpose flour (4¾ cups)',
+          '7 g instant yeast (1 packet)',
+          '2 tsp sea salt',
+          '470 ml very warm water (~48 °C / 120 °F)',
+          '2 tsp maple syrup or sugar',
+          '1 tsp olive oil',
+        ],
+      },
+    ],
+    steps: [
+      'En un bol grande, mezcla bien la harina, la levadura y la sal. Haz un hueco en el centro y añade el agua caliente, el sirope y el aceite. Remueve con una espátula hasta formar una masa irregular, aproximadamente 1 minuto.',
+      'Engrasa ligeramente los lados del bol, dale la vuelta a la masa para engrasarla. Tapa con un paño de cocina y deja reposar en la encimera 2-3 horas hasta que doble su tamaño.',
+      'En los últimos 30-40 minutos de reposo, mete la olla de hierro (dutch oven) con tapa en el horno y precalienta a 230 °C.',
+      'Vuelca la masa sobre una superficie bien enharinada. Espolvorea harina por encima y pliégala sobre sí misma unas cuantas veces con una espátula o rasqueta. Colócala sobre un trozo de papel de horno.',
+      'Con cuidado, mete el papel con la masa dentro de la olla precalentada. Tapa y hornea 45 minutos.',
+      'Retira la tapa y hornea 15-20 minutos más hasta que la corteza esté bien dorada. Al golpear la base debe sonar hueco.',
+      'Deja enfriar al menos 30 minutos antes de cortar.',
+    ],
+    stepsEn: [
+      'In a large bowl, whisk together the flour, yeast, and salt. Create a well in the centre and add the warm water, syrup, and oil. Stir with a spatula until a shaggy dough forms, about 1 minute.',
+      'Lightly grease the sides of the bowl and turn the dough over to grease it. Cover with a kitchen towel and let it rise on the counter for 2-3 hours until doubled in size.',
+      'In the last 30-40 minutes of rising, place your Dutch oven with its lid in the oven and preheat to 230 °C / 450 °F.',
+      'Pour the dough onto a well-floured surface. Sprinkle flour on top and fold it over on itself a few times with a spatula or dough scraper. Place it on a piece of parchment paper.',
+      'Carefully lower the parchment with the dough into the preheated Dutch oven. Cover and bake for 45 minutes.',
+      'Remove the lid and bake for 15-20 more minutes until the crust is deep golden. It should sound hollow when tapped on the bottom.',
+      'Let it cool for at least 30 minutes before slicing.',
+    ],
+    tip: {
+      text: 'La olla de hierro precalentada es el secreto de la corteza crujiente: simula un horno de panadería. Si la cocina está fría, deja reposar la masa dentro del horno apagado con la luz encendida.',
+      author: 'Truco de Jaime',
+    },
+    tipEn: {
+      text: 'The preheated Dutch oven is the secret to the crusty crust: it simulates a bakery oven. If your kitchen is cold, let the dough rise inside the oven with the light on and the oven off.',
+      author: 'Jaime\'s tip',
+    },
   },
 
   {
@@ -1882,15 +1957,61 @@ const RECIPES = [
     id: 'tortilla-patatas',
     title: 'Tortilla de Patatas',
     titleEn: 'Spanish Omelette',
-    subtitle: 'El clásico de clásicos de la cocina española. Con o sin cebolla, jugosa por dentro.',
-    subtitleEn: 'The classic of classics in Spanish cooking. With or without onion, runny on the inside.',
+    subtitle: 'El clásico de clásicos de la cocina española. Basada en la receta de Simone Ortega de "1080 recetas de cocina", jugosita por dentro y cuajada por fuera.',
+    subtitleEn: 'The classic of classics in Spanish cooking. Based on Simone Ortega\'s recipe from "1080 recetas de cocina", runny on the inside and set on the outside.',
     servings: 4,
     category: 'basicos',
     page: 33,
-    incomplete: true,
-    ingredientGroups: [],
-    steps: [],
-    tip: null,
+    ingredientGroups: [
+      {
+        name: 'Ingredientes',
+        items: [
+          '1 kg de patatas (Monalisa o Kennebec)',
+          '8-9 huevos grandes',
+          '1 cebolla grande o 2 medianas',
+          'Aceite de oliva virgen extra abundante',
+          'Sal al gusto',
+        ],
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '1 kg potatoes (Monalisa or Kennebec)',
+          '8-9 large eggs',
+          '1 large or 2 medium onions',
+          'Plenty of extra virgin olive oil',
+          'Salt to taste',
+        ],
+      },
+    ],
+    steps: [
+      'Pela las patatas y córtalas en láminas finas tipo panadera. Corta la cebolla en juliana fina. No laves las patatas tras cortarlas para conservar el almidón.',
+      'Calienta abundante aceite de oliva en una sartén grande. Añade las patatas y la cebolla y cocina a fuego lento, casi confitándolas, hasta que estén tiernas pero no crujientes ni doradas, unos 15-20 minutos.',
+      'Escurre bien la mezcla de patatas y cebolla en un colador para quitar el exceso de aceite. Sala al gusto.',
+      'Bate los huevos en un bol grande. Añade la patata y cebolla caliente al huevo batido. Deja reposar esta mezcla 10-15 minutos. La patata absorberá el huevo y este se cocinará ligeramente con el calor residual.',
+      'Pon una sartén antiadherente con una cucharada de aceite a fuego medio-alto. Cuando esté caliente, vierte la mezcla.',
+      'Mueve la sartén ligeramente para que no se pegue. Cuando los bordes estén cuajados (2-3 minutos), dale la vuelta con ayuda de un plato llano grande.',
+      'Cocina por el otro lado 1-2 minutos si la prefieres muy jugosa, o un poco más si te gusta más hecha.',
+    ],
+    stepsEn: [
+      'Peel the potatoes and cut them into thin slices. Cut the onion into fine julienne. Do not wash the potatoes after cutting to keep the starch.',
+      'Heat plenty of olive oil in a large frying pan. Add the potatoes and onion and cook over low heat, almost confit-style, until tender but not crispy or golden, about 15-20 minutes.',
+      'Drain the potato and onion mixture well in a colander to remove excess oil. Season with salt.',
+      'Beat the eggs in a large bowl. Add the hot potato and onion to the beaten eggs. Let this mixture rest for 10-15 minutes. The potato will absorb the egg and the residual heat will partially cook it.',
+      'Heat a non-stick frying pan with a tablespoon of oil over medium-high heat. When hot, pour in the mixture.',
+      'Gently shake the pan so it does not stick. When the edges are set (2-3 minutes), flip it over using a large flat plate.',
+      'Cook the other side for 1-2 minutes if you like it very runny, or a little longer if you prefer it more set.',
+    ],
+    tip: {
+      text: 'El secreto de Simone Ortega: no lavar la patata tras cortarla para conservar el almidón que da la textura melosa. La proporción de 8-9 huevos por kilo de patata es la clave de la jugosidad. Se puede servir templada o incluso fría.',
+      author: 'Receta de Simone Ortega',
+    },
+    tipEn: {
+      text: 'Simone Ortega\'s secret: do not wash the potatoes after cutting to keep the starch that gives the melting texture. The ratio of 8-9 eggs per kilo of potatoes is the key to the runniness. It can be served warm or even cold.',
+      author: 'Simone Ortega recipe',
+    },
   },
 
   {
