@@ -3383,4 +3383,54 @@ const RECIPES = [
       author: 'Julia y sus recetas',
     },
   },
+
+  {
+    id: 'orecchiette-broccoli',
+    title: 'Orecchiette con Brócoli',
+    titleEn: 'Orecchiette with Broccoli',
+    subtitle: 'Un clásico de la cocina pugliese, sencillo y lleno de sabor. El truco está en cocer el brócoli en la misma agua que la pasta y no tirar el tallo, que queda tiernísimo.',
+    subtitleEn: 'A Pugliese classic, simple and full of flavor. The trick is to cook the broccoli in the same water as the pasta and keep the stem, which turns wonderfully tender.',
+    servings: 2,
+    category: 'pasta',
+    ingredientGroups: [
+      {
+        name: 'Ingredientes',
+        items: [
+          '160 g de orecchiette',
+          '500 g de brócoli',
+          '4 cucharaditas de aceite de oliva virgen extra',
+          '1 diente de ajo',
+          '1 guindilla roja',
+          '40 g de anchoas en aceite (opcional)',
+          'Sal al gusto',
+        ],
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '160 g orecchiette',
+          '500 g broccoli',
+          '4 tsp extra virgin olive oil',
+          '1 clove of garlic',
+          '1 red chili pepper',
+          '40 g anchovies in oil (optional)',
+          'Salt to taste',
+        ],
+      },
+    ],
+    steps: [
+      'Se limpia el brócoli y se corta en trozos, incluyendo el tallo (se pela la parte exterior dura y se trocea). Se hierve en agua con poca sal durante 5-10 minutos. Se escurre y se reserva el agua de cocción.',
+      'Se corta el ajo y la guindilla en láminas finas. Se ponen en una sartén amplia con el aceite y se sofríen a fuego lento sin que el ajo se queme.',
+      'Se añade el brócoli a la sartén y se saltea a fuego medio unos 5 minutos. Si se seca mucho se añade un poco del agua de cocción. Opcionalmente se añaden las anchoas escurridas y troceadas y se saltea unos minutos más.',
+      'Se cuecen las orecchiette en el agua reservada del brócoli con un poco de sal. Se escurren bien y se vierten en la sartén con el brócoli. Se mezcla todo, se ajusta de sal y se sirve.',
+    ],
+    stepsEn: [
+      'Clean the broccoli and cut into pieces, including the stem (peel the tough outer part and chop). Boil in lightly salted water for 5-10 minutes. Drain and reserve the cooking water.',
+      'Thinly slice the garlic and chili. Place in a wide pan with the oil and sauté gently, being careful not to burn the garlic.',
+      'Add the broccoli to the pan and sauté over medium heat for about 5 minutes. If it dries out, add a little of the reserved cooking water. Optionally add the drained and chopped anchovies and sauté a few more minutes.',
+      'Cook the orecchiette in the reserved broccoli water with a little salt. Drain well and add to the pan with the broccoli. Toss everything together, adjust salt, and serve.',
+    ],
+  },
 ];
