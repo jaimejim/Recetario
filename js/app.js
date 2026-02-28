@@ -182,8 +182,8 @@
       detailEl.innerHTML = `
         <div class="recipe-header">
           <div class="recipe-category-label">${cat(recipe.category)}</div>
-          <h1 class="recipe-title">${esc(recipe.title)}</h1>
-          <p class="recipe-subtitle">${esc(recipe.subtitle)}</p>
+          <h1 class="recipe-title">${esc(loc(recipe, 'title'))}</h1>
+          <p class="recipe-subtitle">${esc(loc(recipe, 'subtitle'))}</p>
           <div class="recipe-meta">${t('servings')(recipe.servings)}</div>
         </div>
         <div class="incomplete-notice">
@@ -193,30 +193,31 @@
       return;
     }
 
-    const ingredientsHtml = recipe.ingredientGroups.map(group => {
-      const nameHtml = (group.name && group.name !== 'Ingredientes')
+    const ingredientsHtml = loc(recipe, 'ingredientGroups').map(group => {
+      const nameHtml = (group.name && group.name !== 'Ingredientes' && group.name !== 'Ingredients')
         ? `<div class="ingredient-group-name">${esc(group.name)}</div>`
         : '';
       const items = group.items.map(i => `<li>${esc(i)}</li>`).join('');
       return `${nameHtml}<ul class="ingredient-list">${items}</ul>`;
     }).join('');
 
-    const stepsHtml = recipe.steps
+    const stepsHtml = loc(recipe, 'steps')
       .map(s => `<li>${esc(s)}</li>`)
       .join('');
 
-    const tipHtml = recipe.tip ? `
+    const tipData = loc(recipe, 'tip');
+    const tipHtml = tipData ? `
       <div class="tip-section">
-        <p class="tip-text">${esc(recipe.tip.text)}</p>
-        <div class="tip-author">${esc(recipe.tip.author)}</div>
+        <p class="tip-text">${esc(tipData.text)}</p>
+        <div class="tip-author">${esc(tipData.author)}</div>
       </div>
     ` : '';
 
     detailEl.innerHTML = `
       <div class="recipe-header">
         <div class="recipe-category-label">${cat(recipe.category)}</div>
-        <h1 class="recipe-title">${esc(recipe.title)}</h1>
-        <p class="recipe-subtitle">${esc(recipe.subtitle)}</p>
+        <h1 class="recipe-title">${esc(loc(recipe, 'title'))}</h1>
+        <p class="recipe-subtitle">${esc(loc(recipe, 'subtitle'))}</p>
         <div class="recipe-meta">${t('servings')(recipe.servings)}</div>
       </div>
 
@@ -244,7 +245,7 @@
       viewRecipe.classList.remove('hidden');
       renderRecipe(byId[id]);
       window.scrollTo(0, 0);
-      document.title = byId[id].title + ' · Recetario';
+      document.title = loc(byId[id], 'title') + ' · Recetario';
     } else {
       viewRecipe.classList.add('hidden');
       viewList.classList.remove('hidden');
@@ -282,6 +283,12 @@
   /* -------------------------------------------------------
      Utility
   ------------------------------------------------------- */
+
+  // Return language-specific field if available, otherwise fall back to base field
+  function loc(recipe, field) {
+    const key = field + 'En';
+    return (lang === 'en' && recipe[key] !== undefined) ? recipe[key] : recipe[field];
+  }
 
   function esc(str) {
     return String(str)
