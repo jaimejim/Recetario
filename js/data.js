@@ -16,7 +16,9 @@ const RECIPES = [
   {
     id: 'volovanes-suizos',
     title: 'Volovanes Suizos con Arroz',
+    titleEn: 'Swiss Vol-au-Vents with Rice',
     subtitle: 'Los llaman "vol-au-vent" o "pilzpastetli" en Suiza. Una receta deliciosa para visitas y como aperitivo para picar.',
+    subtitleEn: 'Known as "vol-au-vent" or "pilzpastetli" in Switzerland. A delicious recipe for guests and as a nibble.',
     servings: 4,
     category: 'aperitivos',
     page: 4,
@@ -46,6 +48,32 @@ const RECIPES = [
         ],
       },
     ],
+    ingredientGroupsEn: [
+      {
+        name: 'Vol-au-vents',
+        items: [
+          '4 German sausages',
+          '6 vol-au-vent cases',
+          '½ glass of sweet wine (Ximenez or Port)',
+          '2 ladles of bechamel',
+        ],
+      },
+      {
+        name: 'Side dish',
+        items: ['250 g basmati rice', '100 g peas', '2 carrots'],
+      },
+      {
+        name: 'Bechamel',
+        items: [
+          '200 g flour',
+          '¾ l whole milk',
+          '1 small onion',
+          'Nutmeg',
+          '50 g butter',
+          'White pepper',
+        ],
+      },
+    ],
     steps: [
       'Preparamos la bechamel semi espesa, mezclando harina con parte de la leche con una varilla. Calentamos el resto de la leche, añadimos la nuez moscada, la sal y la pimienta. Mezclamos todo y removemos.',
       'Se quitan las tapas de los volovanes y se apartan en un plato. Podemos meter los volovanes en el horno un minuto para que se gratinen ligeramente y sea más fácil cortar la tapa.',
@@ -56,16 +84,32 @@ const RECIPES = [
       'Rellenamos los volovanes con la mezcla de bechamel, cebolla y salchichas. Ponemos las tapas y metemos en el horno a 150 °C durante 10 minutos.',
       'Servimos los volovanes sobre el arroz, guisantes y zanahoria.',
     ],
+    stepsEn: [
+      'Prepare a semi-thick bechamel by mixing flour with some of the milk using a whisk. Heat the rest of the milk, add the nutmeg, salt, and pepper. Combine everything and stir.',
+      'Remove the lids from the vol-au-vents and set them aside on a plate. You can pop the vol-au-vents in the oven for a minute so they brown slightly and the lids are easier to cut.',
+      'Chop the onion and cut the sausages into small pieces. Also cut the carrots into julienne strips for the side dish.',
+      'Boil the carrots for 15 minutes, adding the peas for the last 10 minutes. Once cooked, drain and set aside. Cook the rice as well and set aside.',
+      'Saute the onion with a drizzle of oil and a little butter over medium heat. Once softened, add the sausages and cook until done.',
+      'Add everything to the bechamel and stir well over very low heat for a couple of minutes. Remove from heat and let cool slightly.',
+      'Fill the vol-au-vents with the bechamel, onion, and sausage mixture. Place the lids on top and bake at 150 °C for 10 minutes.',
+      'Serve the vol-au-vents on a bed of rice, peas, and carrots.',
+    ],
     tip: {
       text: 'Al hacer la bechamel es importante que la leche no llegue a cocer. Hay que remover bien con la varilla a fuego muy bajo para evitar grumos y procurar que no se pegue. Una vez que empieza a espesar (12 minutos aproximadamente) la retiramos del fuego. Para saber que está hecha tiene que quedar blanca y no amarillenta. Usad una nuez moscada fresca que ralléis vosotros: tiene un perfume mucho más intenso.',
       author: 'Consejo de Mari',
+    },
+    tipEn: {
+      text: 'When making the bechamel, it is important that the milk does not boil. Stir well with a whisk over very low heat to avoid lumps and prevent sticking. Once it starts to thicken (about 12 minutes) remove from the heat. You know it is done when it stays white, not yellowish. Use a fresh nutmeg that you grate yourself: the aroma is much more intense.',
+      author: 'Mari\'s tip',
     },
   },
 
   {
     id: 'salmon-marinado',
     title: 'Salmón Marinado',
+    titleEn: 'Marinated Salmon',
     subtitle: 'Deliciosa receta de Suecia, el famoso "Gravlax". Lo hago siempre con una buena ensalada el día de Navidad.',
+    subtitleEn: 'A delicious Swedish recipe, the famous "Gravlax". I always make it with a nice salad on Christmas Day.',
     servings: 4,
     category: 'pescados',
     page: 5,
@@ -97,6 +141,34 @@ const RECIPES = [
         ],
       },
     ],
+    ingredientGroupsEn: [
+      {
+        name: 'Salmon',
+        items: ['750 g fresh salmon'],
+      },
+      {
+        name: 'Marinade',
+        items: [
+          '4 tbsp chopped dill',
+          '4 tbsp ground pepper',
+          '4 tbsp sugar',
+          '4 tbsp salt',
+        ],
+      },
+      {
+        name: 'Salad',
+        items: [
+          '1 escarole',
+          '1 tbsp mustard',
+          '1 tbsp vinegar',
+          '1 tbsp honey',
+          '1 tbsp capers',
+          '8 tbsp oil',
+          '8 tbsp chopped dill',
+          'Dill for garnish',
+        ],
+      },
+    ],
     steps: [
       'Limpiar el salmón de escamas dejando la piel intacta y quitar las espinas que queden con una pinza. Mezclar la sal, el azúcar, la pimienta y el eneldo, y frotar con la mezcla el salmón por la piel y por la carne.',
       'Colocar el salmón en una fuente plana, poner encima una plancha y un peso ligero dejando marinar entre 24 y 48 horas.',
@@ -105,16 +177,30 @@ const RECIPES = [
       'Lavar y escurrir la ensalada, añadir la piel frita y mezclar los ingredientes del aliño.',
       'Servimos el salmón con la ensalada, el aliño y pan fresco.',
     ],
+    stepsEn: [
+      'Clean the salmon of scales, leaving the skin intact, and remove any remaining bones with tweezers. Mix the salt, sugar, pepper, and dill, and rub the mixture over both the skin and flesh of the salmon.',
+      'Place the salmon on a flat dish, put a board and a light weight on top, and let it marinate for 24 to 48 hours.',
+      'Slice it into thin diagonal slices, leaving 2 cm of flesh attached to the skin.',
+      'Cut the salmon skin into strips and fry them until crispy.',
+      'Wash and drain the salad, add the fried skin, and mix the dressing ingredients together.',
+      'Serve the salmon with the salad, dressing, and fresh bread.',
+    ],
     tip: {
       text: 'Cuando compres el salmón pide que te quiten la raspa y la carne de los lados si es posible. Si no tienes una plancha puedes poner unos bricks de leche encima. Si quieres probar una mostaza algo más fuerte puedes probar la "mostaza antigua" que tiene los granos de mostaza.',
       author: 'Truco de Mari',
+    },
+    tipEn: {
+      text: 'When buying the salmon, ask the fishmonger to remove the spine and side flesh if possible. If you don\'t have a press board, you can place milk cartons on top as weights. If you want a stronger mustard, try "whole grain mustard" with visible mustard seeds.',
+      author: 'Mari\'s tip',
     },
   },
 
   {
     id: 'mejillones-gorgonzola',
     title: 'Mejillones al Gorgonzola',
+    titleEn: 'Mussels with Gorgonzola',
     subtitle: 'Los italianos dicen que soñar comiendo mejillones es de buen augurio. Una variante de "moules au roquefort" con el famoso queso italiano.',
+    subtitleEn: 'Italians say that dreaming of eating mussels is a good omen. A twist on "moules au roquefort" with the famous Italian cheese.',
     servings: 4,
     category: 'pescados',
     page: 6,
@@ -134,6 +220,22 @@ const RECIPES = [
         ],
       },
     ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '1 kg mussels',
+          '2 shallots',
+          '20 g butter',
+          '1 clove of garlic',
+          '100 g dry Martini',
+          '150 g cream',
+          '100 g gorgonzola cheese',
+          '2 egg yolks',
+          '1 tbsp chopped chives',
+        ],
+      },
+    ],
     steps: [
       'Se pican las chalotas y el ajo. En una cazuela se sudan las chalotas con la mantequilla durante unos minutos, se añade el ajo bien picado y se suda todo junto otro minuto.',
       'Se agregan los mejillones y el Martini y se cuece todo a fuego vivo y tapado durante 5 minutos hasta que los mejillones se abran.',
@@ -142,16 +244,30 @@ const RECIPES = [
       'Una vez fuera del fuego se añade el gorgonzola rallado. Se mezcla todo hasta disolver bien el queso, se agregan las yemas y se vuelve a mezclar.',
       'Se pone el punto de sal y pimienta y se vierte la salsa cremosa sobre los mejillones reservados. Se espolvorea cebollino picado y se sirve.',
     ],
+    stepsEn: [
+      'Chop the shallots and garlic. In a pot, sweat the shallots in butter for a few minutes, add the finely chopped garlic, and sweat together for another minute.',
+      'Add the mussels and the Martini, and cook covered over high heat for 5 minutes until the mussels open.',
+      'Remove the mussels to a plate, separating the shells that contain meat (which we keep) from the empty ones (which we discard).',
+      'Reduce the cooking juices for 3 minutes, add the cream, and boil for 2 more minutes.',
+      'Once off the heat, add the grated gorgonzola. Mix everything until the cheese is fully dissolved, add the egg yolks, and mix again.',
+      'Season with salt and pepper and pour the creamy sauce over the reserved mussels. Sprinkle with chopped chives and serve.',
+    ],
     tip: {
       text: 'Es importante limpiar bien los mejillones por fuera y de la rebaba que tienen. También es importante raspar las conchas con un cuchillo pequeño si tienen adherencias y limpiarlos con un cepillo fuerte. Si después de cocerlos no se abren, tiradlos. Para este plato siempre me gusta tomar un buen vino blanco fresco, por ejemplo un Rías Baixas de uva Albariño.',
       author: 'Truco de Mari',
+    },
+    tipEn: {
+      text: 'It is important to clean the mussels well on the outside and remove the beard. Also scrape the shells with a small knife if they have barnacles and scrub them with a stiff brush. If any mussels don\'t open after cooking, discard them. For this dish I always enjoy a good chilled white wine, for example a Rias Baixas Albarino.',
+      author: 'Mari\'s tip',
     },
   },
 
   {
     id: 'col-romesco',
     title: 'Col al Horno con Salsa Romesco',
+    titleEn: 'Roasted Cabbage with Romesco Sauce',
     subtitle: 'Nos gusta mucho la col y esta receta es muy sana y sirve incluso como plato único para una cena ligera.',
+    subtitleEn: 'We love cabbage and this recipe is very healthy - it even works as a standalone dish for a light dinner.',
     servings: 4,
     category: 'verduras',
     page: 7,
@@ -178,6 +294,29 @@ const RECIPES = [
         ],
       },
     ],
+    ingredientGroupsEn: [
+      {
+        name: 'For the cabbage',
+        items: [
+          '1 large cabbage (~1 kg)',
+          '2 tbsp olive oil',
+          'Salt and pepper to taste',
+        ],
+      },
+      {
+        name: 'For the romesco sauce',
+        items: [
+          '400 g ripe tomatoes',
+          '1 large onion',
+          '200 g red pepper (optional)',
+          '3 cloves of garlic',
+          '75 g toasted almonds',
+          '50 g stale bread',
+          '50 ml olive oil',
+          'Salt and pepper to taste',
+        ],
+      },
+    ],
     steps: [
       'Precalentamos el horno a 200 °C. Cortamos la col en lonchas grandes de unos 5 cm de grosor.',
       'Colocamos las lonchas de col en una bandeja de horno y rociamos con aceite de oliva, sal y pimienta al gusto.',
@@ -187,16 +326,31 @@ const RECIPES = [
       'En una batidora mezclamos los tomates, el pimiento rojo, los dientes de ajo, las almendras, el pan remojado y ¼ taza de aceite de oliva. Trituramos hasta obtener una salsa suave. Sazonamos con sal y pimienta.',
       'Colocamos la col asada en un plato grande, cubrimos con una generosa porción de salsa romesco y servimos caliente.',
     ],
+    stepsEn: [
+      'Preheat the oven to 200 °C. Cut the cabbage into large slices about 5 cm thick.',
+      'Place the cabbage slices on a baking tray and drizzle with olive oil, salt, and pepper to taste.',
+      'On another tray, place the tomatoes, red pepper, onion, and peeled garlic cloves. Drizzle with olive oil and a pinch of salt.',
+      'Roast the cabbage and vegetables in the oven: 15 minutes for the romesco vegetables and 30 for the cabbage. Remove when tender and slightly charred. Let cool enough to handle.',
+      'Peel the skin off the tomatoes and red pepper, and remove the pepper seeds.',
+      'In a blender, combine the tomatoes, red pepper, garlic cloves, almonds, soaked bread, and ¼ cup of olive oil. Blend until smooth. Season with salt and pepper.',
+      'Place the roasted cabbage on a large plate, cover with a generous portion of romesco sauce, and serve hot.',
+    ],
     tip: {
       text: 'La salsa romesco se puede hacer añadiendo albahaca fresca. Al meter la col en el horno, ponemos la loncha boca-arriba para que se abra como una flor. Una vez horneada, quitamos las hojas externas que pueden estar un poco quemadas.',
       author: 'Truco de Vale',
+    },
+    tipEn: {
+      text: 'The romesco sauce can be made with fresh basil added. When placing the cabbage in the oven, put the slices face-up so they open like a flower. Once roasted, remove the outer leaves that may be a bit charred.',
+      author: 'Vale\'s tip',
     },
   },
 
   {
     id: 'cerdo-navidad',
     title: 'Cerdo de Navidad',
+    titleEn: 'Christmas Pork',
     subtitle: 'Plato especial para el invierno en la sierra.',
+    subtitleEn: 'A special dish for winter in the mountains.',
     servings: 4,
     category: 'carnes',
     page: 8,
@@ -209,7 +363,9 @@ const RECIPES = [
   {
     id: 'tjvjik-pollo',
     title: 'Tjvjik de Pollo',
+    titleEn: 'Chicken Tjvjik',
     subtitle: 'Receta de casquería con ingredientes que ya no se usan. Un plato muy particular y nutritivo que le encanta a los niños.',
+    subtitleEn: 'An offal recipe with ingredients that are rarely used nowadays. A very distinctive and nutritious dish that kids love.',
     servings: 4,
     category: 'carnes',
     page: 9,
@@ -231,6 +387,24 @@ const RECIPES = [
         ],
       },
     ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '400 g chicken gizzards',
+          '400 g chicken hearts',
+          '400 g chicken liver',
+          '1 tbsp olive oil',
+          '2 large onions, finely chopped',
+          '2 cloves of garlic, finely chopped',
+          '1 tin of Mutti tomatoes',
+          'Fresh parsley and chives for garnish',
+          'Dried thyme',
+          'Dried rosemary',
+          'Salt and pepper',
+        ],
+      },
+    ],
     steps: [
       'Lava y seca las mollejas, corazones e hígados de pollo. Corta todos los ingredientes por la mitad. Salpimentamos y reservamos.',
       'En una cazuela sofreímos la cebolla picada muy fina hasta que esté suave y dorada. Cuando esté dorada añadimos el tomate y bajamos el fuego.',
@@ -240,16 +414,31 @@ const RECIPES = [
       'Preparamos el arroz cuando quede poco tiempo para servir.',
       'Sirve el Tjvjik caliente, espolvoreado con perejil o cebollino fresco picado. Se puede poner el arroz en un lateral del plato o en un bol aparte.',
     ],
+    stepsEn: [
+      'Wash and dry the gizzards, hearts, and livers. Cut everything in half. Season with salt and pepper and set aside.',
+      'In a pot, saute the finely chopped onion until soft and golden. Once golden, add the tomato and lower the heat.',
+      'Add the gizzards, livers, and hearts along with the spices. Cook over very low heat for 5-6 hours.',
+      'Stir carefully to make sure all the ingredients are well mixed. Repeat every couple of hours to prevent sticking.',
+      'Season with salt and black pepper to taste. Adjust as needed.',
+      'Prepare the rice when there is little time left before serving.',
+      'Serve the Tjvjik hot, sprinkled with chopped fresh parsley or chives. The rice can be placed on the side of the plate or in a separate bowl.',
+    ],
     tip: {
       text: 'Podemos añadir un poco de guindilla para dar algo de picante. Otras recetas usan limón seco rallado y albahaca seca.',
       author: 'Truco de Jaime',
+    },
+    tipEn: {
+      text: 'You can add a bit of chili for some heat. Other versions use grated dried lemon and dried basil.',
+      author: 'Jaime\'s tip',
     },
   },
 
   {
     id: 'sashimi-arroz',
     title: 'Sashimi y Arroz',
+    titleEn: 'Sashimi and Rice',
     subtitle: 'Una de las recetas japonesas favoritas de la familia. Pescado fresco en crudo con arroz de sushi bien preparado.',
+    subtitleEn: 'One of the family\'s favourite Japanese recipes. Fresh raw fish with properly prepared sushi rice.',
     servings: 4,
     category: 'pescados',
     page: 11,
@@ -274,6 +463,27 @@ const RECIPES = [
         ],
       },
     ],
+    ingredientGroupsEn: [
+      {
+        name: 'Sashimi',
+        items: [
+          '300 g high-quality fresh raw fish fillets (tuna, salmon, butterfish...)',
+          '1 daikon radish, peeled and finely grated',
+          '¼ cup soy sauce',
+          'Wasabi to taste',
+        ],
+      },
+      {
+        name: 'Rice',
+        items: [
+          '2 cups Japanese short-grain rice',
+          '2¼ cups water',
+          '¼ cup rice vinegar',
+          '2 tbsp sugar',
+          '½ tsp salt',
+        ],
+      },
+    ],
     steps: [
       'Enjuaga el arroz en un colador bajo agua fría hasta que el agua salga clara para eliminar el exceso de almidón.',
       'Coloca el arroz en una cacerola y agrega el agua. Lleva a ebullición, reduce el fuego al mínimo, cubre y cocina a fuego lento durante 20 minutos.',
@@ -283,16 +493,31 @@ const RECIPES = [
       'Corta los filetes de pescado en rodajas finas y uniformes de 0,5 a 1 cm de grosor.',
       'Dispón el sashimi en un plato de servir y coloca el rábano daikon rallado junto al pescado. Sirve con soja y wasabi.',
     ],
+    stepsEn: [
+      'Rinse the rice in a sieve under cold water until the water runs clear to remove excess starch.',
+      'Place the rice in a saucepan and add the water. Bring to a boil, reduce heat to the lowest setting, cover, and simmer for 20 minutes.',
+      'Turn off the heat and let the rice rest, covered, for 10 minutes.',
+      'Heat the rice vinegar, sugar, and salt in a small saucepan until dissolved. Let cool to room temperature.',
+      'Transfer the cooked rice to a large bowl and drizzle the vinegar mixture over it. Use a wooden spatula to fold it in without pressing. Let cool to room temperature.',
+      'Cut the fish fillets into thin, even slices 0.5 to 1 cm thick.',
+      'Arrange the sashimi on a serving plate and place the grated daikon radish beside the fish. Serve with soy sauce and wasabi.',
+    ],
     tip: {
       text: 'Usa siempre pescado de la máxima calidad y frescura, apto para consumo en crudo. El daikon rallado limpia el paladar entre bocados.',
       author: 'Truco de Jaime',
+    },
+    tipEn: {
+      text: 'Always use the highest quality and freshest fish, suitable for raw consumption. The grated daikon cleanses the palate between bites.',
+      author: 'Jaime\'s tip',
     },
   },
 
   {
     id: 'nabe',
     title: 'Nabe (Hotpot Japonés)',
+    titleEn: 'Nabe (Japanese Hotpot)',
     subtitle: 'Plato reconfortante para las noches de invierno. El hotpot japonés reúne a la familia alrededor de la mesa.',
+    subtitleEn: 'A comforting dish for winter nights. The Japanese hotpot brings the family together around the table.',
     servings: 4,
     category: 'sopas',
     page: 12,
@@ -317,6 +542,27 @@ const RECIPES = [
         ],
       },
     ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '500 g thinly sliced beef',
+          '500 g mixed seafood (prawns, octopus, squid)',
+          '1 cup fresh mushrooms, sliced',
+          '1 cup spinach leaves',
+          '½ cup chopped spring onion',
+          '1 large carrot, thinly sliced',
+          '1 turnip, thinly sliced',
+          '1 cup bean sprouts',
+          '1 pack firm tofu, cubed',
+          '2 cloves of garlic, finely chopped',
+          '½ cup soy sauce',
+          '2 tbsp Japanese sake (optional)',
+          '1 tbsp vegetable oil',
+          'Fresh chopped coriander for garnish',
+        ],
+      },
+    ],
     steps: [
       'Coloca una olla grande en el fuego. Agrega el aceite y caliéntalo. Agrega el ajo y fríe por un minuto hasta que esté fragante.',
       'Añade la carne de res y fríela hasta que esté dorada. Agrega la salsa de soja y el sake y cocina por unos minutos más.',
@@ -324,16 +570,29 @@ const RECIPES = [
       'Agrega las hojas de espinaca y los cubos de tofu. Cocina unos minutos más hasta que las espinacas se marchiten y el tofu esté caliente.',
       'Decora con cebolla verde picada y cilantro fresco si lo deseas. Sirve la nabe caliente en platos hondos.',
     ],
+    stepsEn: [
+      'Place a large pot over the heat. Add the oil and heat it up. Add the garlic and fry for one minute until fragrant.',
+      'Add the beef and fry until browned. Add the soy sauce and sake and cook for a few more minutes.',
+      'Add the seafood, mushrooms, carrots, turnips, and bean sprouts. Pour in water to cover the ingredients and let the broth cook over medium-high heat for 10 minutes (skim the foam occasionally).',
+      'Add the spinach leaves and tofu cubes. Cook for a few more minutes until the spinach has wilted and the tofu is hot.',
+      'Garnish with chopped spring onion and fresh coriander if desired. Serve the nabe hot in deep bowls.',
+    ],
     tip: {
       text: 'Este plato se sirve en la propia olla en el centro de la mesa, y cada comensal se sirve a su gusto. Puedes añadir fideos ramen o udon al final de la cocción.',
       author: 'Truco de Alberto',
+    },
+    tipEn: {
+      text: 'This dish is served in the pot itself in the centre of the table, and each person helps themselves. You can add ramen or udon noodles at the end of cooking.',
+      author: 'Alberto\'s tip',
     },
   },
 
   {
     id: 'tagliatelle-vongole',
     title: 'Tagliatelle alle Vongole',
+    titleEn: 'Tagliatelle alle Vongole',
     subtitle: 'Ésta receta está avalada por mi hermano como "la mejor pasta que ha comido nunca".',
+    subtitleEn: 'This recipe has been endorsed by my brother as "the best pasta he has ever eaten".',
     servings: 4,
     category: 'pasta',
     page: 14,
@@ -352,6 +611,21 @@ const RECIPES = [
         ],
       },
     ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '500 g tagliatelle pasta',
+          '90 ml olive oil',
+          '1 tbsp finely chopped garlic',
+          '1 tbsp fresh chopped parsley',
+          '48 fresh clams or cockles',
+          '90 ml white wine',
+          '30 g butter',
+          'A tiny pinch of chili flakes',
+        ],
+      },
+    ],
     steps: [
       'Sumergir las almejas en agua salada durante 10 minutos para que suelten la arena. Escurrirlas para quitar la sal.',
       'Usamos una sartén de hierro colado grande y plana para sofreír el ajo y añadimos una vez dorado la guindilla y el perejil.',
@@ -361,16 +635,31 @@ const RECIPES = [
       'Un minuto antes de su punto al dente retiramos y colamos la pasta, encendemos el fuego en la sartén de las almejas y terminamos la cocción de la pasta en ella.',
       'Añadimos la mantequilla y removemos hasta que la pasta esté al dente.',
     ],
+    stepsEn: [
+      'Soak the clams in salted water for 10 minutes so they release any sand. Drain to remove the salt.',
+      'Use a large flat cast-iron pan to saute the garlic, then add the chili flakes and parsley once golden.',
+      'Add the clams in their shells and pour in the wine. Cook for half a minute to let the wine evaporate, then cover the pan so they cook in the steam.',
+      'Checking frequently, cook until all have opened. Turn off the heat and let rest. Remove half of the shells, leaving the clam meat.',
+      'While they cook, fill a pot with water and a handful of sea salt and bring the pasta to a boil.',
+      'One minute before al dente, drain the pasta, turn the heat back on under the clam pan, and finish cooking the pasta in it.',
+      'Add the butter and stir until the pasta is al dente.',
+    ],
     tip: {
       text: 'Recordad que hay que eliminar las almejas que vengan abiertas o rotas de la compra. Una vez cocidas hay que quitar las que no se hayan abierto. Es importante cocinar la pasta con la salsa al mismo tiempo para que absorba el jugo de las almejas.',
       author: 'Truco de Jaime',
+    },
+    tipEn: {
+      text: 'Remember to discard any clams that arrive open or broken from the shop. Once cooked, remove any that haven\'t opened. It is important to cook the pasta in the sauce so it absorbs the clam juices.',
+      author: 'Jaime\'s tip',
     },
   },
 
   {
     id: 'gnocchi-ragu',
     title: 'Gnocchi con Ragú',
+    titleEn: 'Gnocchi with Ragu',
     subtitle: 'Posiblemente la comida favorita de mi hijo, un plato reconfortante para gente hambrienta.',
+    subtitleEn: 'Possibly my son\'s favourite meal, a comforting dish for hungry people.',
     servings: 4,
     category: 'pasta',
     page: 15,
@@ -392,6 +681,24 @@ const RECIPES = [
         ],
       },
     ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '500 g potato gnocchi',
+          '250 g minced pork',
+          '250 g minced beef',
+          '500 g peeled tomatoes',
+          '150 ml white wine',
+          '1 onion',
+          '1 carrot',
+          'Half a tin of Mutti tomato paste',
+          'Grana or Parmesan',
+          'Extra virgin olive oil',
+          'Salt and pepper',
+        ],
+      },
+    ],
     steps: [
       'Corta finamente la cebolla y sofríela a fuego lento en una olla con un generoso chorro de aceite de oliva virgen extra. Añade la zanahoria rallada fina.',
       'Agrega la carne picada y desmenúzala con una cuchara de madera, sazona al gusto y sofríe. Cuando la carne esté bien dorada, sube el fuego y cocina con el vino blanco.',
@@ -400,16 +707,30 @@ const RECIPES = [
       'Cocina los ñoquis en abundante agua hirviendo. Cuando comiencen a flotar, retíralos con una espumadera y agrégales el ragú caliente. Mezcla para integrar y sirve bien calientes.',
       'Espolvorea con parmesano o grana al gusto. Puedes poner unas hojitas de albahaca para decorar.',
     ],
+    stepsEn: [
+      'Finely chop the onion and saute it slowly in a pot with a generous drizzle of extra virgin olive oil. Add the finely grated carrot.',
+      'Add the minced meat and break it up with a wooden spoon, season to taste, and saute. When the meat is well browned, raise the heat and cook with the white wine.',
+      'Once the wine has evaporated, add the Mutti tomato paste. Reduce the heat, cover, and cook for a few minutes, stirring occasionally.',
+      'Add the peeled tomatoes, season with salt and pepper, and continue cooking for about 3 hours over very low heat. Once the ragu is ready, turn off the heat and let it rest.',
+      'Cook the gnocchi in plenty of boiling water. When they start to float, scoop them out with a slotted spoon and add the hot ragu. Toss to combine and serve piping hot.',
+      'Sprinkle with Parmesan or Grana to taste. You can add a few basil leaves for garnish.',
+    ],
     tip: {
       text: 'Hay que asegurarse de que el ragú no tenga pegotes de carne, así que tómate tu tiempo con la cuchara de madera hasta que esté todo homogéneo. Uso el tomate Mutti porque me gusta como queda; también puedes usar concentrado de tomate disuelto en agua.',
       author: 'Truco de Jaime',
+    },
+    tipEn: {
+      text: 'Make sure the ragu has no lumps of meat, so take your time with the wooden spoon until everything is smooth. I use Mutti tomato paste because I like the result; you can also use tomato concentrate dissolved in water.',
+      author: 'Jaime\'s tip',
     },
   },
 
   {
     id: 'canelones-atun',
     title: 'Canelones de Atún',
+    titleEn: 'Tuna Cannelloni',
     subtitle: 'La receta de mi madre. Un clásico de la cocina familiar española.',
+    subtitleEn: 'My mother\'s recipe. A classic of Spanish home cooking.',
     servings: 4,
     category: 'pasta',
     page: 16,
@@ -430,6 +751,23 @@ const RECIPES = [
         ],
       },
     ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '12 cannelloni pasta sheets',
+          '2 tins of tuna in oil (~300 g total)',
+          '1 medium onion, chopped',
+          '2 cloves of garlic, chopped',
+          '1 red pepper, diced (optional)',
+          '400 g crushed tomatoes',
+          '1 tbsp olive oil',
+          'Salt and pepper to taste',
+          'Grated cheese for gratinating',
+          'Bechamel (same as in the vol-au-vents)',
+        ],
+      },
+    ],
     steps: [
       'Precalienta el horno a 180 °C.',
       'Hierve las placas de canelones en agua con sal hasta que estén al dente. Escurre y colócalas sobre papel de cocina separadas para evitar que se peguen.',
@@ -440,16 +778,32 @@ const RECIPES = [
       'En cada placa de canelón, coloca una porción del relleno de atún y enrolla para formar un cilindro. Repite para todos los canelones.',
       'Coloca los canelones en una fuente de horno, cúbrelos con la bechamel, espolvorea queso rallado y hornea 20-25 minutos hasta que el queso esté dorado.',
     ],
+    stepsEn: [
+      'Preheat the oven to 180 °C.',
+      'Boil the cannelloni sheets in salted water until al dente. Drain and lay them on kitchen paper, separated, to prevent sticking.',
+      'Heat the oil in a frying pan over medium heat. Add the onion and garlic and cook until soft and translucent, about 5 minutes.',
+      'Add the red pepper (if using) and cook for 3-4 more minutes.',
+      'Flake the tuna and add it to the pan along with the crushed tomatoes. Simmer for 10 minutes, stirring occasionally. Season with salt and pepper.',
+      'Prepare the bechamel: melt the butter, add the flour, and mix well for one minute. Gradually pour in the milk, stirring constantly until it thickens. Season with salt, pepper, and nutmeg.',
+      'On each cannelloni sheet, place a portion of the tuna filling and roll into a cylinder. Repeat for all the cannelloni.',
+      'Place the cannelloni in a baking dish, cover with the bechamel, sprinkle with grated cheese, and bake for 20-25 minutes until the cheese is golden.',
+    ],
     tip: {
       text: 'Este plato marida bien con un buen Rioja.',
       author: 'Truco de Mari',
+    },
+    tipEn: {
+      text: 'This dish pairs well with a good Rioja.',
+      author: 'Mari\'s tip',
     },
   },
 
   {
     id: 'pizza-napolitana',
     title: 'Pizza Napolitana',
+    titleEn: 'Neapolitan Pizza',
     subtitle: 'La auténtica pizza napolitana, con masa de larga fermentación y tomate San Marzano.',
+    subtitleEn: 'The authentic Neapolitan pizza, with long-fermented dough and San Marzano tomatoes.',
     servings: 4,
     category: 'pasta',
     page: 17,
@@ -481,6 +835,34 @@ const RECIPES = [
         ],
       },
     ],
+    ingredientGroupsEn: [
+      {
+        name: 'Dough',
+        items: [
+          '500 g strong bread flour (tipo 00)',
+          '325 ml warm water',
+          '10 g salt',
+          '2 g active dry yeast',
+        ],
+      },
+      {
+        name: 'Tomato sauce',
+        items: [
+          '400 g San Marzano peeled and crushed tomatoes',
+          '1 clove of garlic, chopped (optional)',
+          'Salt, pepper, and ½ tsp sugar to taste',
+          '1 tbsp olive oil',
+        ],
+      },
+      {
+        name: 'Toppings',
+        items: [
+          '250 g fresh mozzarella, drained and sliced (preferably buffalo)',
+          'Fresh basil to taste',
+          'Extra virgin olive oil to taste',
+        ],
+      },
+    ],
     steps: [
       'Mezcla la harina, la levadura y la sal. Agrega el agua tibia lentamente mientras mezclas, hasta que se forme una masa blanda. Amasa por 10-15 minutos hasta obtener una masa elástica y suave.',
       'Deja reposar la masa en un recipiente engrasado cubierto con un paño húmedo. Déjala fermentar 2 horas o hasta que doble su tamaño en un lugar cálido.',
@@ -490,16 +872,31 @@ const RECIPES = [
       'Cubre la masa con una capa fina de salsa de tomate (dejando 1-2 cm de borde) y coloca rodajas de mozzarella con espacio entre ellas.',
       'Hornea 8-10 minutos hasta que los bordes estén dorados y la mozzarella burbujee. Termina con albahaca fresca y un hilo de aceite de oliva.',
     ],
+    stepsEn: [
+      'Mix the flour, yeast, and salt. Slowly add the warm water while mixing until a soft dough forms. Knead for 10-15 minutes until the dough is elastic and smooth.',
+      'Let the dough rest in a greased bowl covered with a damp cloth. Leave to rise for 2 hours or until doubled in size in a warm place.',
+      'Mix the crushed tomatoes, garlic, olive oil, salt, pepper, and sugar in a bowl. Set aside.',
+      'Preheat the oven to 250 °C with a pizza stone on the lower rack for at least 30 minutes.',
+      'Divide the dough into two portions. On a floured surface, flatten each portion with your fingers to about 30 cm diameter, leaving the edge slightly thicker.',
+      'Spread a thin layer of tomato sauce over the dough (leaving a 1-2 cm border) and arrange mozzarella slices with space between them.',
+      'Bake for 8-10 minutes until the edges are golden and the mozzarella is bubbling. Finish with fresh basil and a drizzle of olive oil.',
+    ],
     tip: {
       text: 'La clave está en la temperatura: el horno debe estar al máximo. Cuanto más alta la temperatura, más auténtica quedará la pizza. La piedra para pizza marcará la diferencia en la base.',
       author: 'Truco de Alberto',
+    },
+    tipEn: {
+      text: 'The key is temperature: the oven must be as hot as possible. The higher the temperature, the more authentic the pizza will be. A pizza stone will make all the difference to the base.',
+      author: 'Alberto\'s tip',
     },
   },
 
   {
     id: 'albondigas-salsa',
     title: 'Albóndigas en Salsa',
+    titleEn: 'Meatballs in Sauce',
     subtitle: 'Receta de Max Mariola. Albóndigas jugosas en salsa de tomate casera, un clásico reconfortante.',
+    subtitleEn: 'Recipe by Max Mariola. Juicy meatballs in homemade tomato sauce, a comforting classic.',
     servings: 4,
     category: 'carnes',
     page: 18,
@@ -531,6 +928,34 @@ const RECIPES = [
         ],
       },
     ],
+    ingredientGroupsEn: [
+      {
+        name: 'Meatballs',
+        items: [
+          '500 g minced beef',
+          '½ cup breadcrumbs',
+          '¼ cup grated Parmesan',
+          '¼ cup fresh chopped parsley',
+          '2 cloves of garlic, finely chopped',
+          '1 large egg',
+          '½ tsp salt',
+          '½ tsp ground black pepper',
+          'Olive oil for frying',
+        ],
+      },
+      {
+        name: 'Tomato sauce',
+        items: [
+          '1 tin whole peeled tomatoes (400 g)',
+          '3 cloves of garlic, finely chopped',
+          '1 medium onion, chopped',
+          '2 tbsp olive oil',
+          '1 tsp sugar',
+          '1 tsp salt',
+          '1 tsp dried oregano',
+        ],
+      },
+    ],
     steps: [
       'En un tazón grande, combina la carne picada, pan rallado, parmesano, perejil, ajo, huevo, sal y pimienta. Mezcla bien hasta integrar todos los ingredientes.',
       'Forma albóndigas del tamaño de una pelota de golf. Deberías obtener cerca de 12 unidades.',
@@ -540,16 +965,31 @@ const RECIPES = [
       'Coloca las albóndigas doradas en la salsa de tomate. Cocina a fuego lento durante 25-30 minutos hasta que las albóndigas estén completamente cocidas.',
       'Sirve caliente con pasta o pan para mojar en la salsa.',
     ],
+    stepsEn: [
+      'In a large bowl, combine the minced beef, breadcrumbs, Parmesan, parsley, garlic, egg, salt, and pepper. Mix well until all ingredients are fully combined.',
+      'Shape the meatballs to the size of a golf ball. You should get about 12.',
+      'In a large frying pan, heat 2 tablespoons of oil over medium-high heat. Cook the meatballs on all sides until golden. Remove and set aside.',
+      'In the same pan, add the oil. Add the chopped onion and garlic, cooking until soft, about 3 minutes.',
+      'Add the tomatoes, sugar, salt, and oregano. Mix well and cook the sauce for 10 minutes over medium-low heat until it thickens.',
+      'Place the browned meatballs in the tomato sauce. Simmer for 25-30 minutes until the meatballs are fully cooked through.',
+      'Serve hot with pasta or bread for dipping in the sauce.',
+    ],
     tip: {
       text: 'Este plato marida bien con un buen Rioja. Puedes añadir unas hojas de albahaca fresca al final para más aroma.',
       author: 'Truco de Mari',
+    },
+    tipEn: {
+      text: 'This dish pairs well with a good Rioja. You can add a few fresh basil leaves at the end for extra aroma.',
+      author: 'Mari\'s tip',
     },
   },
 
   {
     id: 'tartufo-huevo',
     title: 'Tartufo Bianco con Huevo Frito',
+    titleEn: 'White Truffle with Fried Egg',
     subtitle: 'La trufa blanca es uno de los ingredientes más preciados de la cocina italiana. Un plato sencillo que deja boquiabierto.',
+    subtitleEn: 'White truffle is one of the most prized ingredients in Italian cuisine. A simple dish that leaves you speechless.',
     servings: 2,
     category: 'basicos',
     page: 19,
@@ -565,6 +1005,18 @@ const RECIPES = [
         ],
       },
     ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '2 large eggs',
+          '2 slices of bread (preferably baguette or rustic bread)',
+          '2 tbsp olive oil',
+          '1 fresh white truffle (tartufo bianco), ~20-30 g',
+          'Salt and pepper to taste',
+        ],
+      },
+    ],
     steps: [
       'Calienta una sartén antiadherente a fuego medio y añade 1 cucharada de aceite de oliva.',
       'Cuando el aceite esté caliente, tuesta las rebanadas de pan por ambos lados hasta que estén doradas. Retira y reserva.',
@@ -573,16 +1025,30 @@ const RECIPES = [
       'Coloca las rebanadas de pan tostado en platos individuales y coloca cada huevo frito encima.',
       'Adereza con las láminas finas de trufa blanca repartidas entre los dos platos. Salpimienta ligeramente y sirve inmediatamente.',
     ],
+    stepsEn: [
+      'Heat a non-stick frying pan over medium heat and add 1 tablespoon of olive oil.',
+      'When the oil is hot, toast the bread slices on both sides until golden. Remove and set aside.',
+      'In the same pan, add the other tablespoon of olive oil. Crack the eggs into the pan and fry over medium heat until the whites are set and the yolks are still runny.',
+      'While the eggs are frying, wash and dry the white truffle. Shave it into thin slices with a truffle slicer and set aside.',
+      'Place the toasted bread slices on individual plates and place a fried egg on top of each.',
+      'Top with the thin white truffle shavings divided between the two plates. Season lightly with salt and pepper and serve immediately.',
+    ],
     tip: {
       text: 'La trufa blanca es muy delicada y no debe cocinarse. Siempre se ralla en crudo sobre el plato caliente justo antes de servir. Este es un plato de temporada que funciona mejor con trufa recién cosechada.',
       author: 'Truco de Alberto',
+    },
+    tipEn: {
+      text: 'White truffle is very delicate and should never be cooked. It is always shaved raw over the hot dish just before serving. This is a seasonal dish that works best with freshly harvested truffle.',
+      author: 'Alberto\'s tip',
     },
   },
 
   {
     id: 'tagliolini-tartufo',
     title: 'Tagliolini al Tartufo Bianco',
+    titleEn: 'Tagliolini with White Truffle',
     subtitle: 'Durante el Covid… un plato elegantísimo con pocos ingredientes y la trufa blanca como protagonista.',
+    subtitleEn: 'During Covid... an extremely elegant dish with few ingredients and white truffle as the star.',
     servings: 2,
     category: 'pasta',
     page: 20,
@@ -598,6 +1064,18 @@ const RECIPES = [
         ],
       },
     ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '250 g fresh tagliolini',
+          '1 fresh white truffle (tartufo bianco), ~20-30 g',
+          '2 tbsp unsalted butter',
+          '½ cup grated Parmigiano-Reggiano',
+          'Salt to taste',
+        ],
+      },
+    ],
     steps: [
       'Llena una olla con agua abundante y añade sal generosa. Lleva a ebullición.',
       'Mientras esperas, lava y seca la trufa blanca. Rállala en láminas finas con un rallador de trufa y reserva.',
@@ -607,16 +1085,31 @@ const RECIPES = [
       'Espolvorea el queso Parmigiano-Reggiano rallado sobre la pasta y mezcla nuevamente.',
       'Sirve la pasta en platos individuales y adereza con las láminas finas de trufa blanca. Sirve inmediatamente.',
     ],
+    stepsEn: [
+      'Fill a large pot with plenty of water and add a generous amount of salt. Bring to a boil.',
+      'Meanwhile, wash and dry the white truffle. Shave it into thin slices with a truffle slicer and set aside.',
+      'Add the fresh tagliolini to the boiling water and cook according to the packet instructions, usually 2-3 minutes.',
+      'While the pasta cooks, melt the butter in a large frying pan over medium heat.',
+      'When the pasta is cooked, drain it and add it to the pan with the melted butter. Toss well so the pasta is fully coated.',
+      'Sprinkle the grated Parmigiano-Reggiano over the pasta and toss again.',
+      'Serve the pasta on individual plates and top with the thin white truffle shavings. Serve immediately.',
+    ],
     tip: {
       text: 'La sencillez es la clave de este plato. No le añadas nada más —ni ajo, ni aceite extra— para que la trufa sea la verdadera protagonista. Sirve en platos precalentados.',
       author: 'Truco de Jaime',
+    },
+    tipEn: {
+      text: 'Simplicity is the key to this dish. Don\'t add anything else - no garlic, no extra oil - so the truffle is the true star. Serve on pre-warmed plates.',
+      author: 'Jaime\'s tip',
     },
   },
 
   {
     id: 'spaghetti-carbonara',
     title: 'Spaghetti alla Carbonara',
+    titleEn: 'Spaghetti alla Carbonara',
     subtitle: 'La auténtica carbonara romana: sin nata, con guanciale y la mezcla perfecta de huevo y pecorino.',
+    subtitleEn: 'The authentic Roman carbonara: no cream, with guanciale and the perfect blend of egg and pecorino.',
     servings: 4,
     category: 'pasta',
     page: 21,
@@ -635,6 +1128,21 @@ const RECIPES = [
         ],
       },
     ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '400 g spaghetti',
+          '150 g guanciale (or pancetta if guanciale is unavailable)',
+          '3 large eggs',
+          '1 extra egg yolk',
+          '½ cup grated Pecorino Romano',
+          '¼ cup grated Parmigiano-Reggiano',
+          'Freshly ground black pepper to taste',
+          'Salt for cooking the pasta',
+        ],
+      },
+    ],
     steps: [
       'En una olla grande, hierve agua con sal. Corta el guanciale en láminas o cubos pequeños.',
       'Cocina el guanciale a fuego medio-bajo hasta que esté dorado y crujiente, 5-7 minutos. Retira del fuego y reserva el guanciale junto con la grasa que soltó.',
@@ -644,16 +1152,31 @@ const RECIPES = [
       'Si la salsa está demasiado espesa, añade un poco del agua de cocción reservada, unos 30 ml a la vez.',
       'Sirve caliente, espolvoreado con más pimienta negra y queso rallado si lo deseas.',
     ],
+    stepsEn: [
+      'In a large pot, bring salted water to a boil. Cut the guanciale into thin slices or small cubes.',
+      'Cook the guanciale over medium-low heat until golden and crispy, 5-7 minutes. Remove from heat and set aside the guanciale along with the rendered fat.',
+      'In a bowl, mix the eggs, the extra yolk, and the cheeses. Beat vigorously. Add freshly ground black pepper to taste.',
+      'Cook the spaghetti until al dente. Before draining, reserve about 1 cup of the cooking water.',
+      'Drain the spaghetti and pour it into the pan with the guanciale and its fat. Add the egg and cheese mixture and toss quickly so a creamy sauce forms.',
+      'If the sauce is too thick, add a little of the reserved cooking water, about 30 ml at a time.',
+      'Serve hot, sprinkled with more black pepper and grated cheese if desired.',
+    ],
     tip: {
       text: 'El secreto está en la temperatura: la sartén no debe estar demasiado caliente cuando añades los huevos o se cuajarán. La grasa del guanciale es fundamental para la textura de la salsa. Nunca uses nata —eso no es carbonara.',
       author: 'Truco de Alberto',
+    },
+    tipEn: {
+      text: 'The secret is in the temperature: the pan must not be too hot when you add the eggs or they will scramble. The guanciale fat is essential for the sauce texture. Never use cream - that is not carbonara.',
+      author: 'Alberto\'s tip',
     },
   },
 
   {
     id: 'pasta-cacio-pepe',
     title: 'Pasta Cacio e Pepe',
+    titleEn: 'Pasta Cacio e Pepe',
     subtitle: 'Pasta rápida que te saca de un apuro con pocos ingredientes. Muy reconfortante pero nada ligera.',
+    subtitleEn: 'A quick pasta that saves the day with just a few ingredients. Very comforting but not at all light.',
     servings: 2,
     category: 'pasta',
     page: 22,
@@ -669,6 +1192,18 @@ const RECIPES = [
         ],
       },
     ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '250 g pasta (spaghetti or bucatini)',
+          '1 cup finely grated Pecorino Romano',
+          '1 tsp freshly ground black pepper',
+          '2 tbsp butter',
+          'Salt to taste',
+        ],
+      },
+    ],
     steps: [
       'Hierve una olla grande de agua y añade sal generosamente. Cocina la pasta hasta 1 minuto antes de que esté al dente. Reserva aproximadamente 1 taza del agua de cocción antes de escurrir.',
       'Mientras la pasta se cocina, derrite la mantequilla en una sartén grande a fuego medio.',
@@ -677,16 +1212,30 @@ const RECIPES = [
       'Agrega lentamente el queso Pecorino Romano rallado, revolviendo constantemente para crear una salsa cremosa. Si está demasiado espesa, agrega un poco del agua de cocción reservada.',
       'Prueba y ajusta la sal con cuidado, ya que el queso Pecorino ya es bastante salado.',
     ],
+    stepsEn: [
+      'Boil a large pot of water and add salt generously. Cook the pasta until 1 minute before al dente. Reserve about 1 cup of the cooking water before draining.',
+      'While the pasta is cooking, melt the butter in a large frying pan over medium heat.',
+      'Add the freshly ground black pepper to the melted butter and stir for a few minutes until fragrant.',
+      'Drain the pasta and transfer it to the pan with the butter and pepper. Toss well.',
+      'Slowly add the grated Pecorino Romano, stirring constantly to create a creamy sauce. If it is too thick, add a little of the reserved cooking water.',
+      'Taste and adjust the salt carefully, as Pecorino is already quite salty.',
+    ],
     tip: {
       text: 'Usa el rallador fino y ten cuidado de que no queden pegotes de queso. También se puede tostar la pimienta negra antes de molerla para más aroma. Procurar llevar camisa al cocinar porque el queso quema.',
       author: 'Truco de Jaime',
+    },
+    tipEn: {
+      text: 'Use the fine side of the grater and be careful not to leave lumps of cheese. You can also toast the black peppercorns before grinding for more aroma. Make sure to wear a shirt when cooking because the cheese splatters.',
+      author: 'Jaime\'s tip',
     },
   },
 
   {
     id: 'minihamburguesas-pavo',
     title: 'Minihamburguesas de Pavo',
+    titleEn: 'Turkey Sliders',
     subtitle: 'Pequeñas hamburguesas de pavo, perfectas como aperitivo o para los más pequeños.',
+    subtitleEn: 'Small turkey burgers, perfect as a snack or for the little ones.',
     servings: 4,
     category: 'carnes',
     page: 24,
@@ -699,7 +1248,9 @@ const RECIPES = [
   {
     id: 'cazuela-arroz-pollo',
     title: 'Cazuela de Arroz con Pollo',
+    titleEn: 'Chicken and Rice Casserole',
     subtitle: 'Ésta receta es de Yotam Ottolenghi, la hago mucho en casa porque es facilísima y nos encanta a todos.',
+    subtitleEn: 'This recipe is by Yotam Ottolenghi. I make it often at home because it is very easy and everyone loves it.',
     servings: 4,
     category: 'arroces',
     page: 25,
@@ -735,12 +1286,46 @@ const RECIPES = [
       text: 'Usa pimienta fresca molida. Es importante que la medida de agua sea exacta para esta receta. Yo uso pasas por simplicidad pero también se pueden usar grosellas en azúcar. Cuidado al romper la canela: buscamos un par de trozos grandes, no fragmentos pequeños.',
       author: 'Truco de Jaime',
     },
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '1.5 kg chicken, cut into 6-8 pieces',
+          '2 large onions',
+          '200 g rice',
+          'Olive oil',
+          '2 cinnamon sticks',
+          'Cumin',
+          '3 whole cloves',
+          '10 cardamom pods',
+          'Black pepper',
+          'Salt to taste',
+          '75 g raisins',
+          'Handfuls of fresh chopped coriander and dill',
+          '200 ml water',
+        ],
+      },
+    ],
+    stepsEn: [
+      'Mix the chicken pieces by hand with olive oil, salt, plenty of black pepper, cardamom, cloves, and the cinnamon sticks broken in half. Leave to rest while you continue cooking.',
+      'Use a wide casserole or frying pan with a lid, preferably cast iron. Caramelise the onion in olive oil until golden. Remove and set aside.',
+      'In the same pan with a little oil, cook the chicken with the spices over medium heat, 5 minutes each side until well browned and crispy. Remove and set aside.',
+      'Add the rice, onion, and raisins to the pan where the chicken was cooked and stir for 1-2 minutes so it absorbs the flavour. Add salt and more pepper.',
+      'Place the chicken pieces on top of the rice and pour in the hot water. Cover and cook over very low heat for 30 minutes, until the rice is tender and the chicken is fully cooked.',
+      'Let it rest with a cloth under the lid for a couple of minutes and serve. Garnish with fresh chopped coriander.',
+    ],
+    tipEn: {
+      text: 'Use freshly ground pepper. It is important that the water measurement is exact for this recipe. I use raisins for simplicity but you can also use currants in sugar. Be careful when breaking the cinnamon: you want a couple of large pieces, not small fragments.',
+      author: 'Jaime\'s tip',
+    },
   },
 
   {
     id: 'trucha-calabacin',
     title: 'Trucha con Calabacín',
+    titleEn: 'Trout with Courgette',
     subtitle: 'Plato ligero y saludable de trucha con calabacín, perfecto para el verano.',
+    subtitleEn: 'A light and healthy trout dish with courgette, perfect for summer.',
     servings: 4,
     category: 'pescados',
     page: 26,
@@ -753,7 +1338,9 @@ const RECIPES = [
   {
     id: 'gazpacho',
     title: 'Gazpacho',
+    titleEn: 'Gazpacho',
     subtitle: 'Plato fresquísimo para el verano que le encanta a Valentina. Sencillo de hacer y además no se tarda nada en prepararlo.',
+    subtitleEn: 'A wonderfully fresh summer dish that Valentina loves. Simple to make and takes no time at all to prepare.',
     servings: 4,
     category: 'sopas',
     page: 28,
@@ -787,12 +1374,44 @@ const RECIPES = [
       text: 'Los tomates han de estar bien maduros, eso marca la diferencia. También se puede colar para hacerlo más suave. No escatimes en aceite de oliva de calidad.',
       author: 'Truco de Mari',
     },
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '1 kg ripe tomatoes, quartered',
+          '1 green pepper, deseeded and roughly chopped',
+          '1 cucumber, peeled, halved, and deseeded',
+          '½ small onion, chopped',
+          '2 cloves garlic, chopped',
+          '1 slice white bread, crusts removed, soaked in water and squeezed',
+          '3 cups (750 ml) cold water',
+          '⅓ cup (80 ml) extra virgin olive oil',
+          '2 tbsp red wine vinegar',
+          'Salt and pepper to taste',
+          'Garnish: diced peppers, cucumber, onion, and crunchy bread cubes',
+        ],
+      },
+    ],
+    stepsEn: [
+      'In a blender or food processor, combine the tomatoes, green pepper, cucumber, onion, and garlic. Blend until smooth and uniform.',
+      'Add the soaked and squeezed bread to the vegetable mixture. Blend again until well combined.',
+      'With the blender running, pour in the olive oil and vinegar in a thin stream. Continue blending until well emulsified.',
+      'Transfer the gazpacho to a large container and dilute with the 3 cups of cold water, mixing well.',
+      'Season with salt and pepper to taste. Cover and refrigerate for about 2 hours before serving.',
+      'Serve the gazpacho cold in bowls or individual glasses with the garnish of peppers, cucumber, onion, and crunchy bread.',
+    ],
+    tipEn: {
+      text: 'The tomatoes must be very ripe, that makes all the difference. You can also strain it for a smoother texture. Do not skimp on quality olive oil.',
+      author: 'Mari\'s tip',
+    },
   },
 
   {
     id: 'crema-zanahorias',
     title: 'Crema de Zanahorias',
+    titleEn: 'Carrot Soup',
     subtitle: 'Una crema sencillísima que funciona siempre. Suave, reconfortante y de bonito color naranja.',
+    subtitleEn: 'An incredibly simple soup that always works. Smooth, comforting, and a lovely orange colour.',
     servings: 4,
     category: 'sopas',
     page: 29,
@@ -822,12 +1441,40 @@ const RECIPES = [
       text: 'Puedes pasarla por un tamiz antes de servir pero es innecesario en mi opinión, ya que no quedan fibras que tamizar.',
       author: 'Truco de Jaime',
     },
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '4 large carrots',
+          '1 potato',
+          'White part of 1 leek',
+          '2 tbsp olive oil',
+          '1 tsp freshly grated ginger (optional)',
+          '½ cup cream or milk (optional)',
+          'Salt and pepper to taste',
+          'Fresh chopped coriander or parsley to garnish',
+        ],
+      },
+    ],
+    stepsEn: [
+      'Peel and boil the carrots and potatoes. When the carrots start to soften, remove everything from the heat. Do not overcook them so the soup has a fresher flavour.',
+      'Put everything into a blender, including a glass of the cooking broth.',
+      'If you want to add ginger, grate it and add it now. Blend everything well.',
+      'If you want to add cream or milk, stir it in now and mix well. Adjust salt and pepper to taste.',
+      'Serve the soup hot, garnished with fresh chopped coriander or parsley.',
+    ],
+    tipEn: {
+      text: 'You can pass it through a sieve before serving but in my opinion it is unnecessary, as there are no fibres left to strain.',
+      author: 'Jaime\'s tip',
+    },
   },
 
   {
     id: 'pan-casero',
     title: 'Pan Casero',
+    titleEn: 'Homemade Bread',
     subtitle: 'El placer de hornear tu propio pan en casa. Durante el Covid descubrimos lo reconfortante que es.',
+    subtitleEn: 'The pleasure of baking your own bread at home. During Covid we discovered how comforting it is.',
     servings: 4,
     category: 'basicos',
     page: 30,
@@ -840,7 +1487,9 @@ const RECIPES = [
   {
     id: 'cocido-madrileno',
     title: 'Cocido Madrileño',
+    titleEn: 'Madrid-Style Stew',
     subtitle: 'Plato completo que puede durar varios días. Se lleva haciendo en España desde antes del s. XV y en mi casa toda la vida.',
+    subtitleEn: 'A complete meal that can last several days. It has been made in Spain since before the 15th century, and in my family all our lives.',
     servings: 4,
     category: 'arroces',
     page: 31,
@@ -882,12 +1531,52 @@ const RECIPES = [
       text: 'Para el cocido valen otros tipos de carne, por ejemplo las manitas de cerdo en vez del tocino. El pollo es perfecto para hacer croquetas al día siguiente. En una olla express se hace en una hora y quince minutos.',
       author: 'Truco de Mari',
     },
+    ingredientGroupsEn: [
+      {
+        name: 'Stew',
+        items: [
+          '300 g chickpeas',
+          '½ cabbage',
+          '300 g beef shank or rump',
+          'Half a chicken breast',
+          '1 chorizo',
+          '1 rice blood sausage (morcilla)',
+          '150 g streaky bacon',
+          'Ham knuckle',
+          '1 ham bone and 1 beef marrow bone',
+          '3 potatoes',
+          '3 carrots',
+          '3 cloves garlic',
+          'Oil, salt, parsley, and saffron',
+        ],
+      },
+      {
+        name: 'Soup',
+        items: ['Stew broth', 'Thin vermicelli noodles'],
+      },
+    ],
+    stepsEn: [
+      'Soak the chickpeas overnight (about 12 hours).',
+      'In a large pot, add cold water, the beef, knuckle, bacon, and bones along with the spices. The chorizo and morcilla will be cooked separately later.',
+      'When it starts to boil, add the chickpeas (you can put them in a special net so they cook separately).',
+      'Once boiling, lower the heat and an hour later add the chicken, skim off the foam, and leave to cook. Total cooking time should be about 3 and a half hours.',
+      'One hour before the end, add the peeled and chopped carrots, and half an hour before the end add the potatoes, peeled but whole.',
+      'Set aside some broth in another pot, clean and chop the cabbage. Add the chorizo and morcilla, cover, and cook separately.',
+      'With the remaining broth you can make a spectacular soup: simply add the vermicelli to the broth and cook for 8 minutes.',
+      'Serve the cocido on two platters, one with the vegetables and chickpeas and another for the meat. Accompany with tomato sauce.',
+    ],
+    tipEn: {
+      text: 'Other types of meat work for cocido too, for example pig trotters instead of bacon. The chicken is perfect for making croquettes the next day. In a pressure cooker it takes one hour and fifteen minutes.',
+      author: 'Mari\'s tip',
+    },
   },
 
   {
     id: 'lentejas-chorizo',
     title: 'Lentejas con Chorizo',
+    titleEn: 'Lentils with Chorizo',
     subtitle: 'Es una receta sencilla y digna de reyes. Nada más rico que las lentejas para el comienzo del frío y además son súper nutritivas.',
+    subtitleEn: 'A simple recipe fit for royalty. Nothing tastier than lentils when the cold sets in, and they are incredibly nutritious.',
     servings: 4,
     category: 'arroces',
     page: 32,
@@ -925,12 +1614,48 @@ const RECIPES = [
       text: 'Si usas la lenteja pardina no hace falta dejarlas en remojo antes. Como el ajo a muchas personas no les gusta encontrarlo en el plato, podéis echarlo entero y retirarlo a mitad de la cocción.',
       author: 'Truco de Mari',
     },
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '300 g extra pardina lentils',
+          '2 large carrots',
+          '2 cloves garlic',
+          '½ large onion',
+          '2 bay leaves',
+          '½ tbsp smoked paprika (pimenton de la Vera)',
+          'Salt and pepper to taste',
+          '2 tbsp extra virgin olive oil',
+          '½ red pepper',
+          '1 tomato',
+          '1 potato',
+          '1 chorizo (80 g)',
+          '¼ ham bone (~70 g)',
+          'A touch of curry and cumin',
+        ],
+      },
+    ],
+    stepsEn: [
+      'Heat enough water to cover the lentils plus 2-3 fingers extra, depending on how soupy you want them.',
+      'Boil the tomato and peel it. Do not add it yet as it has a lot of water.',
+      'In a pot, add a drizzle of oil, the finely chopped onion, garlic, carrot, and pepper. Fry for 5 minutes, lower the heat, and let it soften until everything is tender.',
+      'Add the lentils and stir. Season with salt, white pepper, a touch of curry, and a touch of cumin. Add the bay leaf.',
+      'Add the bone, chopped potato, chorizo, and a small teaspoon of sweet smoked paprika. Simmer over low heat to prevent them from splitting.',
+      'While they simmer, skim off the foam that contains impurities. They will cook for about 30 minutes; stir occasionally and check the salt and water level.',
+      'By the end of cooking you will barely notice the texture of any individual ingredient, but you will taste them all.',
+    ],
+    tipEn: {
+      text: 'If you use pardina lentils there is no need to soak them beforehand. Since many people do not like finding garlic in their dish, you can add it whole and remove it halfway through cooking.',
+      author: 'Mari\'s tip',
+    },
   },
 
   {
     id: 'tortilla-patatas',
     title: 'Tortilla de Patatas',
+    titleEn: 'Spanish Omelette',
     subtitle: 'El clásico de clásicos de la cocina española. Con o sin cebolla, jugosa por dentro.',
+    subtitleEn: 'The classic of classics in Spanish cooking. With or without onion, runny on the inside.',
     servings: 4,
     category: 'basicos',
     page: 33,
@@ -943,7 +1668,9 @@ const RECIPES = [
   {
     id: 'patatas-revolconas',
     title: 'Patatas Revolconas',
+    titleEn: 'Mashed Potatoes with Paprika',
     subtitle: 'La abuela Jacinta lo preparaba en Narros del Puerto (Ávila) y muy bien, con carne de matanza. De origen humilde, era tradicional por sus pocos ingredientes.',
+    subtitleEn: 'Grandma Jacinta used to make this in Narros del Puerto (Avila) with butchered meat. Of humble origins, it was a traditional dish because of its few ingredients.',
     servings: 4,
     category: 'basicos',
     page: 34,
@@ -976,12 +1703,43 @@ const RECIPES = [
       text: 'Este plato hay que parearlo con un buen Rioja, uno un poco fuertecito. En vez de pasapuré también se puede usar un tenedor si lo queremos más espeso.',
       author: 'Truco de Mari',
     },
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '1.5 kg potatoes',
+          '3 bay leaves',
+          '1 clove garlic',
+          'Garlic powder',
+          '125 g pancetta',
+          '½ chorizo (125 g)',
+          '1 tsp sweet paprika',
+          'Oil',
+          'Salt',
+        ],
+      },
+    ],
+    stepsEn: [
+      'Peel, wash, and chop the potatoes.',
+      'Boil the potatoes for about 30 minutes in plenty of water with the garlic, salt, and bay leaves, adding a tablespoon of oil.',
+      'Meanwhile, chop the chorizo and bacon and fry them (without oil) in a small pan. When golden, remove and set aside.',
+      'Make a sofrito with chopped garlic, paprika, and the leftover juices. Then set it aside.',
+      'Once well cooked, drain the potatoes, removing the bay leaves and garlic, and keep the cooking water.',
+      'Pour the sofrito oil over the potatoes, mix, and mash with a potato ricer. You can use the cooking water to adjust the thickness.',
+      'Serve hot on a platter with toasted bread, topped with the fried chorizo and pancetta.',
+    ],
+    tipEn: {
+      text: 'This dish should be paired with a good Rioja, a slightly full-bodied one. Instead of a potato ricer you can also use a fork if you want it chunkier.',
+      author: 'Mari\'s tip',
+    },
   },
 
   {
     id: 'paella-valenciana',
     title: 'Paella Valenciana',
+    titleEn: 'Valencian Paella',
     subtitle: 'El plato más emblemático de la cocina española, con su costra dorada y el aroma del azafrán.',
+    subtitleEn: 'The most iconic dish in Spanish cuisine, with its golden crust and the aroma of saffron.',
     servings: 4,
     category: 'arroces',
     page: 35,
@@ -994,7 +1752,9 @@ const RECIPES = [
   {
     id: 'barraquito',
     title: 'Barraquito',
+    titleEn: 'Barraquito',
     subtitle: 'Café típico canario, una bomba de azúcar que hace de postre, café y licor todo en uno. Es delicioso pero no hay que abusarlo.',
+    subtitleEn: 'A typical Canary Islands coffee, a sugar bomb that serves as dessert, coffee, and liqueur all in one. Delicious but not to be overdone.',
     servings: 2,
     category: 'bebidas',
     page: 36,
@@ -1024,6 +1784,33 @@ const RECIPES = [
     tip: {
       text: 'Si se tiene un vaporizador para la leche caliente, la espuma queda siempre mejor. Este café funciona también con grappa con una rodaja de naranja o mandarina.',
       author: 'Truco de Jaime',
+    },
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '4 tbsp condensed milk',
+          '4 tbsp Licor 43 (or a coffee liqueur)',
+          '2 tbsp brown sugar',
+          '400 ml espresso coffee',
+          '2 slices of lemon',
+          '2 cinnamon sticks',
+          '400 ml hot milk',
+        ],
+      },
+    ],
+    stepsEn: [
+      'Prepare two transparent glass cups or mugs for serving the barraquito.',
+      'Place 2 tablespoons of condensed milk at the bottom of each glass.',
+      'Add 2 tablespoons of Licor 43 (or coffee liqueur) to each glass, on top of the condensed milk.',
+      'Sprinkle 1 tablespoon of brown sugar into each glass, without stirring.',
+      'Place a slice of lemon on the rim of each glass and a cinnamon stick inside.',
+      'Using a teaspoon, carefully pour 200 ml of espresso into each glass. The spoon prevents the coffee from falling directly onto the sugar and condensed milk, creating distinct layers.',
+      'Again using the spoon, pour 200 ml of hot milk into each glass. Serve immediately so the foam does not collapse.',
+    ],
+    tipEn: {
+      text: 'If you have a milk frother, the foam always turns out better. This coffee also works with grappa and a slice of orange or mandarin.',
+      author: 'Jaime\'s tip',
     },
   },
 
@@ -1097,7 +1884,9 @@ const RECIPES = [
   {
     id: 'dos-huevos-duros',
     title: 'Y También Dos Huevos Duros',
+    titleEn: 'And Two Hard-Boiled Eggs',
     subtitle: 'Frase de la película "Una noche en la ópera" de los Hermanos Marx y una de las frases favoritas de mi padre cuando pedíamos demasiado.',
+    subtitleEn: 'A line from the Marx Brothers film "A Night at the Opera" and one of my father\'s favourite sayings whenever we asked for too much.',
     servings: 1,
     category: 'basicos',
     page: 37,
@@ -1117,6 +1906,23 @@ const RECIPES = [
     tip: {
       text: 'La receta más sencilla del libro. El tiempo exacto de cocción depende del tamaño del huevo y de si empieza en agua fría o caliente. Experimenta hasta dar con tu punto preferido.',
       author: 'Truco de Alberto',
+    },
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: ['1 fresh egg', 'Another fresh egg'],
+      },
+    ],
+    stepsEn: [
+      'Place both eggs in water and bring to a boil.',
+      'At 2 minutes and 30 seconds they will be ready to eat by dipping bread, very runny. Serve with a little salt and pepper.',
+      'At 3 minutes they are still perfect for dipping bread and scooping the cooked edges with a spoon.',
+      'At 5 minutes they are ready for a brine or to eat with soy sauce. Peel them, place in a small pot with soy sauce, and cook for one or two more minutes. They can be used to accompany rice.',
+      'Over 6 minutes and they will be fully hard-boiled. Take them with you for a snack while waiting for the bus, on a walk, or any other time.',
+    ],
+    tipEn: {
+      text: 'The simplest recipe in the book. The exact cooking time depends on the size of the egg and whether it starts in cold or hot water. Experiment until you find your preferred doneness.',
+      author: 'Alberto\'s tip',
     },
   },
 ];
