@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recetario · Jiménez Bolonio</title>
+  <meta name="description" content="Recuerdos y sabores de los Jiménez. Recetario familiar de Jaime Jiménez Bolonio.">
+
+  <!-- TravelingTypewriter via CDNFonts -->
+  <link rel="preconnect" href="https://fonts.cdnfonts.com">
+  <link href="https://fonts.cdnfonts.com/css/traveling-typewriter" rel="stylesheet">
+
+  <!-- Courier Prime as fallback (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- =====================================================
+       LIST VIEW
+  ====================================================== -->
+  <div id="view-list">
+
+    <header class="site-header">
+      <div class="header-inner">
+        <h1 class="site-title">Recetario</h1>
+        <p class="site-subtitle">Recuerdos y sabores de los Jiménez</p>
+        <p class="site-author">Jaime Jiménez Bolonio</p>
+      </div>
+    </header>
+
+    <main class="list-main">
+      <div class="search-wrapper">
+        <input
+          type="text"
+          id="search"
+          placeholder="Buscar receta..."
+          autocomplete="off"
+          spellcheck="false"
+          aria-label="Buscar receta"
+        >
+      </div>
+
+      <div id="recipe-index" role="list" aria-label="Índice de recetas">
+        <!-- populated by app.js -->
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>Familia Jiménez &middot; 2018&ndash;2024</p>
+    </footer>
+
+  </div><!-- #view-list -->
+
+
+  <!-- =====================================================
+       RECIPE DETAIL VIEW
+  ====================================================== -->
+  <div id="view-recipe" class="hidden">
+
+    <nav class="recipe-nav" aria-label="Navegación">
+      <a href="#" id="back-link" class="back-link">&#8592; Índice</a>
+    </nav>
+
+    <article id="recipe-detail">
+      <!-- populated by app.js -->
+    </article>
+
+    <footer class="site-footer">
+      <p>Familia Jiménez &middot; 2018&ndash;2024</p>
+    </footer>
+
+  </div><!-- #view-recipe -->
+
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
