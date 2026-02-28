@@ -1,4 +1,4 @@
-// js/data.js — Recipe data extracted from the Recetario PDF
+// js/data.js - Recipe data extracted from the Recetario PDF
 
 const CATEGORY_LABELS = {
   aperitivos: 'Aperitivos',
@@ -1053,7 +1053,7 @@ const RECIPES = [
       'Serve hot, sprinkled with more black pepper and grated cheese if desired.',
     ],
     tip: {
-      text: 'El secreto está en la temperatura: la sartén no debe estar demasiado caliente cuando añades los huevos o se cuajarán. La grasa del guanciale es fundamental para la textura de la salsa. Nunca uses nata —eso no es carbonara.',
+      text: 'El secreto está en la temperatura: la sartén no debe estar demasiado caliente cuando añades los huevos o se cuajarán. La grasa del guanciale es fundamental para la textura de la salsa. Nunca uses nata, eso no es carbonara.',
       author: 'Truco de Jaime',
     },
     tipEn: {
@@ -1727,8 +1727,8 @@ const RECIPES = [
     id: 'lentejas-chorizo',
     title: 'Lentejas con Chorizo',
     titleEn: 'Lentils with Chorizo',
-    subtitle: 'Es una receta sencilla y digna de reyes. Nada más rico que las lentejas para el comienzo del frío y además son súper nutritivas.',
-    subtitleEn: 'A simple recipe fit for royalty. Nothing tastier than lentils when the cold sets in, and they are incredibly nutritious.',
+    subtitle: 'Es una receta sencilla y riquísima para el comienzo del frío. Son además muy nutritivas. Mi padre Jaime la ha perfeccionado añadiendo un poco de curry, a sus nietos les encanta.',
+    subtitleEn: 'A simple and delicious recipe for when the cold sets in. Very nutritious too. My father Jaime has perfected it by adding a touch of curry, his grandchildren love it.',
     servings: 4,
     category: 'sopas',
     page: 32,
