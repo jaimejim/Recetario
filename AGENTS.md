@@ -1,14 +1,5 @@
 # Agents
 
-This project uses [Kiro CLI](https://kiro.dev) for AI-assisted development.
-
-## Skills
-
-- **Obsidian Notes** — vault management, daily notes, meeting notes
-- **IVD Workflow** — invention disclosure lifecycle
-- **Communications** — emails, reports, presentations
-- **Deckset** — slide generation from markdown
-
 ## Recetario Tasks
 
 When adding recipes:
