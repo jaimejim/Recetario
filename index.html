@@ -6,7 +6,7 @@
   <title>Recetario · Jiménez Bolonio</title>
   <meta name="description" content="Recuerdos y sabores de los Jiménez. Recetario familiar de Jaime Jiménez Bolonio.">
 
-  <!-- TravelingTypewriter via CDNFonts -->
+  <!-- Traveling Typewriter via CDNFonts -->
   <link rel="preconnect" href="https://fonts.cdnfonts.com">
   <link href="https://fonts.cdnfonts.com/css/traveling-typewriter" rel="stylesheet">
 
@@ -26,8 +26,13 @@
 
     <header class="site-header">
       <div class="header-inner">
+        <div class="lang-toggle">
+          <button class="lang-btn" data-lang="es">ES</button>
+          <span class="lang-sep">·</span>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
         <h1 class="site-title">Recetario</h1>
-        <p class="site-subtitle">Recuerdos y sabores de los Jiménez</p>
+        <p class="site-subtitle" id="site-subtitle">Recuerdos y sabores de los Jiménez</p>
         <p class="site-author">Jaime Jiménez Bolonio</p>
       </div>
     </header>
@@ -50,7 +55,7 @@
     </main>
 
     <footer class="site-footer">
-      <p>Familia Jiménez &middot; 2018&ndash;2024</p>
+      <p id="footer-list">Familia Jiménez &middot; 2018&ndash;2024</p>
     </footer>
 
   </div><!-- #view-list -->
@@ -70,7 +75,7 @@
     </article>
 
     <footer class="site-footer">
-      <p>Familia Jiménez &middot; 2018&ndash;2024</p>
+      <p id="footer-recipe">Familia Jiménez &middot; 2018&ndash;2024</p>
     </footer>
 
   </div><!-- #view-recipe -->
