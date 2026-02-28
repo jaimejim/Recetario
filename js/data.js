@@ -850,11 +850,11 @@ const RECIPES = [
     ],
     tip: {
       text: 'La clave está en la temperatura: el horno debe estar al máximo. Cuanto más alta la temperatura, más auténtica quedará la pizza. La piedra para pizza marcará la diferencia en la base.',
-      author: 'Truco de Alberto',
+      author: 'Truco de Jaime',
     },
     tipEn: {
       text: 'The key is temperature: the oven must be as hot as possible. The higher the temperature, the more authentic the pizza will be. A pizza stone will make all the difference to the base.',
-      author: 'Alberto\'s tip',
+      author: 'Jaime\'s tip',
     },
   },
 
@@ -1002,11 +1002,11 @@ const RECIPES = [
     ],
     tip: {
       text: 'La trufa blanca es muy delicada y no debe cocinarse. Siempre se ralla en crudo sobre el plato caliente justo antes de servir. Este es un plato de temporada que funciona mejor con trufa recién cosechada.',
-      author: 'Truco de Alberto',
+      author: 'Truco de Jaime',
     },
     tipEn: {
       text: 'White truffle is very delicate and should never be cooked. It is always shaved raw over the hot dish just before serving. This is a seasonal dish that works best with freshly harvested truffle.',
-      author: 'Alberto\'s tip',
+      author: 'Jaime\'s tip',
     },
   },
 
@@ -1069,11 +1069,11 @@ const RECIPES = [
     ],
     tip: {
       text: 'El secreto está en la temperatura: la sartén no debe estar demasiado caliente cuando añades los huevos o se cuajarán. La grasa del guanciale es fundamental para la textura de la salsa. Nunca uses nata —eso no es carbonara.',
-      author: 'Truco de Alberto',
+      author: 'Truco de Jaime',
     },
     tipEn: {
       text: 'The secret is in the temperature: the pan must not be too hot when you add the eggs or they will scramble. The guanciale fat is essential for the sauce texture. Never use cream - that is not carbonara.',
-      author: 'Alberto\'s tip',
+      author: 'Jaime\'s tip',
     },
   },
 
@@ -2252,7 +2252,7 @@ const RECIPES = [
     ],
     tip: {
       text: 'La receta más sencilla del libro. El tiempo exacto de cocción depende del tamaño del huevo y de si empieza en agua fría o caliente. Experimenta hasta dar con tu punto preferido.',
-      author: 'Truco de Alberto',
+      author: 'Truco de Jaime',
     },
     ingredientGroupsEn: [
       {
@@ -2269,7 +2269,7 @@ const RECIPES = [
     ],
     tipEn: {
       text: 'The simplest recipe in the book. The exact cooking time depends on the size of the egg and whether it starts in cold or hot water. Experiment until you find your preferred doneness.',
-      author: 'Alberto\'s tip',
+      author: 'Jaime\'s tip',
     },
   },
 
