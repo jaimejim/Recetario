@@ -2,9 +2,6 @@
    FONTS
    ============================================================ */
 
-/* MomsTypewriter via OnlineWebFonts CDN */
-@import url('https://db.onlinewebfonts.com/c/8c74fa4a77aabeef0fbd4423f28264e9?family=MomsTypewriter');
-
 /* ============================================================
    VARIABLES
    ============================================================ */
@@ -20,7 +17,7 @@
   --rule-light: #e0d8c8;
 
   --font-title: 'Traveling Typewriter', 'Special Elite', 'Courier New', monospace;
-  --font-body:  'MomsTypewriter', 'Courier Prime', 'Courier New', monospace;
+  --font-body:  'Special Elite', 'Courier New', monospace;
 
   --max-width: 720px;
 }
