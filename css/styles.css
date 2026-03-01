@@ -402,6 +402,10 @@ body {
   color: var(--ink-light);
 }
 
+.frac {
+  font-size: 1.25em;
+}
+
 /* ---- Steps ---- */
 
 .steps-list {

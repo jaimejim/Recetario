@@ -337,7 +337,8 @@
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
+      .replace(/"/g, '&quot;')
+      .replace(/([½⅓⅔¼¾⅕⅛⅜⅝⅞])/g, '<span class="frac">$1</span>');
   }
 
   /* -------------------------------------------------------
