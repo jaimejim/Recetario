@@ -370,17 +370,7 @@ doc.font(FONT_BODY).fontSize(28).fillColor(INK)
   .text('Recetario', { align: 'center' });
 doc.moveDown(0.6);
 doc.font(FONT_BODY).fontSize(11).fillColor(INK_MID)
-  .text('Recuerdos y sabores de los Jiménez-Torno', { align: 'center' });
-
-// Stamp: oval with initials, bottom right
-const stampX = W - M.right - 50;
-const stampY = H - M.bottom - 40;
-doc.save();
-doc.lineWidth(1).strokeColor(INK_MID);
-doc.ellipse(stampX, stampY, 28, 18).stroke();
-doc.font(FONT_MONO).fontSize(7).fillColor(INK_MID)
-  .text('J . J .', stampX - 16, stampY - 4, { width: 32, align: 'center', lineBreak: false, characterSpacing: 1 });
-doc.restore();
+  .text('Recuerdos y sabores de los Jiménez Torno', { align: 'center' });
 
 // Page 3: blank
 doc.addPage();
@@ -396,9 +386,6 @@ doc.text('y sed \u00fatiles en la cocina.', { align: 'left' });
 doc.moveDown(1.5);
 doc.font(FONT_BODY).fontSize(9).fillColor(INK_LIGHT)
   .text('Pap\u00e1', { align: 'right' });
-doc.moveDown(2);
-doc.font(FONT_MONO).fontSize(6.5).fillColor(INK_LIGHT)
-  .text('Helsinki, 2026', { align: 'right' });
 
 // Page 5: blank
 doc.addPage();
@@ -467,7 +454,7 @@ for (let i = 0; i < 4; i++) {
   writePageNum();
   if (i === 3) {
     doc.font(FONT_MONO).fontSize(6).fillColor(INK_LIGHT)
-      .text('Familia Jiménez-Torno\u2003|\u20032018\u20132026', M.left, H - M.bottom + 25, { width: CW, align: 'center', lineBreak: false });
+      .text('Familia Jiménez Torno\u2003|\u20032018\u20132026', M.left, H - M.bottom + 25, { width: CW, align: 'center', lineBreak: false });
   }
 }
 
