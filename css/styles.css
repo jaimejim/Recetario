@@ -341,7 +341,7 @@ body {
   color: var(--ink-mid);
   font-style: italic;
   line-height: 1.65;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.2rem;
 }
 
 .recipe-meta {
