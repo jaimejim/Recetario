@@ -3729,11 +3729,11 @@ const RECIPES = [
       'Off the heat, add the grated cheese and mix. Serve with black pepper and fresh parsley.',
     ],
     tip: {
-      text: 'Sandro, mi suegro italiano, la preparó un día con lo poco que teníamos en casa. A veces la hacemos sin pasta, solo la salchicha al vino, para picar con una cerveza. A mi padre y a mi hijo Giovanni les encanta especialmente. Aunque lleva bastante vino, se evapora del todo y no deja sabor a vino.',
+      text: 'Una de mis recetas de pasta favoritas. Sandro, mi suegro italiano, la preparó un día con lo poco que teníamos en casa. A veces la hacemos sin pasta, solo la salchicha al vino, para picar con una cerveza. A mi padre y a mi hijo Giovanni les encanta especialmente. Aunque lleva bastante vino, se evapora del todo y no deja sabor a vino.',
       author: 'Truco de Jaime',
     },
     tipEn: {
-      text: 'Sandro, my Italian father-in-law, made it one day with the few ingredients we had at home. Sometimes we make it without the pasta, just the sausage in wine, for snacking with a beer. My dad and my boy Giovanni particularly love it. Despite using quite a bit of wine, it all evaporates and does not leave a wine taste at all.',
+      text: 'One of my favourite pasta recipes. Sandro, my Italian father-in-law, made it one day with the few ingredients we had at home. Sometimes we make it without the pasta, just the sausage in wine, for snacking with a beer. My dad and my boy Giovanni particularly love it. Despite using quite a bit of wine, it all evaporates and does not leave a wine taste at all.',
       author: 'Jaime\'s tip',
     },
   },
