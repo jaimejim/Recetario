@@ -404,6 +404,8 @@ body {
 
 .frac {
   font-size: 1.5em;
+  line-height: 0;
+  vertical-align: -0.05em;
 }
 
 /* ---- Steps ---- */
