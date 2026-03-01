@@ -3437,4 +3437,68 @@ const RECIPES = [
       'Cook the orecchiette in the reserved broccoli water with a little salt. Drain well and add to the pan with the broccoli. Toss everything together, adjust salt, and serve.',
     ],
   },
+
+  {
+    id: 'kinpira-verduras',
+    title: 'Kinpira de Zanahoria y Tupinambo',
+    titleEn: 'Carrot and Jerusalem Artichoke Kinpira',
+    subtitle: 'Salteado japonés de zanahoria y tupinambo en salsa de soja, dashi y sésamo tostado. Rápido, sencillo y lleno de sabor.',
+    subtitleEn: 'Japanese stir-fry of carrot and Jerusalem artichoke in soy sauce, dashi and toasted sesame. Quick, simple and full of flavour.',
+    servings: 4,
+    category: 'aperitivos',
+    ingredientGroups: [
+      {
+        name: 'Ingredientes principales',
+        nameEn: 'Main Ingredients',
+        items: [
+          '2 zanahorias',
+          '2 tupinambos (alcachofas de Jerusalén)',
+        ],
+        itemsEn: [
+          '2 carrots',
+          '2 Jerusalem artichokes (sunchokes)',
+        ],
+      },
+      {
+        name: 'Salsa kinpira',
+        nameEn: 'Kinpira Sauce',
+        items: [
+          '1 cucharada de aceite de sésamo',
+          '50 ml de agua',
+          '1 cucharada de azúcar',
+          '1 cucharada de salsa de soja',
+          '0,5 cucharadita de dashi',
+          '1 cucharadita de pimienta roja (al gusto)',
+          'Semillas de sésamo, ligeramente tostadas',
+        ],
+        itemsEn: [
+          '1 tbsp sesame oil',
+          '50 ml water',
+          '1 tbsp sugar',
+          '1 tbsp soy sauce',
+          '0.5 tsp dashi',
+          '1 tsp red pepper (to taste)',
+          'Sesame seeds, lightly toasted',
+        ],
+      },
+    ],
+    steps: [
+      'Pela las zanahorias y los tupinambos. Córtalos en tiras finas de 2-3 mm.',
+      'Tuesta ligeramente las semillas de sésamo en una sartén seca a fuego medio hasta que estén doradas. Resérvalas.',
+      'Calienta 1 cucharada de aceite de sésamo en una sartén a fuego fuerte. Añade la zanahoria y el tupinambo y saltea 2-3 minutos.',
+      'Añade 50 ml de agua, 1 cucharada de azúcar, 1 cucharada de salsa de soja, 0,5 cucharadita de dashi y 1 cucharadita de pimienta roja.',
+      'Cocina hasta que el líquido se reduzca casi por completo. Sirve y espolvorea con las semillas de sésamo tostadas.',
+    ],
+    stepsEn: [
+      'Peel the carrots and Jerusalem artichokes. Cut into thin strips, 2-3 mm wide.',
+      'Lightly toast the sesame seeds in a dry pan over medium heat until golden. Set aside.',
+      'Heat 1 tbsp sesame oil in a pan over high heat. Add the carrot and Jerusalem artichoke strips and stir-fry for 2-3 minutes.',
+      'Add 50 ml water, 1 tbsp sugar, 1 tbsp soy sauce, 0.5 tsp dashi and 1 tsp red pepper.',
+      'Cook until the liquid has almost completely reduced. Serve and sprinkle with the toasted sesame seeds.',
+    ],
+    tip: {
+      text: 'Sorprendentemente fácil y delicioso. Nos lo prepararon Kumiko y su amigo cocinero japonés que estaba de visita en Finlandia, y nunca olvidé lo bueno que estaba. Funciona genial como aperitivo o como acompañamiento mientras comes otra cosa. El tupinambo es fundamental para el sabor. En Japón se hace también con konjac (konnyaku), pero es difícil de encontrar en Europa.',
+      textEn: 'Surprisingly easy and delicious. Kumiko and her Japanese chef friend, who was visiting Finland, made it for us and I never forgot how good it was. Works great as an appetizer or as a side while eating something else. Jerusalem artichoke is key to the flavour. In Japan they also make it with konjac (konnyaku), but it is hard to find in Europe.',
+    },
+  },
 ];
