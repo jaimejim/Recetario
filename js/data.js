@@ -2998,6 +2998,10 @@ const RECIPES = [
       'Place them in a saucepan with the oil, salt, pepper and the chopped half onion. Add a little hot water.',
       'Cover and cook over low heat for another hour, stirring occasionally so they do not stick to the bottom.',
     ],
+    tip: {
+      text: '"A la casera" viene del italiano "casalinga". Antaño las lentejas se cocinaban durante muchas horas por el tipo de embalaje. Hoy en día dos horas puede ser demasiado, así que se puede reducir el tiempo de cocción.',
+      textEn: '"A la casera" comes from the Italian "casalinga" (homestyle). Lentils used to be cooked for many hours due to the type of packaging. Nowadays two hours may be too long, so cooking time can be reduced.',
+    },
   },
 
   {
