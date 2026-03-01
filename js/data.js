@@ -1399,7 +1399,7 @@ const RECIPES = [
     ],
     tip: {
       text: 'Puedes pasarla por un tamiz antes de servir pero es innecesario en mi opinión, ya que no quedan fibras que tamizar.',
-      author: 'Truco de Jaime',
+      author: 'Truco de Jaime Sr.',
     },
     ingredientGroupsEn: [
       {
@@ -1425,7 +1425,7 @@ const RECIPES = [
     ],
     tipEn: {
       text: 'You can pass it through a sieve before serving but in my opinion it is unnecessary, as there are no fibres left to strain.',
-      author: 'Jaime\'s tip',
+      author: 'Jaime Sr.\'s tip',
     },
   },
 
@@ -2237,7 +2237,7 @@ const RECIPES = [
     ],
     tip: {
       text: 'La receta más sencilla del libro. El tiempo exacto de cocción depende del tamaño del huevo y de si empieza en agua fría o caliente. Experimenta hasta dar con tu punto preferido.',
-      author: 'Truco de Jaime',
+      author: 'Truco de Jaime Sr.',
     },
     ingredientGroupsEn: [
       {
@@ -2254,7 +2254,7 @@ const RECIPES = [
     ],
     tipEn: {
       text: 'The simplest recipe in the book. The exact cooking time depends on the size of the egg and whether it starts in cold or hot water. Experiment until you find your preferred doneness.',
-      author: 'Jaime\'s tip',
+      author: 'Jaime Sr.\'s tip',
     },
   },
 
@@ -3430,11 +3430,11 @@ const RECIPES = [
     ],
     tip: {
       text: 'A mi padre le encantaba ponerle guindilla y los hacíamos en la chimenea, con las brasas que quedaban, a fuego muy lento durante muchas horas. Con media guindilla basta para una cantidad enorme de judiones. Si te pasas y echas tres o cuatro, harás sufrir de placer a los comensales: estará buenísimo pero tendrán que beber mucha agua.',
-      author: 'Jaime Nonno',
+      author: 'Jaime Sr.',
     },
     tipEn: {
       text: 'My father loved adding chilli pepper, and we used to cook them by the fireplace over the remaining embers, very slowly for many hours. Half a chilli is enough for a huge amount of beans. If you go overboard and throw in three or four, your guests will suffer from pleasure: it will be delicious but they will need a lot of water.',
-      author: 'Jaime Nonno',
+      author: 'Jaime Sr.',
     },
   },
 
