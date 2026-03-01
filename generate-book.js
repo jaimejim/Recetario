@@ -32,6 +32,8 @@ const FONT_MONO_BOLD = '/System/Library/Fonts/Supplemental/Courier New Bold.ttf'
 const FONT_MONO_ITALIC = '/System/Library/Fonts/Supplemental/Courier New Italic.ttf';
 
 const doc = new PDFDocument({ size: [W, H], margins: M, bufferPages: true });
+// Tell PDF viewers to display two-up with first page as cover
+doc._root.data.PageLayout = 'TwoPageLeft';
 doc.pipe(fs.createWriteStream('recetario.pdf'));
 
 // Paint cream background on every page
