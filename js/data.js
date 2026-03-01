@@ -2878,8 +2878,8 @@ const RECIPES = [
     id: 'lasagne-ragu',
     title: 'Lasaña al Ragú',
     titleEn: 'Lasagne al Ragù',
-    subtitle: 'Lasaña con ragú de carne de ternera cocinado 3 horas, bechamel casera y parmesano. La receta de Max Mariola.',
-    subtitleEn: 'Lasagne with a 3-hour beef ragù, homemade béchamel and Parmesan. Max Mariola\'s recipe.',
+    subtitle: 'Lasaña con ragú de carne de ternera cocinado 3 horas, bechamel casera y parmesano.',
+    subtitleEn: 'Lasagne with a 3-hour beef ragù, homemade béchamel and Parmesan.',
     servings: 6,
     category: 'pasta',
     ingredientGroups: [
