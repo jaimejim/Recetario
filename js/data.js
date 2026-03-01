@@ -3667,11 +3667,11 @@ const RECIPES = [
       'Squeeze the orange peel over the glass to release the oils, run it along the rim and drop it in as garnish.',
     ],
     tip: {
-      text: 'Mi suegro americano me lo preparó y me encantó. El cubo de hielo grande es clave: se derrite despacio y no agua el cóctel. No soy ningún experto, pero a mí me gusta con Hudson Baby Bourbon.',
+      text: 'Wes, mi suegro americano, me lo preparó y me encantó. El cubo de hielo grande es clave: se derrite despacio y no agua el cóctel. No soy ningún experto, pero a mí me gusta con Hudson Baby Bourbon.',
       author: 'Truco de Jaime',
     },
     tipEn: {
-      text: 'My American father-in-law made it for me and I loved it. The big ice cube is key: it melts slowly and does not water down the cocktail. I am no expert, but I like it with Hudson Baby Bourbon.',
+      text: 'Wes, my American father-in-law, made it for me and I loved it. The big ice cube is key: it melts slowly and does not water down the cocktail. I am no expert, but I like it with Hudson Baby Bourbon.',
       author: 'Jaime\'s tip',
     },
   },
