@@ -189,9 +189,8 @@ function renderRecipe(r, lang) {
   const headerExtra = gapSpace / gapCount;
   const stepsExtra = gapSpace / gapCount;
   const tipExtra = tipData ? gapSpace / gapCount : 0;
-  // Push remaining space to top to vertically center content
-  const topPad = (extraSpace - gapSpace) / 2;
-  doc.y = M.top + topPad;
+  // Push remaining space to bottom (top-aligned, consistent title position)
+  doc.y = M.top;
 
   // --- Pass 2: render ---
 
