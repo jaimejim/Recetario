@@ -332,13 +332,55 @@ function renderRecipe(r, lang) {
 // Page 1: blank
 doc.addPage();
 
-// Page 2: half title
-doc.moveDown(10);
+// Page 2: half title with laurel illustration and stamp
+doc.moveDown(6);
+
+// Laurel branch illustration (simple woodcut style)
+const cx = W / 2;
+const ly = doc.y + 20;
+doc.save();
+doc.lineWidth(1.2).strokeColor(INK).fillColor(INK);
+
+// Left branch
+[-1, 1].forEach(side => {
+  for (let i = 0; i < 5; i++) {
+    const angle = (0.3 + i * 0.22) * side;
+    const dist = 18 + i * 10;
+    const lx = cx + Math.sin(angle) * dist;
+    const leafY = ly + Math.cos(angle) * dist * 0.6;
+    const leafAngle = angle + (side * 0.4);
+    doc.save();
+    doc.translate(lx, leafY);
+    doc.rotate(leafAngle * (180 / Math.PI));
+    // Leaf shape
+    doc.path(`M 0,-6 Q 3,-3 3,0 Q 3,3 0,6 Q -3,3 -3,0 Q -3,-3 0,-6`)
+      .fillOpacity(0.85).fill(INK);
+    doc.restore();
+  }
+  // Stem
+  doc.path(`M ${cx},${ly} Q ${cx + side * 8},${ly + 30} ${cx + side * 15},${ly + 55}`)
+    .lineWidth(1).stroke();
+});
+
+doc.restore();
+doc.y = ly + 70;
+
+// Title
 doc.font(FONT_BODY).fontSize(28).fillColor(INK)
   .text('Recetario', { align: 'center' });
 doc.moveDown(0.6);
 doc.font(FONT_BODY).fontSize(11).fillColor(INK_MID)
   .text('Recuerdos y sabores de los Jiménez-Torno', { align: 'center' });
+
+// Stamp: oval with initials, bottom right
+const stampX = W - M.right - 50;
+const stampY = H - M.bottom - 40;
+doc.save();
+doc.lineWidth(1).strokeColor(INK_MID);
+doc.ellipse(stampX, stampY, 28, 18).stroke();
+doc.font(FONT_MONO).fontSize(7).fillColor(INK_MID)
+  .text('J . J .', stampX - 16, stampY - 4, { width: 32, align: 'center', lineBreak: false, characterSpacing: 1 });
+doc.restore();
 
 // Page 3: blank
 doc.addPage();
@@ -354,6 +396,9 @@ doc.text('y sed \u00fatiles en la cocina.', { align: 'left' });
 doc.moveDown(1.5);
 doc.font(FONT_BODY).fontSize(9).fillColor(INK_LIGHT)
   .text('Pap\u00e1', { align: 'right' });
+doc.moveDown(2);
+doc.font(FONT_MONO).fontSize(6.5).fillColor(INK_LIGHT)
+  .text('Helsinki, 2026', { align: 'right' });
 
 // Page 5: blank
 doc.addPage();
