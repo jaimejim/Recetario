@@ -3200,8 +3200,8 @@ const RECIPES = [
       'To serve, tear the rocket by hand, top with the fruit slices, rinsed chickpeas, grapes and Roquefort cut into cubes.',
       'Dress with the sauce, garnish with a slice of grapefruit and, optionally, a few drops of balsamic and fig glaze on top.',
     ],
-    tip: { text: 'El sumac y las uvas no solo aportan sabor, también le dan un color precioso al plato. El glaseado de balsámico e higo es opcional y se puede sustituir por otras reducciones o glaseados. Sin los garbanzos queda una versión mucho más ligera y está igual de buena.', author: 'Jaime' },
-    tipEn: { text: 'The sumac and grapes add not just flavor but also a beautiful color to the dish. The balsamic and fig glaze is optional and can be replaced with other reductions or glazes. Without the chickpeas it makes a much lighter version of the salad and is just as delicious.', author: 'Jaime' },
+    tip: { text: 'El sumac y las uvas no solo aportan sabor, también le dan un color precioso al plato. El glaseado de balsámico e higo es opcional y se puede sustituir por otras reducciones o glaseados. Sin los garbanzos queda una versión mucho más ligera y está igual de buena.', author: 'Truco de Jaime' },
+    tipEn: { text: 'The sumac and grapes add not just flavor but also a beautiful color to the dish. The balsamic and fig glaze is optional and can be replaced with other reductions or glazes. Without the chickpeas it makes a much lighter version of the salad and is just as delicious.', author: 'Jaime\'s tip' },
   },
 
   {
