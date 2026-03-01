@@ -375,9 +375,9 @@ catOrder.forEach(cat => {
 });
 
 // === RECIPES ===
-// Ensure first recipe starts on a left (even) page: ES left, EN right
+// Ensure first recipe ES lands on an odd page (left in TwoPageLeft: [0],[1,2],[3,4]...)
 const pagesBefore = doc.bufferedPageRange().count;
-if (pagesBefore % 2 !== 0) doc.addPage(); // blank recto so next addPage is verso
+if (pagesBefore % 2 === 0) doc.addPage();
 
 catOrder.forEach(cat => {
   const catRecipes = recipes.filter(r => r.category === cat);
