@@ -2972,6 +2972,14 @@ const RECIPES = [
       'Assemble the lasagne: spread a spoonful of béchamel on the bottom of an oven dish. Cover with pasta sheets, ragù, béchamel and grated Parmesan. Repeat the layers until you run out of ingredients.',
       'On the last layer, dot with a few pieces of butter. Bake at 180 °C for about 30 minutes.',
     ],
+    tip: {
+      text: 'Nuestra amiga Laura hace una variación añadiendo romero a la salsa de tomate del ragú y media cucharada o una cucharada de azúcar (según el tomate) para suavizarlo. Realza mucho el sabor de la lasaña.',
+      author: 'Truco de Laura',
+    },
+    tipEn: {
+      text: 'Our friend Laura makes a variation by adding rosemary to the tomato sauce for the ragù and half to one tablespoon of sugar (depending on the tomato) to soften it. It really enhances the flavour of the lasagne.',
+      author: 'Laura\'s tip',
+    },
   },
 
   {
