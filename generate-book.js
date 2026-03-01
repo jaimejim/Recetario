@@ -31,21 +31,23 @@ const FONT_MONO = '/System/Library/Fonts/Supplemental/Courier New.ttf';
 const FONT_MONO_BOLD = '/System/Library/Fonts/Supplemental/Courier New Bold.ttf';
 const FONT_MONO_ITALIC = '/System/Library/Fonts/Supplemental/Courier New Italic.ttf';
 
-const doc = new PDFDocument({ size: [W, H], margins: M, bufferPages: true });
-// Tell PDF viewers to display two-up with first page as cover
+const doc = new PDFDocument({ size: [W, H], margins: M, autoFirstPage: false });
 doc._root.data.PageLayout = 'TwoPageLeft';
 doc.pipe(fs.createWriteStream('recetario.pdf'));
 
-// Paint cream background on every page
+let pageNum = 0;
+
 function paintBg() {
   doc.save();
   doc.rect(0, 0, W, H).fill(CREAM);
   doc.restore();
   doc.y = M.top;
   doc.x = M.left;
+  pageNum++;
 }
-paintBg(); // first page
+
 doc.on('pageAdded', paintBg);
+doc.addPage();
 
 // Fractions render small in Special Elite. We render them at 9pt while keeping surrounding text at 7pt.
 const FRAC_RE = /([½⅓⅔¼¾⅕⅛⅜⅝⅞])/;
@@ -72,6 +74,17 @@ function writeLine(str, x, y, opts, baseSize) {
   doc.fontSize(baseSize);
   // Force y to base-size position to prevent gaps
   doc.y = y + baseHeight;
+}
+
+function writePageNum() {
+  if (pageNum > 5) {
+    doc.save();
+    doc.font(FONT_MONO).fontSize(6).fillColor(INK_LIGHT);
+    const numStr = `${pageNum - 5}`;
+    const numW = doc.widthOfString(numStr);
+    doc.text(numStr, M.left + (CW - numW) / 2, H - M.bottom + 15, { lineBreak: false });
+    doc.restore();
+  }
 }
 
 function ensureSpace(needed) {
@@ -310,6 +323,8 @@ function renderRecipe(r, lang) {
       .lineWidth(1.5).strokeColor(ACCENT).stroke();
     doc.y = tipBottom + 4;
   }
+
+  writePageNum();
 }
 
 // === FRONT MATTER ===
@@ -377,8 +392,7 @@ catOrder.forEach(cat => {
 
 // === RECIPES ===
 // Ensure first recipe ES lands on an odd page (left in TwoPageLeft: [0],[1,2],[3,4]...)
-const pagesBefore = doc.bufferedPageRange().count;
-if (pagesBefore % 2 === 0) doc.addPage();
+if (pageNum % 2 === 0) doc.addPage();
 
 catOrder.forEach(cat => {
   const catRecipes = recipes.filter(r => r.category === cat);
@@ -405,21 +419,12 @@ for (let i = 0; i < 4; i++) {
     doc.moveTo(M.left, y).lineTo(W - M.right, y).lineWidth(0.2).strokeColor(RULE_LIGHT).stroke();
     y += 22;
   }
+  writePageNum();
+  if (i === 3) {
+    doc.font(FONT_MONO).fontSize(6).fillColor(INK_LIGHT)
+      .text('Familia Jiménez-Torno\u2003|\u20032018\u20132026', M.left, H - M.bottom + 25, { width: CW, align: 'center', lineBreak: false });
+  }
 }
-
-// === PAGE NUMBERS ===
-const range = doc.bufferedPageRange();
-for (let i = range.start; i < range.start + range.count; i++) {
-  doc.switchToPage(i);
-  if (i < 5) continue;
-  doc.font(FONT_MONO).fontSize(6).fillColor(INK_LIGHT)
-    .text(`${i - 4}`, M.left, H - M.bottom + 15, { width: CW, align: 'center' });
-}
-
-// === FOOTER on last content page ===
-doc.switchToPage(range.start + range.count - 1);
-doc.font(FONT_MONO).fontSize(6).fillColor(INK_LIGHT)
-  .text('Familia Jiménez-Torno\u2003|\u20032018\u20132026', M.left, H - M.bottom + 25, { width: CW, align: 'center' });
 
 doc.end();
-console.log(`✓ Generated recetario.pdf (${recipes.length} recipes, ${range.count} pages)`);
+console.log(`✓ Generated recetario.pdf (${recipes.length} recipes, ${pageNum} pages)`);
