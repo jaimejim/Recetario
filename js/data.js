@@ -2835,14 +2835,18 @@ const RECIPES = [
     ingredientGroups: [
       {
         name: 'Ingredientes',
-        nameEn: 'Ingredients',
         items: [
           '400 g de espaguetis',
           '150-200 g de guanciale',
           'Pecorino romano rallado (cantidad generosa)',
           'Sal y pimienta negra',
         ],
-        itemsEn: [
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
           '400 g spaghetti',
           '150-200 g guanciale',
           'Grated pecorino romano (generous amount)',
@@ -2881,7 +2885,6 @@ const RECIPES = [
     ingredientGroups: [
       {
         name: 'Ragú',
-        nameEn: 'Ragù',
         items: [
           '1 kg de carne de ternera (corte piccione), cortada en dados',
           '2 ramas de apio',
@@ -2896,7 +2899,28 @@ const RECIPES = [
           'Aceite de oliva',
           'Sal y pimienta negra',
         ],
-        itemsEn: [
+      },
+      {
+        name: 'Bechamel',
+        items: [
+          '1 l de leche entera fría',
+          '80 g de harina',
+          '80 g de mantequilla',
+          'Nuez moscada',
+          'Sal',
+        ],
+      },
+      {
+        name: 'Montaje',
+        items: [
+          '1 paquete de 250 g de láminas de lasaña fresca',
+        ],
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ragù',
+        items: [
           '1 kg beef (piccione cut), diced',
           '2 celery stalks',
           '1 carrot',
@@ -2912,16 +2936,8 @@ const RECIPES = [
         ],
       },
       {
-        name: 'Bechamel',
-        nameEn: 'Béchamel',
+        name: 'Béchamel',
         items: [
-          '1 l de leche entera fría',
-          '80 g de harina',
-          '80 g de mantequilla',
-          'Nuez moscada',
-          'Sal',
-        ],
-        itemsEn: [
           '1 l cold whole milk',
           '80 g flour',
           '80 g butter',
@@ -2930,12 +2946,8 @@ const RECIPES = [
         ],
       },
       {
-        name: 'Montaje',
-        nameEn: 'Assembly',
+        name: 'Assembly',
         items: [
-          '1 paquete de 250 g de láminas de lasaña fresca',
-        ],
-        itemsEn: [
           '1 pack of 250 g fresh lasagne sheets',
         ],
       },
@@ -3021,7 +3033,6 @@ const RECIPES = [
     ingredientGroups: [
       {
         name: 'Ingredientes',
-        nameEn: 'Ingredients',
         items: [
           '800 g de lentejas',
           '2 cebollas',
@@ -3034,7 +3045,12 @@ const RECIPES = [
           'Vinagre de vino blanco',
           'Sal',
         ],
-        itemsEn: [
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
           '800 g lentils',
           '2 onions',
           '300 g datterini (or cherry) tomatoes',
@@ -3075,7 +3091,6 @@ const RECIPES = [
     ingredientGroups: [
       {
         name: 'Ingredientes',
-        nameEn: 'Ingredients',
         items: [
           '1 kg de tomates maduros de ensalada',
           '2 pepinos',
@@ -3085,7 +3100,12 @@ const RECIPES = [
           'Tomillo fresco',
           'Albahaca fresca',
         ],
-        itemsEn: [
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
           '1 kg ripe salad tomatoes',
           '2 cucumbers',
           '1 honeydew melon',
@@ -3125,7 +3145,6 @@ const RECIPES = [
     ingredientGroups: [
       {
         name: 'Ingredientes',
-        nameEn: 'Ingredients',
         items: [
           '2 peras Williams',
           '1 manzana',
@@ -3138,7 +3157,12 @@ const RECIPES = [
           'Aceite de oliva virgen extra',
           'Sal',
         ],
-        itemsEn: [
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
           '2 Williams pears',
           '1 apple',
           '170 g Roquefort',
@@ -3177,14 +3201,18 @@ const RECIPES = [
     ingredientGroups: [
       {
         name: 'Ingredientes',
-        nameEn: 'Ingredients',
         items: [
           '150 ml de zumo de zanahoria',
           '100 ml de zumo de manzana',
           '2 plátanos',
           '500 ml de yogur natural',
         ],
-        itemsEn: [
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
           '150 ml carrot juice',
           '100 ml apple juice',
           '2 bananas',
@@ -3213,14 +3241,18 @@ const RECIPES = [
     ingredientGroups: [
       {
         name: 'Ingredientes',
-        nameEn: 'Ingredients',
         items: [
           '2 kiwis',
           '½ melón Galia',
           '200 ml de yogur de melón',
           '6-8 cubitos de zumo de manzana congelado',
         ],
-        itemsEn: [
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
           '2 kiwi fruits',
           '½ a Galia melon',
           '200 ml melon yoghurt',
@@ -3249,7 +3281,6 @@ const RECIPES = [
     ingredientGroups: [
       {
         name: 'Ingredientes',
-        nameEn: 'Ingredients',
         items: [
           '200 ml de moras',
           '200 ml de grosellas rojas',
@@ -3258,7 +3289,12 @@ const RECIPES = [
           '1 cucharada de azúcar',
           '500 ml de yogur natural',
         ],
-        itemsEn: [
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
           '200 ml blackberries',
           '200 ml redcurrants',
           '200 ml blueberries',
@@ -3291,7 +3327,6 @@ const RECIPES = [
     ingredientGroups: [
       {
         name: 'Ingredientes',
-        nameEn: 'Ingredients',
         items: [
           '1 plátano en rodajas, preferiblemente congelado',
           'Zumo de 1 naranja',
@@ -3300,7 +3335,12 @@ const RECIPES = [
           '2 g de guindilla (un trocito pequeño)',
           '2 hojas de melisa fresca',
         ],
-        itemsEn: [
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
           '1 banana, sliced, preferably frozen',
           'The juice of 1 orange',
           '1 tbsp honey',
@@ -3331,7 +3371,6 @@ const RECIPES = [
     ingredientGroups: [
       {
         name: 'Ingredientes',
-        nameEn: 'Ingredients',
         items: [
           '500 g de judiones de la Granja',
           '1 oreja de cerdo',
@@ -3348,7 +3387,12 @@ const RECIPES = [
           'Sal al gusto',
           '1 cucharadita de maicena (opcional)',
         ],
-        itemsEn: [
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
           '500 g La Granja butter beans',
           '1 pig ear',
           '2 fresh pork shanks',
