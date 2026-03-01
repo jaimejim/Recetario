@@ -3429,11 +3429,11 @@ const RECIPES = [
       'Chop the chorizo, ear and meat. Serve hot.',
     ],
     tip: {
-      text: 'Si los dejas reposar 24 horas están aún más ricos. Los judiones de la Granja se cultivan en La Granja de San Ildefonso, Segovia.',
+      text: 'Si los dejas reposar 24 horas están aún más ricos. Los judiones de la Granja se cultivan en La Granja de San Ildefonso, Segovia. A mi padre le encantaba ponerle guindilla y los hacíamos en la chimenea, con las brasas que quedaban, a fuego muy lento durante muchas horas. Con media guindilla basta para una cantidad enorme de judiones. Si te pasas y echas tres o cuatro, harás sufrir de placer a los comensales: estará buenísimo pero tendrán que beber mucha agua.',
       author: 'Julia y sus recetas',
     },
     tipEn: {
-      text: 'If you let them rest for 24 hours they taste even better. La Granja beans are grown in La Granja de San Ildefonso, Segovia.',
+      text: 'If you let them rest for 24 hours they taste even better. La Granja beans are grown in La Granja de San Ildefonso, Segovia. My father loved adding chilli pepper, and we used to cook them by the fireplace over the remaining embers, very slowly for many hours. Half a chilli is enough for a huge amount of beans. If you go overboard and throw in three or four, your guests will suffer from pleasure: it will be delicious but they will need a lot of water.',
       author: 'Julia y sus recetas',
     },
   },
