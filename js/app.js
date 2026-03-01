@@ -21,7 +21,7 @@
       sectionSteps:      'Elaboración',
       servings:          n => `${n} persona${n !== 1 ? 's' : ''}`,
       incomplete:        'Esta receta se añadirá próximamente al recetario.',
-      footer:            'Familia Jiménez-Torno \u00b7 2018\u20132026',
+      footer:            'Familia Jiménez-Torno\u2003|\u20032018\u20132026',
       all:               'Todas',
       categories: {
         aperitivos: 'Aperitivos',
@@ -44,7 +44,7 @@
       sectionSteps:      'Method',
       servings:          n => `${n} serving${n !== 1 ? 's' : ''}`,
       incomplete:        'This recipe will be added to the book soon.',
-      footer:            'Jiménez-Torno Family \u00b7 2018\u20132026',
+      footer:            'Jiménez-Torno Family\u2003|\u20032018\u20132026',
       all:               'All',
       categories: {
         aperitivos: 'Starters',
