@@ -99,35 +99,121 @@ function renderRecipe(r, lang) {
   const servingsLabel = lang === 'en'
     ? `${r.servings} serving${r.servings !== 1 ? 's' : ''}`
     : `${r.servings} persona${r.servings !== 1 ? 's' : ''}`;
-
-  // Category label - more breathing room
   const catLabel = lang === 'en'
     ? { aperitivos: 'Starters', pasta: 'Pasta', pescados: 'Fish', carnes: 'Meat', arroces: 'Rice', sopas: 'Soups', verduras: 'Vegetables', basicos: 'Basics', bebidas: 'Drinks' }[r.category]
     : categories[r.category];
+  const ingLabel = lang === 'en' ? 'INGREDIENTS' : 'INGREDIENTES';
+  const stepsLabel = lang === 'en' ? 'METHOD' : 'ELABORACIÓN';
+
+  const PAGE_H = H - M.top - M.bottom;
+
+  // --- Pass 1: measure content height at base sizes ---
+  function measureHeight(s) {
+    let h = 0;
+    const bh = (text, font, size, w) => {
+      doc.font(font).fontSize(size);
+      return doc.heightOfString(text, { width: w || CW });
+    };
+
+    // Header: category + title + subtitle + servings + gaps + rule
+    h += bh(catLabel.toUpperCase(), FONT_MONO, 6, CW) + 4;
+    h += bh(title, FONT_BODY, 14 * s, CW) + 2;
+    h += bh(subtitle, FONT_BODY, 7.5 * s, CW) + 2;
+    h += bh(servingsLabel, FONT_MONO, 6, CW) + 8 + 6; // gap to rule + rule+gap
+
+    // Ingredients label + rule
+    h += 14;
+
+    if (groups.length >= 3) {
+      const colCount = groups.length;
+      const colGap = 8;
+      const colW = (CW - colGap * (colCount - 1)) / colCount;
+      const colHeights = groups.map(g => {
+        let ch = 0;
+        if (g.name && g.name !== 'Ingredientes' && g.name !== 'Ingredients') ch += 12;
+        g.items.forEach(item => { ch += Math.max(9, bh(item, FONT_BODY, 6.5 * s, colW - 10)); });
+        return ch;
+      });
+      h += Math.max(...colHeights) + 4;
+    } else {
+      groups.forEach((g, gi) => {
+        if (g.name && g.name !== 'Ingredientes' && g.name !== 'Ingredients') {
+          h += (gi > 0 ? 4 : 0) + 10;
+        }
+        g.items.forEach(item => { h += Math.max(9, bh(item, FONT_BODY, 7.5 * s, CW - 14)); });
+        h += 1;
+      });
+    }
+
+    h += 6; // gap before steps
+
+    // Steps label + rule
+    h += 14;
+
+    steps.forEach((step, i) => {
+      h += Math.max(12, bh(step, FONT_BODY, 7.5 * s, CW - 16)) + 2;
+      if (i < steps.length - 1) h += 4;
+    });
+
+    // Tip
+    if (tipData && tipData.text) {
+      h += 8;
+      h += bh(tipData.text, FONT_BODY, 6.5 * s, CW - 16);
+      if (tipData.author) h += 10;
+      h += 6;
+    }
+
+    return h;
+  }
+
+  // Find scale that fits (min 0.75 to keep text readable)
+  let scale = 1.0;
+  let contentH = measureHeight(scale);
+  if (contentH > PAGE_H) {
+    let lo = 0.75, hi = 1.0;
+    for (let i = 0; i < 10; i++) {
+      const mid = (lo + hi) / 2;
+      if (measureHeight(mid) > PAGE_H) hi = mid; else lo = mid;
+    }
+    scale = lo;
+    contentH = measureHeight(scale);
+    console.log(`  ⚠ ${r.id} (${lang}): scaled to ${(scale*100).toFixed(0)}%`);
+  }
+
+  const S = scale; // shorthand
+  const extraSpace = Math.max(0, PAGE_H - contentH);
+  // Distribute extra space: 40% after header rule, 30% before steps, 30% before tip
+  const headerExtra = extraSpace * 0.4;
+  const stepsExtra = extraSpace * 0.3;
+  const tipExtra = extraSpace * 0.3;
+
+  // --- Pass 2: render ---
+
+  // Category
   doc.font(FONT_MONO).fontSize(6).fillColor(ACCENT)
     .text(catLabel.toUpperCase(), { align: 'center', characterSpacing: 3 });
   doc.moveDown(0.5);
 
-  // Title with servings inline
-  doc.font(FONT_BODY).fontSize(14).fillColor(INK)
+  // Title
+  doc.font(FONT_BODY).fontSize(14 * S).fillColor(INK)
     .text(title, { align: 'center' });
   doc.moveDown(0.15);
+
   // Subtitle
-  doc.font(FONT_BODY).fontSize(7.5).fillColor(INK_MID)
+  doc.font(FONT_BODY).fontSize(7.5 * S).fillColor(INK_MID)
     .text(subtitle, { align: 'center' });
   doc.moveDown(0.15);
 
-  // Servings as pill - hugs subtitle
+  // Servings
   doc.font(FONT_MONO).fontSize(6).fillColor(INK_LIGHT)
     .text(servingsLabel, { align: 'center', characterSpacing: 1 });
   doc.moveDown(0.6);
 
   // Rule
   drawRule(1.5, INK);
-  doc.moveDown(0.5);
+  doc.y += 6 + headerExtra;
 
-  // Section: Ingredients
-  const ingLabel = lang === 'en' ? 'INGREDIENTS' : 'INGREDIENTES';
+  // Ingredients label
   doc.font(FONT_MONO).fontSize(7).fillColor(INK)
     .text(ingLabel, M.left, doc.y, { characterSpacing: 2.5, align: 'left' });
   doc.moveDown(0.2);
@@ -135,23 +221,11 @@ function renderRecipe(r, lang) {
   doc.moveDown(0.45);
 
   if (groups.length >= 3) {
-    // Multi-column layout for recipes with many groups
     const colCount = groups.length;
     const colGap = 8;
     const colW = (CW - colGap * (colCount - 1)) / colCount;
     const startY = doc.y;
-
-    // Measure each column height first
-    const colHeights = groups.map(g => {
-      let h = 0;
-      if (g.name && g.name !== 'Ingredientes' && g.name !== 'Ingredients') {
-        h += 14; // group name height
-      }
-      h += g.items.length * 11; // ~11pt per item
-      return h;
-    });
-    const maxH = Math.max(...colHeights);
-    ensureSpace(maxH + 10);
+    let maxBottom = startY;
 
     groups.forEach((g, gi) => {
       const colX = M.left + gi * (colW + colGap);
@@ -164,15 +238,15 @@ function renderRecipe(r, lang) {
       g.items.forEach(item => {
         doc.font(FONT_MONO).fontSize(4).fillColor(INK_LIGHT).text('\u2022', colX, y + 1);
         doc.font(FONT_BODY).fillColor(INK);
-        writeLine(item, colX + 10, y, { width: colW - 10 }, 6.5);
+        writeLine(item, colX + 10, y, { width: colW - 10 }, 6.5 * S);
         y = Math.max(y + 10, doc.y);
       });
+      if (y > maxBottom) maxBottom = y;
     });
-    doc.y = startY + maxH + 6;
+    doc.y = maxBottom + 6;
   } else {
     groups.forEach((g, gi) => {
       if (g.name && g.name !== 'Ingredientes' && g.name !== 'Ingredients') {
-        ensureSpace(18);
         if (gi > 0) doc.moveDown(0.3);
         drawRule(0.3, RULE_LIGHT);
         doc.moveDown(0.25);
@@ -181,20 +255,18 @@ function renderRecipe(r, lang) {
         doc.moveDown(0.3);
       }
       g.items.forEach(item => {
-        ensureSpace(12);
         const y = doc.y;
         doc.font(FONT_MONO).fontSize(4).fillColor(INK_LIGHT).text('\u2022', M.left + 3, y + 1);
         doc.font(FONT_BODY).fillColor(INK);
-        writeLine(item, M.left + 14, y, { width: CW - 14 }, 7.5);
+        writeLine(item, M.left + 14, y, { width: CW - 14 }, 7.5 * S);
       });
       doc.moveDown(0.15);
     });
   }
 
-  doc.moveDown(0.5);
+  doc.y += 6 + stepsExtra;
 
-  // Section: Steps
-  const stepsLabel = lang === 'en' ? 'METHOD' : 'ELABORACIÓN';
+  // Steps label
   doc.font(FONT_MONO).fontSize(7).fillColor(INK)
     .text(stepsLabel, M.left, doc.y, { characterSpacing: 2.5, align: 'left' });
   doc.moveDown(0.2);
@@ -202,27 +274,24 @@ function renderRecipe(r, lang) {
   doc.moveDown(0.45);
 
   steps.forEach((step, i) => {
-    ensureSpace(20);
     const y = doc.y;
-    doc.font(FONT_MONO).fontSize(7.5).fillColor(ACCENT).text(`${i + 1}.`, M.left, y);
+    doc.font(FONT_MONO).fontSize(7.5 * S).fillColor(ACCENT).text(`${i + 1}.`, M.left, y);
     doc.font(FONT_BODY).fillColor(INK);
-    writeLine(step, M.left + 16, y, { width: CW - 16 }, 7.5);
+    writeLine(step, M.left + 16, y, { width: CW - 16 }, 7.5 * S);
     doc.moveDown(0.2);
-    // Dotted rule between steps
     if (i < steps.length - 1) {
       drawRule(0.3, RULE_LIGHT);
       doc.moveDown(0.25);
     }
   });
 
-  // Tip - left border accent line
+  // Tip
   if (tipData && tipData.text) {
-    doc.moveDown(0.8);
-    ensureSpace(35);
+    doc.y += 8 + tipExtra;
     const tipTop = doc.y;
     const tipLeft = M.left + 8;
     const tipWidth = CW - 16;
-    doc.font(FONT_BODY).fontSize(6.5).fillColor(INK_MID)
+    doc.font(FONT_BODY).fontSize(6.5 * S).fillColor(INK_MID)
       .text(tipData.text, tipLeft, tipTop, { width: tipWidth });
     if (tipData.author) {
       doc.moveDown(0.2);
@@ -230,7 +299,6 @@ function renderRecipe(r, lang) {
         .text(tipData.author, tipLeft, doc.y, { width: tipWidth, align: 'right', characterSpacing: 1.5 });
     }
     const tipBottom = doc.y + 4;
-    // Left accent border
     doc.moveTo(M.left + 2, tipTop - 2).lineTo(M.left + 2, tipBottom)
       .lineWidth(1.5).strokeColor(ACCENT).stroke();
     doc.y = tipBottom + 4;
