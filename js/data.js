@@ -208,8 +208,8 @@ const RECIPES = [
         name: 'Ingredientes',
         items: [
           '1 kg de mejillones (pesados con la concha)',
-          '1/4 de vaso de agua',
-          '1/2 limón (opcional)',
+          '¼ de vaso de agua',
+          '½ limón (opcional)',
           '1 hoja de laurel (opcional)',
         ],
       },
@@ -219,8 +219,8 @@ const RECIPES = [
         name: 'Ingredients',
         items: [
           '1 kg mussels (weighed with shells)',
-          '1/4 glass of water',
-          '1/2 lemon (optional)',
+          '¼ glass of water',
+          '½ lemon (optional)',
           '1 bay leaf (optional)',
         ],
       },

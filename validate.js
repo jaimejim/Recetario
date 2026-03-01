@@ -9,6 +9,7 @@ const recipes = ctx.RECIPES;
 
 const VALID_CATEGORIES = ['aperitivos', 'pasta', 'pescados', 'carnes', 'arroces', 'sopas', 'verduras', 'basicos', 'bebidas'];
 const EM_DASH = /\u2014/;
+const ASCII_FRAC = /\b\d+\/[234]\b/;
 
 let errors = 0;
 const err = msg => { console.error(msg); errors++; };
@@ -59,12 +60,15 @@ recipes.forEach(r => {
   if (r.stepsEn && r.steps && r.stepsEn.length !== r.steps.length)
     err(`[${id}] stepsEn has ${r.stepsEn.length} steps, steps has ${r.steps.length}`);
 
-  // No em dashes in any text field
+  // Collect all text fields
   const texts = [r.title, r.titleEn, r.subtitle, r.subtitleEn, ...(r.steps || []), ...(r.stepsEn || [])];
   if (r.tip) texts.push(r.tip.text);
   if (r.tipEn) texts.push(r.tipEn.text);
+  (r.ingredientGroups || []).forEach(g => texts.push(...(g.items || [])));
+  (r.ingredientGroupsEn || []).forEach(g => texts.push(...(g.items || [])));
   texts.forEach(t => {
     if (t && EM_DASH.test(t)) err(`[${id}] em dash found: "${t.substring(0, 60)}..."`);
+    if (t && ASCII_FRAC.test(t)) err(`[${id}] ASCII fraction found (use ½ ¼ ¾ ⅓ ⅔): "${t.substring(0, 60)}..."`);
   });
 });
 
