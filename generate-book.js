@@ -331,11 +331,11 @@ doc.addPage();
 // Page 4: dedication
 doc.moveDown(10);
 doc.font(FONT_BODY).fontSize(9).fillColor(INK_MID)
-  .text('Para, Giulia, Giacomo y Giovanni,', { align: 'center' });
+  .text('Para, Giulia, Giacomo y Giovanni,', { align: 'left' });
 doc.moveDown(1);
-doc.text('espero que com\u00e1is bien', { align: 'center' });
+doc.text('espero que com\u00e1is bien', { align: 'left' });
 doc.moveDown(0.2);
-doc.text('y siempre se\u00e1is \u00fatiles en la cocina.', { align: 'center' });
+doc.text('y siempre se\u00e1is \u00fatiles en la cocina.', { align: 'left' });
 doc.moveDown(1.5);
 doc.font(FONT_BODY).fontSize(9).fillColor(INK_LIGHT)
   .text('Pap\u00e1', { align: 'right' });
