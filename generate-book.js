@@ -420,6 +420,8 @@ for (let i = range.start; i < range.start + range.count; i++) {
 doc.switchToPage(range.start + range.count - 1);
 doc.font(FONT_MONO).fontSize(6).fillColor(INK_LIGHT)
   .text('Familia Jiménez-Torno\u2003|\u20032018\u20132026', M.left, H - M.bottom + 25, { width: CW, align: 'center' });
+doc.font(FONT_BODY).fontSize(5.5).fillColor(RULE)
+  .text('Gracias a Opus por ayudarme a poner todo junto.', M.left, H - 18, { width: CW, align: 'center' });
 
 doc.end();
 console.log(`✓ Generated recetario.pdf (${recipes.length} recipes, ${range.count} pages)`);
