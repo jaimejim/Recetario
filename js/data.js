@@ -3675,4 +3675,66 @@ const RECIPES = [
       author: 'Jaime\'s tip',
     },
   },
+
+  {
+    id: 'pasta-salsiccia-vino-rosso',
+    title: 'Pasta con Salchicha al Vino Tinto',
+    titleEn: 'Pasta with Sausage in Red Wine',
+    subtitle: 'Pasta con salchicha italiana desmenuzada, cebolla y vino tinto. Pocos ingredientes, mucho sabor.',
+    subtitleEn: 'Pasta with crumbled Italian sausage, onion and red wine. Few ingredients, big flavour.',
+    servings: 2,
+    category: 'pasta',
+    ingredientGroups: [
+      {
+        name: 'Ingredientes',
+        items: [
+          '200 g de pasta (busiate, tagliatelle o pappardelle)',
+          '250 g de salchicha fresca italiana (4 nudos)',
+          '250 ml de vino tinto (que sea bueno)',
+          '1 cebolla roja o blanca',
+          'Aceite de oliva',
+          'Perejil fresco picado',
+          'Pimienta negra',
+          'Queso rallado (parmesano o pecorino)',
+        ],
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '200 g pasta (busiate, tagliatelle or pappardelle)',
+          '250 g fresh Italian sausage (4 links)',
+          '250 ml red wine (use a good one)',
+          '1 red or white onion',
+          'Olive oil',
+          'Fresh chopped parsley',
+          'Black pepper',
+          'Grated cheese (Parmesan or Pecorino)',
+        ],
+      },
+    ],
+    steps: [
+      'Pon un par de cucharadas de aceite en una sartén amplia y añade la cebolla cortada en rodajas finas. Deja que se ablande a fuego bajo.',
+      'Retira la tripa de la salchicha y desmenúzala. Cuando la cebolla esté pochada, añade la salchicha y dórala un par de minutos.',
+      'Cuando la salchicha esté blanca por fuera, añade el vino tinto y el perejil picado. Deja evaporar un par de minutos, tapa y cocina a fuego bajo 10-15 minutos hasta que el vino se reduzca. No añadas sal, la salchicha ya tiene suficiente.',
+      'Cuece la pasta y cuando le falten 2-3 minutos, pásala a la sartén con el sugo. Manteca la pasta en la salsa añadiendo agua de cocción si hace falta.',
+      'Fuera del fuego, añade el queso rallado y mezcla. Sirve con pimienta negra y perejil fresco.',
+    ],
+    stepsEn: [
+      'Add a couple of tablespoons of olive oil to a wide pan and add the thinly sliced onion. Let it soften over low heat.',
+      'Remove the casing from the sausage and crumble it. When the onion is soft, add the sausage and brown for a couple of minutes.',
+      'Once the sausage has turned white, add the red wine and chopped parsley. Let it evaporate for a couple of minutes, then cover and cook over low heat for 10-15 minutes until the wine has reduced. Do not add salt, the sausage has enough.',
+      'Cook the pasta and 2-3 minutes before it is done, transfer it to the pan with the sauce. Toss the pasta in the sauce, adding cooking water if needed.',
+      'Off the heat, add the grated cheese and mix. Serve with black pepper and fresh parsley.',
+    ],
+    tip: {
+      text: 'Sandro, mi suegro italiano, la preparó un día con lo poco que teníamos en casa. A veces la hacemos sin pasta, solo la salchicha al vino, para picar con una cerveza. A mi padre y a mi hijo Giovanni les encanta especialmente. Aunque lleva bastante vino, se evapora del todo y no deja sabor a vino.',
+      author: 'Truco de Jaime',
+    },
+    tipEn: {
+      text: 'Sandro, my Italian father-in-law, made it one day with the few ingredients we had at home. Sometimes we make it without the pasta, just the sausage in wine, for snacking with a beer. My dad and my boy Giovanni particularly love it. Despite using quite a bit of wine, it all evaporates and does not leave a wine taste at all.',
+      author: 'Jaime\'s tip',
+    },
+  },
 ];
