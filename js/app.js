@@ -13,7 +13,7 @@
 
   const STRINGS = {
     es: {
-      subtitle:          'Recuerdos y sabores de los Jiménez',
+      subtitle:          'Recuerdos y sabores de los Jiménez-Torno',
       searchPlaceholder: 'Buscar receta...',
       backLink:          '\u2190 Índice',
       noResults:         'No se encontraron recetas.',
@@ -21,7 +21,7 @@
       sectionSteps:      'Elaboración',
       servings:          n => `${n} persona${n !== 1 ? 's' : ''}`,
       incomplete:        'Esta receta se añadirá próximamente al recetario.',
-      footer:            'Familia Jiménez \u00b7 2018\u20132024',
+      footer:            'Familia Jiménez-Torno \u00b7 2018\u20132026',
       all:               'Todas',
       categories: {
         aperitivos: 'Aperitivos',
@@ -36,7 +36,7 @@
       },
     },
     en: {
-      subtitle:          'Memories and flavours of the Jiménez family',
+      subtitle:          'Memories and flavours of the Jiménez-Torno family',
       searchPlaceholder: 'Search recipe...',
       backLink:          '\u2190 Index',
       noResults:         'No recipes found.',
@@ -44,7 +44,7 @@
       sectionSteps:      'Method',
       servings:          n => `${n} serving${n !== 1 ? 's' : ''}`,
       incomplete:        'This recipe will be added to the book soon.',
-      footer:            'Jiménez Family \u00b7 2018\u20132024',
+      footer:            'Jiménez-Torno Family \u00b7 2018\u20132026',
       all:               'All',
       categories: {
         aperitivos: 'Starters',
@@ -295,7 +295,7 @@
     } else {
       viewRecipe.classList.add('hidden');
       viewList.classList.remove('hidden');
-      document.title = 'Recetario \u00b7 Jiménez Bolonio';
+      document.title = 'Recetario \u00b7 Jiménez-Torno';
     }
   }
 
