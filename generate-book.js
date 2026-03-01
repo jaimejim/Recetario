@@ -182,10 +182,16 @@ function renderRecipe(r, lang) {
 
   const S = scale; // shorthand
   const extraSpace = Math.max(0, PAGE_H - contentH);
-  // Distribute extra space: 40% after header rule, 30% before steps, 30% before tip
-  const headerExtra = extraSpace * 0.4;
-  const stepsExtra = extraSpace * 0.3;
-  const tipExtra = extraSpace * 0.3;
+  // Cap per-gap padding to avoid dead zones on short recipes
+  const maxGap = 20;
+  const gapCount = tipData ? 3 : 2;
+  const gapSpace = Math.min(extraSpace, maxGap * gapCount);
+  const headerExtra = gapSpace / gapCount;
+  const stepsExtra = gapSpace / gapCount;
+  const tipExtra = tipData ? gapSpace / gapCount : 0;
+  // Push remaining space to top to vertically center content
+  const topPad = (extraSpace - gapSpace) / 2;
+  doc.y = M.top + topPad;
 
   // --- Pass 2: render ---
 
