@@ -2973,14 +2973,18 @@ const RECIPES = [
     ingredientGroups: [
       {
         name: 'Ingredientes',
-        nameEn: 'Ingredients',
         items: [
           '1 kg de lentejas secas',
           '1 vaso de aceite de oliva virgen extra',
           'Sal y pimienta',
           'Media cebolla',
         ],
-        itemsEn: [
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
           '1 kg dried lentils',
           '1 glass extra virgin olive oil',
           'Salt and pepper',
@@ -3000,7 +3004,9 @@ const RECIPES = [
     ],
     tip: {
       text: '"A la casera" viene del italiano "casalinga". Antaño las lentejas se cocinaban durante muchas horas por el tipo de embalaje. Hoy en día dos horas puede ser demasiado, así que se puede reducir el tiempo de cocción.',
-      textEn: '"A la casera" comes from the Italian "casalinga" (homestyle). Lentils used to be cooked for many hours due to the type of packaging. Nowadays two hours may be too long, so cooking time can be reduced.',
+    },
+    tipEn: {
+      text: '"A la casera" comes from the Italian "casalinga" (homestyle). Lentils used to be cooked for many hours due to the type of packaging. Nowadays two hours may be too long, so cooking time can be reduced.',
     },
   },
 
@@ -3449,19 +3455,13 @@ const RECIPES = [
     ingredientGroups: [
       {
         name: 'Ingredientes principales',
-        nameEn: 'Main Ingredients',
         items: [
           '2 zanahorias',
           '2 tupinambos (alcachofas de Jerusalén)',
         ],
-        itemsEn: [
-          '2 carrots',
-          '2 Jerusalem artichokes (sunchokes)',
-        ],
       },
       {
         name: 'Salsa kinpira',
-        nameEn: 'Kinpira Sauce',
         items: [
           '1 cucharada de aceite de sésamo',
           '50 ml de agua',
@@ -3471,7 +3471,19 @@ const RECIPES = [
           '1 cucharadita de pimienta roja (al gusto)',
           'Semillas de sésamo, ligeramente tostadas',
         ],
-        itemsEn: [
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Main Ingredients',
+        items: [
+          '2 carrots',
+          '2 Jerusalem artichokes (sunchokes)',
+        ],
+      },
+      {
+        name: 'Kinpira Sauce',
+        items: [
           '1 tbsp sesame oil',
           '50 ml water',
           '1 tbsp sugar',
@@ -3498,7 +3510,9 @@ const RECIPES = [
     ],
     tip: {
       text: 'Sorprendentemente fácil y delicioso. Nos lo prepararon Kumiko y su amigo cocinero japonés que estaba de visita en Finlandia, y nunca olvidé lo bueno que estaba. Funciona genial como aperitivo o como acompañamiento mientras comes otra cosa. El tupinambo es fundamental para el sabor. En Japón se hace también con konjac (konnyaku), pero es difícil de encontrar en Europa.',
-      textEn: 'Surprisingly easy and delicious. Kumiko and her Japanese chef friend, who was visiting Finland, made it for us and I never forgot how good it was. Works great as an appetizer or as a side while eating something else. Jerusalem artichoke is key to the flavour. In Japan they also make it with konjac (konnyaku), but it is hard to find in Europe.',
+    },
+    tipEn: {
+      text: 'Surprisingly easy and delicious. Kumiko and her Japanese chef friend, who was visiting Finland, made it for us and I never forgot how good it was. Works great as an appetizer or as a side while eating something else. Jerusalem artichoke is key to the flavour. In Japan they also make it with konjac (konnyaku), but it is hard to find in Europe.',
     },
   },
 ];
