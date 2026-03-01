@@ -53,7 +53,7 @@ function writeLine(str, x, y, opts, baseSize) {
     return;
   }
   // Render with larger fractions, then force y to what base size would have been
-  const fracSize = baseSize + 2;
+  const fracSize = baseSize + 1.5;
   // Measure height at base size
   const baseHeight = doc.font(FONT_BODY).fontSize(baseSize).heightOfString(str, { width: opts.width || CW });
   // Render segments
@@ -119,7 +119,7 @@ function renderRecipe(r, lang) {
 
   // Servings as pill - hugs subtitle
   doc.font(FONT_MONO).fontSize(6).fillColor(INK_LIGHT)
-    .text(`[ ${servingsLabel} ]`, { align: 'center', characterSpacing: 1 });
+    .text(servingsLabel, { align: 'center', characterSpacing: 1 });
   doc.moveDown(0.6);
 
   // Rule
@@ -129,7 +129,7 @@ function renderRecipe(r, lang) {
   // Section: Ingredients
   const ingLabel = lang === 'en' ? 'INGREDIENTS' : 'INGREDIENTES';
   doc.font(FONT_MONO).fontSize(7).fillColor(INK)
-    .text(ingLabel, { characterSpacing: 2.5 });
+    .text(ingLabel, M.left, doc.y, { characterSpacing: 2.5, align: 'left' });
   doc.moveDown(0.2);
   drawRule(0.5, INK);
   doc.moveDown(0.45);
@@ -185,7 +185,7 @@ function renderRecipe(r, lang) {
         const y = doc.y;
         doc.font(FONT_MONO).fontSize(4).fillColor(INK_LIGHT).text('\u2022', M.left + 3, y + 1);
         doc.font(FONT_BODY).fillColor(INK);
-        writeLine(item, M.left + 14, y, { width: CW - 14 }, 7);
+        writeLine(item, M.left + 14, y, { width: CW - 14 }, 7.5);
       });
       doc.moveDown(0.15);
     });
@@ -196,7 +196,7 @@ function renderRecipe(r, lang) {
   // Section: Steps
   const stepsLabel = lang === 'en' ? 'METHOD' : 'ELABORACIÓN';
   doc.font(FONT_MONO).fontSize(7).fillColor(INK)
-    .text(stepsLabel, { characterSpacing: 2.5 });
+    .text(stepsLabel, M.left, doc.y, { characterSpacing: 2.5, align: 'left' });
   doc.moveDown(0.2);
   drawRule(0.5, INK);
   doc.moveDown(0.45);
@@ -204,9 +204,9 @@ function renderRecipe(r, lang) {
   steps.forEach((step, i) => {
     ensureSpace(20);
     const y = doc.y;
-    doc.font(FONT_MONO).fontSize(7).fillColor(ACCENT).text(`${i + 1}.`, M.left, y);
+    doc.font(FONT_MONO).fontSize(7.5).fillColor(ACCENT).text(`${i + 1}.`, M.left, y);
     doc.font(FONT_BODY).fillColor(INK);
-    writeLine(step, M.left + 16, y, { width: CW - 16 }, 7);
+    writeLine(step, M.left + 16, y, { width: CW - 16 }, 7.5);
     doc.moveDown(0.2);
     // Dotted rule between steps
     if (i < steps.length - 1) {
@@ -217,12 +217,11 @@ function renderRecipe(r, lang) {
 
   // Tip - left border accent line
   if (tipData && tipData.text) {
-    doc.moveDown(0.5);
+    doc.moveDown(0.8);
     ensureSpace(35);
     const tipTop = doc.y;
-    // Indent tip content
     const tipLeft = M.left + 8;
-    const tipWidth = CW - 8;
+    const tipWidth = CW - 16;
     doc.font(FONT_BODY).fontSize(6.5).fillColor(INK_MID)
       .text(tipData.text, tipLeft, tipTop, { width: tipWidth });
     if (tipData.author) {
