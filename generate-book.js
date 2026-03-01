@@ -23,6 +23,7 @@ const INK_LIGHT = '#8a8070';
 const ACCENT = '#8b1c1c';
 const RULE = '#cec5b0';
 const RULE_LIGHT = '#e0d8c8';
+const CREAM = '#faf8f3';
 
 // Fonts (Special Elite for body, Courier New Bold for headings)
 const FONT_BODY = './fonts/SpecialElite-Regular.ttf';
@@ -33,15 +34,30 @@ const FONT_MONO_ITALIC = '/System/Library/Fonts/Supplemental/Courier New Italic.
 const doc = new PDFDocument({ size: [W, H], margins: M, bufferPages: true });
 doc.pipe(fs.createWriteStream('recetario.pdf'));
 
+// Paint cream background on every page
+function paintBg() {
+  doc.save();
+  doc.rect(0, 0, W, H).fill(CREAM);
+  doc.restore();
+  doc.y = M.top;
+  doc.x = M.left;
+}
+paintBg(); // first page
+doc.on('pageAdded', paintBg);
+
 // Fractions render small in Special Elite. We render them at 9pt while keeping surrounding text at 7pt.
 const FRAC_RE = /([½⅓⅔¼¾⅕⅛⅜⅝⅞])/;
 function writeLine(str, x, y, opts, baseSize) {
-  const fracSize = 9;
-  const parts = str.split(FRAC_RE);
-  if (parts.length === 1) {
+  if (!FRAC_RE.test(str)) {
     doc.fontSize(baseSize).text(str, x, y, opts);
     return;
   }
+  // Render with larger fractions, then force y to what base size would have been
+  const fracSize = baseSize + 2;
+  // Measure height at base size
+  const baseHeight = doc.font(FONT_BODY).fontSize(baseSize).heightOfString(str, { width: opts.width || CW });
+  // Render segments
+  const parts = str.split(FRAC_RE);
   let first = true;
   parts.forEach((part, i) => {
     if (!part) return;
@@ -52,6 +68,8 @@ function writeLine(str, x, y, opts, baseSize) {
     else doc.text(part, { continued: !last });
   });
   doc.fontSize(baseSize);
+  // Force y to base-size position to prevent gaps
+  doc.y = y + baseHeight;
 }
 
 function ensureSpace(needed) {
@@ -82,27 +100,26 @@ function renderRecipe(r, lang) {
     ? `${r.servings} serving${r.servings !== 1 ? 's' : ''}`
     : `${r.servings} persona${r.servings !== 1 ? 's' : ''}`;
 
-  // Category label
+  // Category label - more breathing room
   const catLabel = lang === 'en'
     ? { aperitivos: 'Starters', pasta: 'Pasta', pescados: 'Fish', carnes: 'Meat', arroces: 'Rice', sopas: 'Soups', verduras: 'Vegetables', basicos: 'Basics', bebidas: 'Drinks' }[r.category]
     : categories[r.category];
   doc.font(FONT_MONO).fontSize(6).fillColor(ACCENT)
-    .text(catLabel.toUpperCase(), { align: 'center', characterSpacing: 2 });
-  doc.moveDown(0.3);
+    .text(catLabel.toUpperCase(), { align: 'center', characterSpacing: 3 });
+  doc.moveDown(0.5);
 
-  // Title
+  // Title with servings inline
   doc.font(FONT_BODY).fontSize(14).fillColor(INK)
     .text(title, { align: 'center' });
+  doc.moveDown(0.15);
+  // Servings as pill next to title
+  doc.font(FONT_MONO).fontSize(6).fillColor(INK_LIGHT)
+    .text(`[ ${servingsLabel} ]`, { align: 'center', characterSpacing: 1 });
   doc.moveDown(0.3);
 
   // Subtitle
   doc.font(FONT_BODY).fontSize(7.5).fillColor(INK_MID)
     .text(subtitle, { align: 'center' });
-  doc.moveDown(0.15);
-
-  // Servings
-  doc.font(FONT_MONO).fontSize(6.5).fillColor(INK_LIGHT)
-    .text(servingsLabel, { align: 'center', characterSpacing: 1 });
   doc.moveDown(0.5);
 
   // Rule
@@ -117,17 +134,21 @@ function renderRecipe(r, lang) {
   drawRule(0.5, INK);
   doc.moveDown(0.35);
 
-  groups.forEach(g => {
+  groups.forEach((g, gi) => {
     if (g.name && g.name !== 'Ingredientes' && g.name !== 'Ingredients') {
-      ensureSpace(14);
-      doc.font(FONT_MONO).fontSize(6).fillColor(INK_LIGHT)
-        .text(g.name.toUpperCase(), { characterSpacing: 1.5 });
+      ensureSpace(18);
+      if (gi > 0) doc.moveDown(0.3);
+      drawRule(0.3, RULE_LIGHT);
       doc.moveDown(0.25);
+      doc.font(FONT_MONO).fontSize(6).fillColor(INK_LIGHT)
+        .text(g.name.toUpperCase(), M.left + 14, doc.y, { characterSpacing: 1.5 });
+      doc.moveDown(0.3);
     }
     g.items.forEach(item => {
-      ensureSpace(11);
+      ensureSpace(12);
       const y = doc.y;
-      doc.font(FONT_MONO).fontSize(6.5).fillColor(INK_LIGHT).text('\u2014', M.left, y);
+      // Small bullet dot instead of dash
+      doc.font(FONT_MONO).fontSize(4).fillColor(INK_LIGHT).text('\u2022', M.left + 3, y + 1);
       doc.font(FONT_BODY).fillColor(INK);
       writeLine(item, M.left + 14, y, { width: CW - 14 }, 7);
     });
@@ -142,38 +163,42 @@ function renderRecipe(r, lang) {
     .text(stepsLabel, { characterSpacing: 2.5 });
   doc.moveDown(0.1);
   drawRule(0.5, INK);
-  doc.moveDown(0.35);
+  doc.moveDown(0.4);
 
   steps.forEach((step, i) => {
-    ensureSpace(18);
+    ensureSpace(20);
     const y = doc.y;
     doc.font(FONT_MONO).fontSize(7).fillColor(ACCENT).text(`${i + 1}.`, M.left, y);
-    doc.font(FONT_BODY).fontSize(7).fillColor(INK).text(step, M.left + 16, y, { width: CW - 16 });
-    doc.moveDown(0.1);
+    doc.font(FONT_BODY).fillColor(INK);
+    writeLine(step, M.left + 16, y, { width: CW - 16 }, 7);
+    doc.moveDown(0.2);
     // Dotted rule between steps
     if (i < steps.length - 1) {
       drawRule(0.3, RULE_LIGHT);
-      doc.moveDown(0.15);
+      doc.moveDown(0.25);
     }
   });
 
-  // Tip
+  // Tip - left border accent line
   if (tipData && tipData.text) {
     doc.moveDown(0.5);
-    ensureSpace(30);
-    // Tip box
-    const tipY = doc.y;
-    drawRule(0.5, RULE);
-    doc.moveDown(0.3);
+    ensureSpace(35);
+    const tipTop = doc.y;
+    // Indent tip content
+    const tipLeft = M.left + 8;
+    const tipWidth = CW - 8;
     doc.font(FONT_BODY).fontSize(6.5).fillColor(INK_MID)
-      .text(tipData.text, { width: CW });
+      .text(tipData.text, tipLeft, tipTop, { width: tipWidth });
     if (tipData.author) {
-      doc.moveDown(0.15);
+      doc.moveDown(0.2);
       doc.font(FONT_MONO).fontSize(6).fillColor(ACCENT)
-        .text(tipData.author, { align: 'right', characterSpacing: 1.5 });
+        .text(tipData.author, tipLeft, doc.y, { width: tipWidth, align: 'right', characterSpacing: 1.5 });
     }
-    doc.moveDown(0.2);
-    drawRule(0.5, RULE);
+    const tipBottom = doc.y + 4;
+    // Left accent border
+    doc.moveTo(M.left + 2, tipTop - 2).lineTo(M.left + 2, tipBottom)
+      .lineWidth(1.5).strokeColor(ACCENT).stroke();
+    doc.y = tipBottom + 4;
   }
 }
 

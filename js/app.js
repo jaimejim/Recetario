@@ -15,7 +15,7 @@
     es: {
       subtitle:          'Recuerdos y sabores de los Jiménez-Torno',
       searchPlaceholder: 'Buscar receta...',
-      backLink:          '\u2190 Índice',
+      backLink:          '\u2039 Índice',
       noResults:         'No se encontraron recetas.',
       sectionIngredients:'Ingredientes',
       sectionSteps:      'Elaboración',
@@ -38,7 +38,7 @@
     en: {
       subtitle:          'Memories and flavours of the Jiménez-Torno family',
       searchPlaceholder: 'Search recipe...',
-      backLink:          '\u2190 Index',
+      backLink:          '\u2039 Index',
       noResults:         'No recipes found.',
       sectionIngredients:'Ingredients',
       sectionSteps:      'Method',
