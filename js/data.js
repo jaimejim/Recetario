@@ -3559,4 +3559,58 @@ const RECIPES = [
       text: 'Surprisingly easy and delicious. Kumiko and her Japanese chef friend, who was visiting Finland, made it for us and I never forgot how good it was. Works great as an appetizer or as a side while eating something else. Jerusalem artichoke is key to the flavour. In Japan they also make it with konjac (konnyaku), but it is hard to find in Europe.',
     },
   },
+
+  {
+    id: 'rosti-suizo',
+    title: 'Rösti',
+    titleEn: 'Rösti (Swiss Potato Cake)',
+    subtitle: 'Torta crujiente de patata rallada, típica de los Alpes suizos. Se cuece primero la patata entera, se enfría, se ralla y se dora en mantequilla.',
+    subtitleEn: 'Crispy grated potato cake from the Swiss Alps. The potato is first boiled whole, chilled, grated and then fried in butter.',
+    servings: 4,
+    category: 'aperitivos',
+    ingredientGroups: [
+      {
+        name: 'Ingredientes',
+        items: [
+          '450 g de patatas (tipo Yukon Gold o similar, harinosas)',
+          'Sal',
+          '85 g de mantequilla sin sal',
+        ],
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '450 g Yukon Gold potatoes (about 2 medium)',
+          'Kosher salt',
+          '85 g unsalted butter',
+        ],
+      },
+    ],
+    steps: [
+      'Pon las patatas enteras con piel en una olla, cúbrelas con agua fría y sala generosamente. Lleva a ebullición suave y cuece unos 25 minutos, hasta que se puedan pinchar con un cuchillo pero sin que se abran. Escurre, deja enfriar y refrigera al menos 8 horas (hasta 3 días).',
+      'Pela las patatas frías y rállalas con el lado grueso del rallador. Sala al gusto y mezcla.',
+      'Derrite la mitad de la mantequilla en una sartén antiadherente a fuego medio-alto. Añade la patata rallada y presiona con una espátula para formar una torta compacta.',
+      'Cocina sin tocar unos 5-6 minutos hasta que la base esté bien dorada y crujiente. Sacude la sartén de vez en cuando para que no se pegue.',
+      'Coloca un plato encima de la sartén y dale la vuelta. Añade el resto de la mantequilla a la sartén, desliza el rösti de nuevo y dora el otro lado otros 5-6 minutos.',
+      'Sirve caliente, cortado en porciones.',
+    ],
+    stepsEn: [
+      'Place the whole unpeeled potatoes in a pot, cover with cold water and season generously with salt. Bring to a gentle simmer and cook for about 25 minutes, until a knife just pierces through but the skins have not split. Drain, cool and refrigerate for at least 8 hours (up to 3 days).',
+      'Peel the cold potatoes and grate them on the large holes of a box grater. Season with salt and toss to combine.',
+      'Melt half the butter in a nonstick skillet over medium-high heat. Add the grated potato and press with a spatula to form a compact cake.',
+      'Cook undisturbed for 5-6 minutes until the bottom is deeply golden and crispy. Shake the pan occasionally to prevent sticking.',
+      'Place a plate over the skillet and flip. Add the remaining butter to the pan, slide the rösti back in and brown the other side for another 5-6 minutes.',
+      'Serve hot, cut into portions.',
+    ],
+    tip: {
+      text: 'Plato típico de los Alpes suizos. Solemos comerlo después de esquiar porque es muy fácil de hacer. Se puede comprar ya casi listo y solo hay que añadir un poco de grasa y hacerlo en la sartén, pero si tienes tiempo queda mucho mejor hecho desde cero. Un truco: puedes sacarlo a media cocción, ponerlo en un bol, mezclar unos huevos batidos y devolverlo a la sartén. Te queda algo parecido a una tortilla de patatas. A los niños les encanta.',
+      author: 'Truco de Jaime',
+    },
+    tipEn: {
+      text: 'A classic from the Swiss Alps. We usually have it after skiing because it is so easy to make. You can buy it almost ready-made and just add some fat and cook it in a pan, but if you have time it is much better from scratch. A trick: take it out halfway through cooking, place in a bowl, mix in some scrambled eggs and put it back in the pan. You get something like a Spanish tortilla de patatas. The kids love it.',
+      author: 'Jaime\'s tip',
+    },
+  },
 ];
