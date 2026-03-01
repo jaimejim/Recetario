@@ -126,7 +126,7 @@ function renderRecipe(r, lang) {
     // Ingredients label + rule
     h += 14;
 
-    if (groups.length >= 3) {
+    if (groups.length >= 2) {
       const colCount = groups.length;
       const colGap = 8;
       const colW = (CW - colGap * (colCount - 1)) / colCount;
@@ -227,7 +227,7 @@ function renderRecipe(r, lang) {
   drawRule(0.5, INK);
   doc.moveDown(0.45);
 
-  if (groups.length >= 3) {
+  if (groups.length >= 2) {
     const colCount = groups.length;
     const colGap = 8;
     const colW = (CW - colGap * (colCount - 1)) / colCount;

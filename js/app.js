@@ -241,7 +241,7 @@
     }
 
     const groups = loc(recipe, 'ingredientGroups');
-    const multiCol = groups.length >= 3;
+    const multiCol = groups.length >= 2;
     const ingredientsHtml = groups.map(group => {
       const nameHtml = (group.name && group.name !== 'Ingredientes' && group.name !== 'Ingredients')
         ? `<div class="ingredient-group-name">${esc(group.name)}</div>`

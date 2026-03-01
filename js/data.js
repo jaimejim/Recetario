@@ -3742,23 +3742,33 @@ const RECIPES = [
     id: 'cassoeula',
     title: 'Cassoeula',
     titleEn: 'Cassoeula (Milanese Pork and Cabbage Stew)',
-    subtitle: 'Estofado invernal milanés de costillas, salchichas, cortezas y manita de cerdo con col rizada. Plato contundente de origen campesino lombardo, asociado a la festividad de San Antonio Abad el 17 de enero, que coincidía con el fin de la matanza del cerdo. Se usaban las partes listas para consumir de inmediato, mientras los cortes nobles se colgaban a curar. Otra leyenda sitúa su origen en el siglo XVI bajo dominio español en Milán, aunque la existencia de un plato llamado "mangiacaxöla" en Busto Arsizio en el siglo XII sugiere que la receta es mucho más antigua.',
-    subtitleEn: 'Milanese winter stew of pork ribs, sausages, rind and trotter with Savoy cabbage. A hearty peasant dish from Lombardy, traditionally linked to the feast of St Anthony the Abbot on January 17, which marked the end of the pig-slaughtering season. The cuts used were those ready to eat straight after slaughter, while the better meat was hung to cure. Another legend traces it to 16th-century Spanish-ruled Milan, though the existence of a dish called "mangiacaxöla" in 12th-century Busto Arsizio suggests the recipe is far older.',
+    subtitle: 'Estofado invernal milanés de costillas, salchichas, cortezas y manita de cerdo con col rizada.',
+    subtitleEn: 'Milanese winter stew of pork ribs, sausages, rind and trotter with Savoy cabbage.',
     servings: 6,
     category: 'carnes',
     ingredientGroups: [
       {
-        name: 'Ingredientes',
+        name: 'Cerdo',
         items: [
           '400 g de costillas de cerdo',
           '300 g de verzini (salchichas frescas lombardas) o salchichas frescas',
           '100 g de cortezas de cerdo',
           '1 manita de cerdo',
           'Musetto y rabito de cerdo (opcionales)',
+        ],
+      },
+      {
+        name: 'Verduras',
+        items: [
           '1,5 kg de col rizada (verza)',
           '150 g de zanahorias',
           '150 g de cebollas',
           '100 g de apio',
+        ],
+      },
+      {
+        name: 'Otros',
+        items: [
           '50 g de concentrado de tomate',
           '20 g de mantequilla',
           '1 ramita de romero',
@@ -3771,17 +3781,27 @@ const RECIPES = [
     ],
     ingredientGroupsEn: [
       {
-        name: 'Ingredients',
+        name: 'Pork',
         items: [
           '400 g pork ribs',
           '300 g verzini (Lombard fresh sausages) or fresh pork sausages',
           '100 g pork rind',
           '1 pig trotter',
           'Pig snout and tail (optional)',
+        ],
+      },
+      {
+        name: 'Vegetables',
+        items: [
           '1.5 kg Savoy cabbage',
           '150 g carrots',
           '150 g onions',
           '100 g celery',
+        ],
+      },
+      {
+        name: 'Other',
+        items: [
           '50 g tomato concentrate',
           '20 g butter',
           '1 sprig of rosemary',
@@ -3811,11 +3831,11 @@ const RECIPES = [
       'Season with salt and pepper only at the end. The cassoeula is ready when all the meat is tender.',
     ],
     tip: {
-      text: 'Gino, el abuelo de mi mujer, y Massimo, su tío, la hacen de maravilla. Las partes del cerdo se pueden combinar de muchas formas: costillas, salchichas, cortezas, manita, musetto, rabito. Cada familia tiene su versión. Lo ideal es cocinarla con antelación, dejarla enfriar y reposar en la nevera al menos 8 horas. Al recalentarla queda aún mejor. Se sirve con polenta.',
+      text: 'Gino, el abuelo de mi mujer, y Massimo, su tío, la hacen de maravilla. Cada familia tiene su versión. Lo ideal es cocinarla con antelación y dejarla reposar en la nevera al menos 8 horas: recalentada queda aún mejor. Se sirve con polenta. Plato de origen campesino lombardo, asociado a la festividad de San Antonio Abad el 17 de enero, que coincidía con el fin de la matanza del cerdo. Se usaban las partes listas para consumir de inmediato, mientras los cortes nobles se colgaban a curar. Otra leyenda sitúa su origen en el Milán español del siglo XVI, aunque la existencia de un plato llamado "mangiacaxöla" en Busto Arsizio en el siglo XII sugiere que la receta es mucho más antigua.',
       author: 'Truco de Jaime',
     },
     tipEn: {
-      text: 'Gino, my wife\'s grandpa, and Massimo, her uncle, make it really well. The pork parts can be combined in many ways: ribs, sausages, rind, trotter, snout, tail. Every family has their own version. Ideally cook it ahead, let it cool and rest in the fridge for at least 8 hours. It is even better when reheated. Serve with polenta.',
+      text: 'Gino, my wife\'s grandpa, and Massimo, her uncle, make it really well. Every family has their own version. Ideally cook it ahead and rest in the fridge for at least 8 hours: it is even better reheated. Serve with polenta. A hearty peasant dish from Lombardy, traditionally linked to the feast of St Anthony the Abbot on January 17, which marked the end of the pig-slaughtering season. The cuts used were those ready to eat straight after slaughter, while the better meat was hung to cure. Another legend traces it to 16th-century Spanish-ruled Milan, though the existence of a dish called "mangiacaxöla" in 12th-century Busto Arsizio suggests the recipe is far older.',
       author: 'Jaime\'s tip',
     },
   },
