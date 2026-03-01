@@ -112,15 +112,15 @@ function renderRecipe(r, lang) {
   doc.font(FONT_BODY).fontSize(14).fillColor(INK)
     .text(title, { align: 'center' });
   doc.moveDown(0.15);
-  // Servings as pill next to title
-  doc.font(FONT_MONO).fontSize(6).fillColor(INK_LIGHT)
-    .text(`[ ${servingsLabel} ]`, { align: 'center', characterSpacing: 1 });
-  doc.moveDown(0.3);
-
   // Subtitle
   doc.font(FONT_BODY).fontSize(7.5).fillColor(INK_MID)
     .text(subtitle, { align: 'center' });
-  doc.moveDown(0.5);
+  doc.moveDown(0.15);
+
+  // Servings as pill - hugs subtitle
+  doc.font(FONT_MONO).fontSize(6).fillColor(INK_LIGHT)
+    .text(`[ ${servingsLabel} ]`, { align: 'center', characterSpacing: 1 });
+  doc.moveDown(0.6);
 
   // Rule
   drawRule(1.5, INK);
@@ -130,30 +130,66 @@ function renderRecipe(r, lang) {
   const ingLabel = lang === 'en' ? 'INGREDIENTS' : 'INGREDIENTES';
   doc.font(FONT_MONO).fontSize(7).fillColor(INK)
     .text(ingLabel, { characterSpacing: 2.5 });
-  doc.moveDown(0.1);
+  doc.moveDown(0.2);
   drawRule(0.5, INK);
-  doc.moveDown(0.35);
+  doc.moveDown(0.45);
 
-  groups.forEach((g, gi) => {
-    if (g.name && g.name !== 'Ingredientes' && g.name !== 'Ingredients') {
-      ensureSpace(18);
-      if (gi > 0) doc.moveDown(0.3);
-      drawRule(0.3, RULE_LIGHT);
-      doc.moveDown(0.25);
-      doc.font(FONT_MONO).fontSize(6).fillColor(INK_LIGHT)
-        .text(g.name.toUpperCase(), M.left + 14, doc.y, { characterSpacing: 1.5 });
-      doc.moveDown(0.3);
-    }
-    g.items.forEach(item => {
-      ensureSpace(12);
-      const y = doc.y;
-      // Small bullet dot instead of dash
-      doc.font(FONT_MONO).fontSize(4).fillColor(INK_LIGHT).text('\u2022', M.left + 3, y + 1);
-      doc.font(FONT_BODY).fillColor(INK);
-      writeLine(item, M.left + 14, y, { width: CW - 14 }, 7);
+  if (groups.length >= 3) {
+    // Multi-column layout for recipes with many groups
+    const colCount = groups.length;
+    const colGap = 8;
+    const colW = (CW - colGap * (colCount - 1)) / colCount;
+    const startY = doc.y;
+
+    // Measure each column height first
+    const colHeights = groups.map(g => {
+      let h = 0;
+      if (g.name && g.name !== 'Ingredientes' && g.name !== 'Ingredients') {
+        h += 14; // group name height
+      }
+      h += g.items.length * 11; // ~11pt per item
+      return h;
     });
-    doc.moveDown(0.15);
-  });
+    const maxH = Math.max(...colHeights);
+    ensureSpace(maxH + 10);
+
+    groups.forEach((g, gi) => {
+      const colX = M.left + gi * (colW + colGap);
+      let y = startY;
+      if (g.name && g.name !== 'Ingredientes' && g.name !== 'Ingredients') {
+        doc.font(FONT_MONO).fontSize(5.5).fillColor(INK_LIGHT)
+          .text(g.name.toUpperCase(), colX, y, { width: colW, characterSpacing: 1 });
+        y += 12;
+      }
+      g.items.forEach(item => {
+        doc.font(FONT_MONO).fontSize(4).fillColor(INK_LIGHT).text('\u2022', colX, y + 1);
+        doc.font(FONT_BODY).fillColor(INK);
+        writeLine(item, colX + 10, y, { width: colW - 10 }, 6.5);
+        y = Math.max(y + 10, doc.y);
+      });
+    });
+    doc.y = startY + maxH + 6;
+  } else {
+    groups.forEach((g, gi) => {
+      if (g.name && g.name !== 'Ingredientes' && g.name !== 'Ingredients') {
+        ensureSpace(18);
+        if (gi > 0) doc.moveDown(0.3);
+        drawRule(0.3, RULE_LIGHT);
+        doc.moveDown(0.25);
+        doc.font(FONT_MONO).fontSize(6).fillColor(INK_LIGHT)
+          .text(g.name.toUpperCase(), M.left + 14, doc.y, { characterSpacing: 1.5 });
+        doc.moveDown(0.3);
+      }
+      g.items.forEach(item => {
+        ensureSpace(12);
+        const y = doc.y;
+        doc.font(FONT_MONO).fontSize(4).fillColor(INK_LIGHT).text('\u2022', M.left + 3, y + 1);
+        doc.font(FONT_BODY).fillColor(INK);
+        writeLine(item, M.left + 14, y, { width: CW - 14 }, 7);
+      });
+      doc.moveDown(0.15);
+    });
+  }
 
   doc.moveDown(0.5);
 
@@ -161,9 +197,9 @@ function renderRecipe(r, lang) {
   const stepsLabel = lang === 'en' ? 'METHOD' : 'ELABORACIÓN';
   doc.font(FONT_MONO).fontSize(7).fillColor(INK)
     .text(stepsLabel, { characterSpacing: 2.5 });
-  doc.moveDown(0.1);
+  doc.moveDown(0.2);
   drawRule(0.5, INK);
-  doc.moveDown(0.4);
+  doc.moveDown(0.45);
 
   steps.forEach((step, i) => {
     ensureSpace(20);
@@ -304,7 +340,7 @@ for (let i = range.start; i < range.start + range.count; i++) {
 // === FOOTER on last content page ===
 doc.switchToPage(range.start + range.count - 1);
 doc.font(FONT_MONO).fontSize(6).fillColor(INK_LIGHT)
-  .text('Familia Jiménez-Torno \u00b7 2018\u20132026', M.left, H - M.bottom + 25, { width: CW, align: 'center' });
+  .text('Familia Jiménez-Torno\u2003|\u20032018\u20132026', M.left, H - M.bottom + 25, { width: CW, align: 'center' });
 
 doc.end();
 console.log(`✓ Generated recetario.pdf (${recipes.length} recipes, ${range.count} pages)`);
