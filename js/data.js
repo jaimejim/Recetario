@@ -1433,8 +1433,8 @@ const RECIPES = [
     id: 'caldo-rapido',
     title: 'Caldo Rápido',
     titleEn: 'Quick Stock',
-    subtitle: 'Receta 163 de "1080 recetas de cocina". Una forma rápida de preparar ¼ l de caldo, bien para un enfermo, bien para obtener una salsa más sabrosa.',
-    subtitleEn: 'Recipe 163 from "1080 recetas de cocina". A quick way to prepare ¼ l of stock, either for someone unwell or to make a tastier sauce.',
+    subtitle: 'Una forma rápida de preparar ¼ l de caldo, bien para un enfermo, bien para obtener una salsa más sabrosa.',
+    subtitleEn: 'A quick way to prepare ¼ l of stock, either for someone unwell or to make a tastier sauce.',
     servings: 2,
     category: 'sopas',
     ingredientGroups: [
@@ -1495,8 +1495,8 @@ const RECIPES = [
     id: 'sopa-verduras',
     title: 'Sopa de Verduras',
     titleEn: 'Vegetable Soup',
-    subtitle: 'Receta 227 de "1080 recetas de cocina". Sopa sencilla y reconfortante con verduras y hueso de codillo.',
-    subtitleEn: 'Recipe 227 from "1080 recetas de cocina". A simple and comforting soup with vegetables and a ham bone.',
+    subtitle: 'Sopa sencilla y reconfortante con verduras y hueso de codillo.',
+    subtitleEn: 'A simple and comforting soup with vegetables and a ham bone.',
     servings: 6,
     category: 'sopas',
     ingredientGroups: [
