@@ -8,7 +8,7 @@ When adding recipes:
 2. Check `js/data.js` for duplicates before adding
 3. Translate to both Spanish (`title`, `subtitle`, `steps`, `ingredientGroups`) and English (`titleEn`, `subtitleEn`, `stepsEn`, `ingredientGroupsEn`). Tips use `tip` and `tipEn` as separate top-level keys
 4. Pick the right `category`: aperitivos, pasta, pescados, carnes, arroces, sopas, verduras, basicos, bebidas
-5. Run `node validate.js` before committing — it checks EN keys, inline mistakes, and count mismatches
+5. Run `node validate.js` before committing — it checks EN keys, inline mistakes, count mismatches, duplicate IDs, valid categories, required fields, and em dashes
 6. Validate syntax with `node -c js/data.js` after editing
 7. Titles should be descriptive (e.g. "Smoothie de Zanahoria, Manzana y Plátano", not "Rise and Shine")
 
