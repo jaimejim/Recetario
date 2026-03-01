@@ -240,13 +240,20 @@
       return;
     }
 
-    const ingredientsHtml = loc(recipe, 'ingredientGroups').map(group => {
+    const groups = loc(recipe, 'ingredientGroups');
+    const multiCol = groups.length >= 3;
+    const ingredientsHtml = groups.map(group => {
       const nameHtml = (group.name && group.name !== 'Ingredientes' && group.name !== 'Ingredients')
         ? `<div class="ingredient-group-name">${esc(group.name)}</div>`
         : '';
       const items = group.items.map(i => `<li>${esc(i)}</li>`).join('');
-      return `${nameHtml}<ul class="ingredient-list">${items}</ul>`;
+      return multiCol
+        ? `<div class="ingredient-col">${nameHtml}<ul class="ingredient-list">${items}</ul></div>`
+        : `${nameHtml}<ul class="ingredient-list">${items}</ul>`;
     }).join('');
+    const ingredientsWrapped = multiCol
+      ? `<div class="ingredient-grid">${ingredientsHtml}</div>`
+      : ingredientsHtml;
 
     const stepsHtml = loc(recipe, 'steps')
       .map(s => `<li>${esc(s)}</li>`)
@@ -270,7 +277,7 @@
 
       <div class="section-heading">${t('sectionIngredients')}</div>
       <hr class="section-rule">
-      ${ingredientsHtml}
+      ${ingredientsWrapped}
 
       <div class="section-heading">${t('sectionSteps')}</div>
       <hr class="section-rule">

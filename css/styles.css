@@ -372,6 +372,16 @@ body {
 
 /* ---- Ingredients ---- */
 
+.ingredient-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.4rem 1.6rem;
+}
+
+.ingredient-grid .ingredient-group-name {
+  margin-top: 0;
+}
+
 .ingredient-group-name {
   font-family: var(--font-body);
   font-size: 0.72rem;
