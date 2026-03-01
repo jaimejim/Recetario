@@ -3621,4 +3621,58 @@ const RECIPES = [
       author: 'Jaime\'s tip',
     },
   },
+
+  {
+    id: 'old-fashioned',
+    title: 'Old Fashioned',
+    titleEn: 'Old Fashioned',
+    subtitle: 'El cóctel clásico por excelencia: bourbon, angostura, sirope y una piel de naranja. Sencillo y elegante.',
+    subtitleEn: 'The quintessential classic cocktail: bourbon, Angostura bitters, simple syrup and an orange peel. Simple and elegant.',
+    servings: 1,
+    category: 'bebidas',
+    ingredientGroups: [
+      {
+        name: 'Ingredientes',
+        items: [
+          '2 cucharaditas de sirope simple',
+          '2 golpes de angostura',
+          '1 cucharadita de agua',
+          '1 cubo de hielo grande',
+          '45 ml de bourbon',
+          '1 tira de piel de naranja',
+        ],
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '2 tsp simple syrup',
+          '2 dashes Angostura bitters',
+          '1 tsp water',
+          '1 large ice cube',
+          '45 ml (1.5 oz) bourbon',
+          '1 orange peel strip',
+        ],
+      },
+    ],
+    steps: [
+      'Vierte el sirope, el agua y la angostura en un vaso bajo (rocks glass). Remueve para mezclar.',
+      'Añade un cubo de hielo grande y vierte el bourbon.',
+      'Exprime la piel de naranja sobre el vaso para liberar los aceites, pásala por el borde y déjala dentro como decoración.',
+    ],
+    stepsEn: [
+      'Pour the simple syrup, water and bitters into a rocks glass. Stir to combine.',
+      'Add a large ice cube and pour in the bourbon.',
+      'Squeeze the orange peel over the glass to release the oils, run it along the rim and drop it in as garnish.',
+    ],
+    tip: {
+      text: 'Mi suegro americano me lo preparó y me encantó. El cubo de hielo grande es clave: se derrite despacio y no agua el cóctel. No soy ningún experto, pero a mí me gusta con Hudson Baby Bourbon.',
+      author: 'Truco de Jaime',
+    },
+    tipEn: {
+      text: 'My American father-in-law made it for me and I loved it. The big ice cube is key: it melts slowly and does not water down the cocktail. I am no expert, but I like it with Hudson Baby Bourbon.',
+      author: 'Jaime\'s tip',
+    },
+  },
 ];
