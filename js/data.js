@@ -1602,11 +1602,11 @@ const RECIPES = [
     ],
     tip: {
       text: 'La olla de hierro precalentada es el secreto de la corteza crujiente: simula un horno de panadería. Si la cocina está fría, deja reposar la masa dentro del horno apagado con la luz encendida.',
-      author: 'Truco de Jaime',
+      author: 'Truco de Vale',
     },
     tipEn: {
       text: 'The preheated Dutch oven is the secret to the crusty crust: it simulates a bakery oven. If your kitchen is cold, let the dough rise inside the oven with the light on and the oven off.',
-      author: 'Jaime\'s tip',
+      author: 'Vale\'s tip',
     },
   },
 
@@ -1763,7 +1763,7 @@ const RECIPES = [
       'Al final de la cocción casi no notaremos textura de ninguno de los ingredientes pero sí su sabor.',
     ],
     tip: {
-      text: 'Si usas la lenteja pardina no hace falta dejarlas en remojo antes. Como el ajo a muchas personas no les gusta encontrarlo en el plato, podéis echarlo entero y retirarlo a mitad de la cocción.',
+      text: 'Si usas la lenteja pardina no hace falta dejarlas en remojo antes. Como el ajo a muchas personas no les gusta encontrarlo en el plato, podéis echarlo entero y retirarlo a mitad de la cocción. Un chorrito de vinagre de vino o de Jerez al final, fuera del fuego, le da un toque ácido que realza todos los sabores.',
       author: 'Truco de Mari',
     },
     ingredientGroupsEn: [
@@ -1797,7 +1797,7 @@ const RECIPES = [
       'By the end of cooking you will barely notice the texture of any individual ingredient, but you will taste them all.',
     ],
     tipEn: {
-      text: 'If you use pardina lentils there is no need to soak them beforehand. Since many people do not like finding garlic in their dish, you can add it whole and remove it halfway through cooking.',
+      text: 'If you use pardina lentils there is no need to soak them beforehand. Since many people do not like finding garlic in their dish, you can add it whole and remove it halfway through cooking. A splash of wine vinegar or sherry vinegar at the end, off the heat, adds an acidic touch that brings out all the flavours.',
       author: 'Mari\'s tip',
     },
   },
@@ -2973,11 +2973,11 @@ const RECIPES = [
       'On the last layer, dot with a few pieces of butter. Bake at 180 °C for about 30 minutes.',
     ],
     tip: {
-      text: 'Nuestra amiga Laura hace una variación añadiendo romero a la salsa de tomate del ragú y media cucharada o una cucharada de azúcar (según el tomate) para suavizarlo. Realza mucho el sabor de la lasaña.',
+      text: 'Nuestra amiga Laura hace una variación añadiendo romero a la salsa de tomate del ragú y media cucharada o una cucharada de azúcar (según el tomate) para suavizarlo. Realza mucho el sabor de la lasaña. Otra opción: añadir una pizca de pimentón dulce al ragú para darle un toque más terroso.',
       author: 'Truco de Laura',
     },
     tipEn: {
-      text: 'Our friend Laura makes a variation by adding rosemary to the tomato sauce for the ragù and half to one tablespoon of sugar (depending on the tomato) to soften it. It really enhances the flavour of the lasagne.',
+      text: 'Our friend Laura makes a variation by adding rosemary to the tomato sauce for the ragù and half to one tablespoon of sugar (depending on the tomato) to soften it. It really enhances the flavour of the lasagne. Another option: add a pinch of sweet paprika to the ragù for a slightly more earthy flavour.',
       author: 'Laura\'s tip',
     },
   },
