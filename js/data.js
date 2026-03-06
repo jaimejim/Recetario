@@ -3971,4 +3971,57 @@ const RECIPES = [
       'Serve with okonomiyaki sauce, mayonnaise in zigzag, katsuobushi and aonori on top.',
     ],
   },
+  {
+    id: 'pepino-encurtido-jengibre',
+    title: 'Pepino Encurtido con Jengibre',
+    titleEn: 'Vinegar-Ginger Cucumber Pickles',
+    subtitle: 'Encurtido japonés rápido del libro Oishii. Crujiente, ácido y con un toque de sésamo.',
+    subtitleEn: 'Quick Japanese pickle from the Oishii cookbook. Crunchy, tangy and with a sesame kick.',
+    servings: 4,
+    category: 'verduras',
+    ingredientGroups: [
+      {
+        name: 'Ingredientes',
+        items: [
+          '300 g de pepino',
+          '20 g de jengibre fresco',
+          '1 cucharada de sal',
+          '2 cucharadas de azúcar',
+          '1 cucharada de vinagre',
+          '1 cucharada de salsa de soja',
+          '1 cucharada de aceite de sésamo',
+          '1 cucharada de semillas de sésamo',
+        ],
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '300 g cucumber',
+          '20 g fresh ginger',
+          '1 tbsp salt',
+          '2 tbsp sugar',
+          '1 tbsp vinegar',
+          '1 tbsp soy sauce',
+          '1 tbsp sesame oil',
+          '1 tbsp sesame seeds',
+        ],
+      },
+    ],
+    steps: [
+      'Corta el pepino en rodajas finas o en bastones. Espolvorea con la sal, mezcla y deja reposar 10 minutos. Escurre el líquido.',
+      'Pela y ralla o corta el jengibre en juliana fina.',
+      'Mezcla el vinagre, el azúcar, la salsa de soja y el aceite de sésamo.',
+      'Combina el pepino escurrido con el jengibre y el aliño. Espolvorea las semillas de sésamo por encima.',
+      'Deja marinar al menos 15 minutos en la nevera antes de servir.',
+    ],
+    stepsEn: [
+      'Cut the cucumber into thin slices or batons. Sprinkle with salt, toss and let sit for 10 minutes. Drain the liquid.',
+      'Peel and grate or finely julienne the ginger.',
+      'Mix the vinegar, sugar, soy sauce and sesame oil.',
+      'Combine the drained cucumber with the ginger and dressing. Sprinkle sesame seeds on top.',
+      'Marinate for at least 15 minutes in the fridge before serving.',
+    ],
+  },
 ];
