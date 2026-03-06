@@ -3845,4 +3845,57 @@ const RECIPES = [
       author: 'Jaime\'s tip',
     },
   },
+  {
+    id: 'curry-riisi',
+    title: 'Arroz con Curry Japonés',
+    titleEn: 'Japanese Curry Rice',
+    subtitle: 'Receta finlandesa de curry japonés con tofu o pollo. Reconfortante, sencilla y perfecta para el invierno nórdico.',
+    subtitleEn: 'A Finnish take on Japanese curry with tofu or chicken. Comforting, simple and perfect for cold weather.',
+    servings: 4,
+    category: 'arroces',
+    ingredientGroups: [
+      {
+        name: 'Ingredientes',
+        items: [
+          '250 g de tofu firme o pollo',
+          '2 cebollas',
+          '3 dientes de ajo',
+          '2 zanahorias',
+          '2 patatas',
+          '1 l de agua',
+          '1 paquete de pasta de curry japonés',
+          'Aceite para freír',
+          'Arroz cocido para acompañar',
+        ],
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '250 g firm tofu or chicken',
+          '2 onions',
+          '3 cloves of garlic',
+          '2 carrots',
+          '2 potatoes',
+          '1 l water',
+          '1 packet of Japanese curry roux',
+          'Oil for frying',
+          'Cooked rice to serve',
+        ],
+      },
+    ],
+    steps: [
+      'Pela las cebollas. Pica una cebolla y los dientes de ajo en cubos pequeños y sofríelos en una olla con aceite.',
+      'Añade el pollo y deja que se dore. Si usas tofu, córtalo en cubos, fríelo hasta que esté crujiente y resérvalos aparte.',
+      'Pela las zanahorias y las patatas. Corta las zanahorias, las patatas y la segunda cebolla en trozos grandes y añádelos a la olla. Deja que se ablanden.',
+      'Cuando el agua hierva, añade la pasta de curry (y los cubos de tofu frito si es el caso). Deja cocer a fuego lento unos diez minutos.',
+    ],
+    stepsEn: [
+      'Peel the onions. Dice one onion and the garlic cloves into small cubes and sauté in a pot with oil.',
+      'Add the chicken and let it brown. If using tofu, cut into cubes, fry until crispy and set aside.',
+      'Peel the carrots and potatoes. Cut the carrots, potatoes and the second onion into large pieces and add to the pot. Let them soften.',
+      'When the water boils, add the curry roux (and the fried tofu cubes if using). Simmer for about ten minutes.',
+    ],
+  },
 ];
