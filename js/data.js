@@ -3898,4 +3898,77 @@ const RECIPES = [
       'When the water boils, add the curry roux (and the fried tofu cubes if using). Simmer for about ten minutes.',
     ],
   },
+  {
+    id: 'okonomiyaki',
+    title: 'Okonomiyaki',
+    titleEn: 'Okonomiyaki',
+    subtitle: 'Tortilla japonesa de col, flexible con los ingredientes y adictiva con sus salsas.',
+    subtitleEn: 'Japanese cabbage pancake, flexible with toppings and addictive with its sauces.',
+    servings: 2,
+    category: 'verduras',
+    ingredientGroups: [
+      {
+        name: 'Masa',
+        items: [
+          '1 dl de harina de trigo',
+          '1 cucharadita de fécula de patata',
+          '1 dl de caldo dashi',
+          '1 cucharadita de sal',
+          '1 huevo',
+        ],
+      },
+      {
+        name: 'Relleno y acompañamiento',
+        items: [
+          '1 puñado grande de col en juliana fina',
+          '1 cebolleta (opcional)',
+          'Gambas, calamar, cerdo en lonchas finas o tofu',
+          'Aceite para freír',
+          'Salsa okonomiyaki (o salsa Worcester + kétchup)',
+          'Mayonesa japonesa',
+          'Katsuobushi (copos de bonito)',
+          'Aonori (alga en polvo)',
+        ],
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Batter',
+        items: [
+          '100 ml wheat flour',
+          '1 tsp potato starch',
+          '100 ml dashi broth',
+          '1 tsp salt',
+          '1 egg',
+        ],
+      },
+      {
+        name: 'Filling and toppings',
+        items: [
+          '1 large handful of finely shredded cabbage',
+          '1 spring onion (optional)',
+          'Prawns, squid, thinly sliced pork or tofu',
+          'Oil for frying',
+          'Okonomiyaki sauce (or Worcestershire + ketchup)',
+          'Japanese mayonnaise',
+          'Katsuobushi (bonito flakes)',
+          'Aonori (seaweed powder)',
+        ],
+      },
+    ],
+    steps: [
+      'Mezcla la harina, la fécula, la sal y el caldo dashi hasta obtener una masa lisa. Añade el huevo y mezcla bien.',
+      'Incorpora la col cortada fina y la cebolleta. La masa debe quedar espesa, más col que masa.',
+      'Calienta aceite en una sartén a fuego medio. Vierte la mezcla formando una tortilla gruesa. Si usas cerdo, coloca las lonchas encima.',
+      'Cocina 3-4 minutos por cada lado hasta que esté dorada y crujiente por fuera.',
+      'Sirve con salsa okonomiyaki, mayonesa en zigzag, katsuobushi y aonori por encima.',
+    ],
+    stepsEn: [
+      'Mix the flour, starch, salt and dashi broth until smooth. Add the egg and mix well.',
+      'Fold in the finely shredded cabbage and spring onion. The batter should be thick, more cabbage than batter.',
+      'Heat oil in a frying pan over medium heat. Pour the mixture to form a thick pancake. If using pork, lay the slices on top.',
+      'Cook 3-4 minutes per side until golden and crispy on the outside.',
+      'Serve with okonomiyaki sauce, mayonnaise in zigzag, katsuobushi and aonori on top.',
+    ],
+  },
 ];
