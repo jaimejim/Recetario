@@ -1,0 +1,10 @@
+name = "recetario"
+compatibility_date = "2026-03-08"
+
+[assets]
+directory = "./"
+not_found_handling = "single-page-application"
+
+[[routes]]
+pattern = "recetario.jaime.win"
+custom_domain = true

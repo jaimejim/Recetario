@@ -1,0 +1,13 @@
+.git
+node_modules
+AGENTS.md
+README.md
+LICENSE
+.gitignore
+.assetsignore
+wrangler.toml
+vercel.json
+validate.js
+generate-book.js
+recetario.pdf
+fraction-test.pdf
