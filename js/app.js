@@ -8,7 +8,7 @@
   ------------------------------------------------------- */
   const CATEGORY_ORDER = [
     'aperitivos', 'sopas', 'verduras', 'pasta',
-    'pescados', 'carnes', 'arroces', 'basicos', 'bebidas',
+    'pescados', 'carnes', 'arroces', 'postres', 'basicos', 'bebidas',
   ];
 
   const STRINGS = {
@@ -33,6 +33,7 @@
         verduras:   'Verduras',
         basicos:    'Básicos',
         bebidas:    'Bebidas',
+        postres:    'Postres',
       },
     },
     en: {
@@ -56,6 +57,7 @@
         verduras:   'Vegetables',
         basicos:    'Basics',
         bebidas:    'Drinks',
+        postres:    'Desserts',
       },
     },
   };

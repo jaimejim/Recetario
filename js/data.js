@@ -10,6 +10,7 @@ const CATEGORY_LABELS = {
   verduras:   'Verduras',
   basicos:    'Básicos',
   bebidas:    'Bebidas',
+  postres:    'Postres',
 };
 
 const RECIPES = [
@@ -4107,5 +4108,161 @@ const RECIPES = [
       'Dice the preserved lemon and add it with the olives. Season with black pepper. Place the chicken skin-side up on the sauce and bake for 30 minutes.',
       'Remove from the oven, arrange the crispy sage on top of the chicken and serve immediately. Pair with rocket salad and crusty bread, or roast potatoes.',
     ],
+  },
+
+  {
+    id: 'bikkuritei-col-carne',
+    title: 'Col con Carne al Estilo Bikkuritei',
+    titleEn: 'Bikkuritei-Style Cabbage & Meat',
+    subtitle: 'Inspirada en el famoso restaurante de Sapporo. Cerdo o ternera salteados con col, mucho ajo y una salsa picante de miso para mojar. Rústica, rápida y adictiva.',
+    subtitleEn: 'Inspired by the famous Sapporo restaurant. Pork or beef stir-fried with cabbage, loads of garlic, and a spicy miso dipping sauce. Rustic, fast, and addictive.',
+    servings: 4,
+    category: 'carnes',
+    page: 39,
+    ingredientGroups: [
+      {
+        name: 'Principal',
+        items: [
+          '400-600 g de cerdo o ternera, cortado en trozos',
+          '½ col, troceada en trozos grandes',
+          '4-8 dientes de ajo (o 4-6 cucharaditas de ajo rallado)',
+          '2-4 cucharadas de manteca de cerdo (o aceite vegetal)',
+          'Sal al gusto (~2 cucharaditas)',
+          'MSG (ajinomoto), ~1 cucharadita (opcional)',
+        ],
+      },
+      {
+        name: 'Salsa picante de miso (sinmiso)',
+        items: [
+          '4 cucharadas de miso (rojo o mezcla)',
+          '2 cucharaditas de doubanjiang (pasta de chile con soja)',
+          '2 cucharaditas de ichimi togarashi (chile japonés en polvo)',
+          '2 cucharaditas de ajo rallado',
+          '2 cucharaditas de aceite de sésamo',
+          '1 cucharadita de salsa de soja (opcional)',
+          '2 cucharaditas de sake o mirin (opcional)',
+        ],
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Main',
+        items: [
+          '400-600 g pork or beef, cut into bite-sized pieces',
+          '½ head cabbage, roughly chopped into large chunks',
+          '4-8 cloves garlic (or 4-6 tsp grated garlic)',
+          '2-4 tbsp lard (or vegetable oil)',
+          'Salt to taste (~2 tsp)',
+          'MSG (ajinomoto), ~1 tsp (optional)',
+        ],
+      },
+      {
+        name: 'Spicy miso sauce (sinmiso)',
+        items: [
+          '4 tbsp miso (red or combined)',
+          '2 tsp doubanjiang (chili bean paste)',
+          '2 tsp ichimi togarashi (Japanese chili powder)',
+          '2 tsp grated garlic',
+          '2 tsp sesame oil',
+          '1 tsp soy sauce (optional)',
+          '2 tsp sake or mirin (optional)',
+        ],
+      },
+    ],
+    steps: [
+      'Prepara la salsa de miso: mezcla todos los ingredientes de la salsa en un cazo pequeño a fuego bajo hasta que estén bien integrados y la mezcla espese ligeramente. Reserva.',
+      'Calienta una sartén grande de hierro fundido o plancha a fuego fuerte. Añade la manteca y la mitad del ajo. Saltea unos 30 segundos hasta que esté fragante.',
+      'Echa la carne y cocina hasta que esté dorada (5-7 minutos). Sazona con la mitad de la sal y el MSG mientras se hace.',
+      'Añade la col. Saltea todo junto 4-7 minutos hasta que la col se ablande pero siga crujiente. Agrega el resto del ajo, sal y MSG. Ajusta al gusto: tiene que quedar sabroso y con mucho ajo sin pasarse.',
+      'Para el toque auténtico: inclina la sartén apoyando un lado sobre una cuchara de madera para que los jugos se acumulen en el fondo.',
+      'Sirve caliente con la salsa de miso al lado para mojar. Acompaña con arroz blanco y sopa de miso.',
+    ],
+    stepsEn: [
+      'Prepare the miso sauce: mix all sauce ingredients in a small pan over low heat until combined and slightly thickened. Set aside.',
+      'Heat a large cast-iron skillet or griddle over high heat. Add the lard and half the garlic. Sauté for about 30 seconds until fragrant.',
+      'Add the meat and cook until browned (5-7 minutes). Season with half the salt and MSG as it cooks.',
+      'Toss in the cabbage. Stir-fry everything together for 4-7 minutes until the cabbage softens but stays crunchy. Add the remaining garlic, salt, and MSG. Adjust to taste: it should be savoury and garlicky without overpowering.',
+      'For the authentic touch: prop one side of the pan on a wooden spoon so the juices pool at the bottom.',
+      'Serve hot with the miso sauce on the side for dipping. Pair with steamed rice and miso soup.',
+    ],
+    tip: {
+      text: 'El cerdo tipo falda o aguja queda mejor que el solomillo, que se seca. Si usas ternera, elige un corte con algo de grasa. La manteca de cerdo marca la diferencia frente al aceite vegetal. No escatimes en ajo.',
+      author: 'Truco de Jaime',
+    },
+    tipEn: {
+      text: 'Pork belly or shoulder works better than loin, which dries out. If using beef, pick a cut with some fat. Lard makes a real difference over vegetable oil. Don\'t skimp on the garlic.',
+      author: 'Jaime\'s tip',
+    },
+  },
+
+  {
+    id: 'bizcocho-yogur-rosa',
+    title: 'Bizcocho de Yogur de Rosa',
+    titleEn: 'Rosa\'s Yogurt Cake',
+    subtitle: 'El clásico bizcocho español que se mide con el vasito de yogur. Esponjoso, jugoso y perfecto para principiantes.',
+    subtitleEn: 'The classic Spanish yogurt cake measured with the yogurt cup. Fluffy, juicy, and perfect for beginners.',
+    servings: 8,
+    category: 'postres',
+    page: 40,
+    ingredientGroups: [
+      {
+        name: 'Ingredientes',
+        items: [
+          '3 huevos frescos',
+          '1 yogur natural (el vasito se usa como medida, ~125 g)',
+          '2 vasitos de azúcar (1,5 si lo prefieres menos dulce)',
+          '1 vasito de aceite suave (girasol recomendado)',
+          '3 vasitos de harina, tamizada',
+          '1 sobre de levadura química (~16 g)',
+          'Ralladura de 1 limón',
+        ],
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '3 fresh eggs',
+          '1 plain yogurt (the cup is used as a measure, ~125 g)',
+          '2 yogurt cups of sugar (1.5 if you prefer less sweet)',
+          '1 yogurt cup of mild oil (sunflower recommended)',
+          '3 yogurt cups of flour, sifted',
+          '1 packet of baking powder (~16 g)',
+          'Zest of 1 lemon',
+        ],
+      },
+    ],
+    steps: [
+      'Precalienta el horno a 180 °C.',
+      'Bate los 3 huevos hasta que estén espumosos.',
+      'Añade el yogur y mezcla bien.',
+      'Con el vasito de yogur vacío, añade 2 medidas de azúcar. Mezcla.',
+      'Añade 1 medida de aceite e integra.',
+      'Tamiza 3 medidas de harina poco a poco, mezclando para evitar grumos. Con la última medida, añade la levadura.',
+      'Ralla la piel de 1 limón e incorpórala a la masa.',
+      'Vierte en un molde forrado con papel de horno o engrasado.',
+      'Hornea unos 40 minutos. Pincha con un palillo: si sale limpio, está listo.',
+      'Deja templar antes de desmoldar.',
+    ],
+    stepsEn: [
+      'Preheat the oven to 180 °C / 350 °F.',
+      'Beat the 3 eggs until fluffy.',
+      'Add the yogurt and mix thoroughly.',
+      'Using the empty yogurt cup, add 2 measures of sugar. Mix well.',
+      'Add 1 measure of oil and incorporate.',
+      'Sift in 3 measures of flour gradually, mixing to avoid lumps. With the last measure, add the baking powder.',
+      'Grate in the zest of 1 lemon and fold into the batter.',
+      'Pour into a lined or greased cake mould.',
+      'Bake for about 40 minutes. Test with a toothpick: if it comes out clean, it\'s ready.',
+      'Let cool slightly before removing from the mould.',
+    ],
+    tip: {
+      text: 'Variaciones: un chorrito de anís, yogur de limón en vez de natural, ralladura de naranja, trozos de manzana, nueces o pepitas de chocolate. Para versión de chocolate, sustituye parte de la harina por cacao en polvo.',
+      author: 'Trucos de los comentarios',
+    },
+    tipEn: {
+      text: 'Variations: a splash of anise, lemon yogurt instead of plain, orange zest, apple pieces, nuts, or chocolate chips. For a chocolate version, replace some flour with cocoa powder.',
+      author: 'Tips from the comments',
+    },
   },
 ];
