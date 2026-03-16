@@ -4024,6 +4024,14 @@ const RECIPES = [
       'Combine the drained cucumber with the ginger and dressing. Sprinkle sesame seeds on top.',
       'Marinate for at least 15 minutes in the fridge before serving.',
     ],
+    tip: {
+      text: 'Probado en Shenzhen (marzo 2026): añadir un poco de guindilla al marinado le da un buen contraste picante, y unas hojas de cilantro fresco por encima lo refrescan mucho.',
+      author: 'Nota de Jaime',
+    },
+    tipEn: {
+      text: 'Tried in Shenzhen (March 2026): adding some chili to the marinade gives a nice spicy contrast, and fresh coriander leaves on top really freshen it up.',
+      author: 'Jaime\'s note',
+    },
   },
   {
     id: 'salviakana',
