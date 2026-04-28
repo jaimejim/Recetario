@@ -4538,4 +4538,176 @@ const RECIPES = [
       author: 'Kai',
     },
   },
+
+  {
+    id: 'lomo-embuchado',
+    title: 'Lomo Embuchado Casero',
+    titleEn: 'Homemade Cured Pork Loin',
+    subtitle: 'Lomo curado en casa con sal, azúcar y pimentón. Receta de Isabel. Necesita paciencia pero el resultado es espectacular.',
+    subtitleEn: 'Home-cured pork loin with salt, sugar and paprika. Isabel\'s recipe. Requires patience but the result is spectacular.',
+    servings: 8,
+    category: 'carnes',
+    page: 0,
+    ingredientGroups: [
+      {
+        name: 'Curado',
+        items: [
+          '1 lomo de cerdo entero (~1 kg)',
+          'Sal gruesa',
+          'Azúcar (misma cantidad que la sal)',
+        ],
+      },
+      {
+        name: 'Adobo',
+        items: [
+          'Pimentón de la Vera (dulce o mezcla dulce/picante)',
+          '3-4 dientes de ajo machacados',
+          'Orégano',
+          'Aceite de oliva virgen extra',
+        ],
+      },
+      {
+        name: 'Embutido',
+        items: [
+          'Tripa natural de cerdo (o colágeno)',
+          'Hilo de bramante para atar',
+        ],
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Curing',
+        items: [
+          '1 whole pork loin (~1 kg)',
+          'Coarse salt',
+          'Sugar (same amount as salt)',
+        ],
+      },
+      {
+        name: 'Marinade',
+        items: [
+          'Pimentón de la Vera (sweet or sweet/hot mix)',
+          '3-4 crushed garlic cloves',
+          'Oregano',
+          'Extra virgin olive oil',
+        ],
+      },
+      {
+        name: 'Casing',
+        items: [
+          'Natural pork casing (or collagen)',
+          'Butcher\'s twine for tying',
+        ],
+      },
+    ],
+    steps: [
+      'Secar bien el lomo con papel de cocina, eliminando toda el agua y la sangre.',
+      'Mezclar sal y azúcar a partes iguales. En una fuente, hacer una cama con la mezcla y colocar el lomo encima. Cubrir completamente con el resto de la mezcla.',
+      'Tapar con film y meter en la nevera 48 horas, dándole la vuelta cada 12 horas.',
+      'Sacar el lomo, lavar bien bajo el grifo para quitar toda la sal. Secar a fondo con papel.',
+      'Preparar el adobo: mezclar el pimentón, el ajo machacado, el orégano y un chorro de aceite de oliva hasta formar una pasta.',
+      'Untar el lomo por todas partes con el adobo, masajeando bien para que penetre.',
+      'Embutir el lomo en la tripa natural. Atar con bramante cada 3-4 cm para que quede firme y uniforme.',
+      'Colgar en un lugar fresco, seco y ventilado (10-15 °C). Curar durante 30-45 días hasta que pierda un 30-40% de su peso.',
+      'Cortar en lonchas finas. Se conserva en la nevera envuelto en un paño limpio.',
+    ],
+    stepsEn: [
+      'Pat the loin thoroughly dry with kitchen paper, removing all moisture and blood.',
+      'Mix salt and sugar in equal parts. Spread a bed of the mixture in a dish, place the loin on top, and cover completely with the rest.',
+      'Cover with cling film and refrigerate for 48 hours, turning every 12 hours.',
+      'Remove the loin, rinse well under running water to remove all salt. Pat completely dry.',
+      'Prepare the marinade: mix the paprika, crushed garlic, oregano and a glug of olive oil into a paste.',
+      'Rub the loin all over with the marinade, massaging well so it penetrates.',
+      'Stuff the loin into the natural casing. Tie with twine every 3-4 cm so it stays firm and even.',
+      'Hang in a cool, dry, ventilated place (10-15 °C). Cure for 30-45 days until it loses 30-40% of its weight.',
+      'Slice thinly. Store in the fridge wrapped in a clean cloth.',
+    ],
+    tip: {
+      text: 'La proporción 1:1 de sal y azúcar es clave: el azúcar suaviza el curado y evita que quede demasiado salado. Si no tienes sitio para colgar, la nevera funciona (más lento, 45-60 días). El pimentón de la Vera es lo que le da el sabor y color típico. Receta de Isabel.',
+      author: 'Kai',
+    },
+    tipEn: {
+      text: 'The 1:1 salt-to-sugar ratio is key: the sugar softens the cure and prevents it from being too salty. If you have nowhere to hang it, the fridge works (slower, 45-60 days). Pimentón de la Vera is what gives it the classic flavour and colour. Isabel\'s recipe.',
+      author: 'Kai',
+    },
+  },
+
+  {
+    id: 'crema-calabacin-asado',
+    title: 'Crema de Calabacín Asado con Curry y Leche de Coco',
+    titleEn: 'Roasted Courgette Cream with Curry and Coconut Milk',
+    subtitle: 'Calabacín y cebolla asados al horno, luego triturados con curry, leche de coco y un toque de levadura de cerveza. Receta de Nacho Lozano.',
+    subtitleEn: 'Oven-roasted courgette and onion, blended with curry, coconut milk and a touch of brewer\'s yeast. Nacho Lozano\'s recipe.',
+    servings: 4,
+    category: 'sopas',
+    page: 0,
+    ingredientGroups: [
+      {
+        name: 'Asado',
+        items: [
+          '3-4 calabacines medianos, cortados por la mitad a lo largo',
+          '2 cebollas grandes, cortadas en cuartos',
+          'Aceite de oliva',
+        ],
+      },
+      {
+        name: 'Crema',
+        items: [
+          '1 nuez de mantequilla',
+          '1 cucharada de curry en polvo',
+          '1 cucharadita de levadura de cerveza (nutricional)',
+          '200 ml de leche de coco',
+          'Sal',
+        ],
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Roasting',
+        items: [
+          '3-4 medium courgettes, halved lengthwise',
+          '2 large onions, quartered',
+          'Olive oil',
+        ],
+      },
+      {
+        name: 'Cream',
+        items: [
+          '1 knob of butter',
+          '1 tbsp curry powder',
+          '1 tsp brewer\'s yeast (nutritional)',
+          '200 ml coconut milk',
+          'Salt',
+        ],
+      },
+    ],
+    steps: [
+      'Precalentar el horno a 200 °C. Colocar los calabacines y la cebolla en una bandeja. Regar con aceite de oliva.',
+      'Asar mínimo 1 hora hasta que estén bien dorados y tiernos. Reservar el agua que sueltan.',
+      'En una olla, derretir la mantequilla. Añadir la cebolla asada y rehogar brevemente.',
+      'Añadir el calabacín asado con todo su jugo.',
+      'Incorporar la levadura de cerveza, la cucharada de curry y la leche de coco.',
+      'Salar al gusto. Subir el fuego para que hierva y se integre todo.',
+      'Triturar a máxima potencia hasta obtener una crema fina y homogénea.',
+      'Servir caliente.',
+    ],
+    stepsEn: [
+      'Preheat the oven to 200 °C. Place the courgettes and onion on a baking tray. Drizzle with olive oil.',
+      'Roast for at least 1 hour until well browned and tender. Reserve the liquid they release.',
+      'In a pot, melt the butter. Add the roasted onion and sauté briefly.',
+      'Add the roasted courgette with all its juices.',
+      'Stir in the brewer\'s yeast, the tablespoon of curry and the coconut milk.',
+      'Season with salt. Raise the heat to bring to a boil so everything integrates.',
+      'Blend at maximum power until smooth and homogeneous.',
+      'Serve hot.',
+    ],
+    tip: {
+      text: 'El truco es asar bien las verduras: mínimo una hora. El calabacín suelta mucha agua al horno, no la tires, va a la crema. La levadura de cerveza aporta umami sin que se note. Receta de Nacho Lozano (Chef de Familia).',
+      author: 'Kai',
+    },
+    tipEn: {
+      text: 'The trick is roasting the vegetables properly: at least one hour. The courgettes release a lot of water in the oven; don\'t discard it, it goes into the cream. Brewer\'s yeast adds umami without being noticeable. Nacho Lozano\'s recipe (Chef de Familia).',
+      author: 'Kai',
+    },
+  },
 ];
