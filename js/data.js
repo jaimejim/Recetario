@@ -4860,13 +4860,13 @@ const RECIPES = [
     titleEn: 'Barbecued Beef Flap (Vacío)',
     subtitle: 'Un corte fibroso y sabroso, sellado fuerte por fuera y jugoso por dentro. En barbacoa de gas se hace en dos zonas de calor y con termómetro: el punto lo manda la sonda, no el reloj.',
     subtitleEn: 'A flavourful, fibrous cut: seared hard on the outside and juicy inside. On a gas barbecue it is cooked over two heat zones with a thermometer: the probe decides the doneness, not the clock.',
-    servings: 6,
+    servings: 3,
     category: 'carnes',
     ingredientGroups: [
       {
         name: 'Ingredientes',
         items: [
-          '1 pieza de vacío de ternera (~2 kg)',
+          '1 pieza de vacío de ternera (~1 kg)',
           'Sal gruesa',
           'Pimienta negra recién molida',
         ],
@@ -4912,7 +4912,7 @@ const RECIPES = [
       {
         name: 'Ingredients',
         items: [
-          '1 piece of beef flap/bavette (vacío) (~2 kg)',
+          '1 piece of beef flap/bavette (vacío) (~1 kg)',
           'Coarse salt',
           'Freshly ground black pepper',
         ],
@@ -4955,7 +4955,7 @@ const RECIPES = [
       },
     ],
     steps: [
-      'Saca el vacío de la nevera 45 a 60 minutos antes para atemperarlo, así se dora de forma más uniforme. No lo dejes fuera más de 2 horas.',
+      'Saca el vacío de la nevera unos 30 minutos antes para atemperarlo y sécalo bien con papel de cocina, así se dora mejor. No lo dejes fuera más de 2 horas.',
       'Si vas a adobarlo, úntalo con la mezcla de aceite, ajo, romero, tomillo y el cítrico o vinagre un máximo de 30 a 60 minutos: el ácido actúa solo en superficie y en exceso reblandece la carne. No retires la telilla de grasa, protege la pieza y aporta sabor.',
       'Sala con sal gruesa por ambas caras justo antes de cocinar y añade pimienta.',
       'Prepara la barbacoa de gas en dos zonas: una directa a fuego fuerte para sellar y otra indirecta con los quemadores apagados y la tapa cerrada a 180 a 200 °C. Ten a mano un termómetro de sonda.',
@@ -4967,7 +4967,7 @@ const RECIPES = [
       'Salsas para mojar (opcional, por si no adobas la carne): para el chimichurri, hidrata el ajo, el orégano y la sal en el agua caliente, añade el vinagre y el aceite, deja reposar 15 minutos e incorpora el perejil (mejora si macera un par de horas). Para la de soja y jengibre, mezcla todos los ingredientes en un bol y ajusta el picante y el azúcar al gusto.',
     ],
     stepsEn: [
-      'Take the flap out of the fridge 45 to 60 minutes ahead so it comes to room temperature and browns more evenly. Do not leave it out for more than 2 hours.',
+      'Take the flap out of the fridge about 30 minutes ahead so it comes to room temperature and pat it dry with kitchen paper, so it browns better. Do not leave it out for more than 2 hours.',
       'If marinating, coat it with the oil, garlic, rosemary, thyme and citrus or vinegar mix for 30 to 60 minutes at most: the acid only acts on the surface and too much of it softens the meat. Do not remove the layer of fat, it protects the piece and adds flavour.',
       'Season generously with coarse salt on both sides just before cooking and add pepper.',
       'Set up the gas barbecue in two zones: a direct zone on high heat for searing and an indirect zone with the burners off and the lid closed at 180 to 200 °C. Keep a probe thermometer to hand.',
