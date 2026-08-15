@@ -243,19 +243,23 @@
     }
 
     const groups = loc(recipe, 'ingredientGroups');
-    const multiCol = groups.length >= 2;
-    const ingredientsHtml = groups.map(group => {
-      const nameHtml = (group.name && group.name !== 'Ingredientes' && group.name !== 'Ingredients')
-        ? `<div class="ingredient-group-name">${esc(group.name)}</div>`
-        : '';
-      const items = group.items.map(i => `<li>${esc(i)}</li>`).join('');
-      return multiCol
-        ? `<div class="ingredient-col">${nameHtml}<ul class="ingredient-list">${items}</ul></div>`
-        : `${nameHtml}<ul class="ingredient-list">${items}</ul>`;
-    }).join('');
-    const ingredientsWrapped = multiCol
-      ? `<div class="ingredient-grid">${ingredientsHtml}</div>`
-      : ingredientsHtml;
+    const groupName = group => (group.name && group.name !== 'Ingredientes' && group.name !== 'Ingredients')
+      ? `<div class="ingredient-group-name">${esc(group.name)}</div>`
+      : '';
+    const groupItems = group => group.items.map(i => `<li>${esc(i)}</li>`).join('');
+    const renderCol = group => `<div class="ingredient-col">${groupName(group)}<ul class="ingredient-list">${groupItems(group)}</ul></div>`;
+    let ingredientsWrapped;
+    if (groups.length === 4) {
+      // Two paired columns, tops aligned: first half left, second half right
+      const left = groups.slice(0, 2).map(renderCol).join('');
+      const right = groups.slice(2).map(renderCol).join('');
+      ingredientsWrapped = `<div class="ingredient-grid ingredient-grid--paired"><div class="ingredient-colwrap">${left}</div><div class="ingredient-colwrap">${right}</div></div>`;
+    } else if (groups.length >= 2) {
+      ingredientsWrapped = `<div class="ingredient-grid">${groups.map(renderCol).join('')}</div>`;
+    } else {
+      const g = groups[0];
+      ingredientsWrapped = `${groupName(g)}<ul class="ingredient-list">${groupItems(g)}</ul>`;
+    }
 
     const stepsHtml = loc(recipe, 'steps')
       .map(s => `<li>${esc(s)}</li>`)

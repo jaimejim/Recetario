@@ -382,6 +382,27 @@ body {
   margin-top: 0;
 }
 
+/* 4 groups: two paired columns, tops aligned (e.g. Ingredientes + Adobo | 2 salsas) */
+.ingredient-grid--paired {
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+.ingredient-colwrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredient-colwrap .ingredient-col + .ingredient-col {
+  margin-top: 1.2rem;
+}
+
+@media (max-width: 520px) {
+  .ingredient-grid--paired {
+    grid-template-columns: 1fr;
+  }
+}
+
 .ingredient-group-name {
   font-family: var(--font-body);
   font-size: 0.72rem;
