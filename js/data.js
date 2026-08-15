@@ -4853,4 +4853,84 @@ const RECIPES = [
       author: 'Jaime\'s tip',
     },
   },
+
+  {
+    id: 'vacio-ternera-barbacoa',
+    title: 'Vacío de Ternera a la Barbacoa',
+    titleEn: 'Barbecued Beef Flap (Vacío)',
+    subtitle: 'Un corte fibroso y sabroso, sellado fuerte por fuera y jugoso por dentro. En barbacoa de gas se hace en dos zonas de calor y con termómetro: el punto lo manda la sonda, no el reloj.',
+    subtitleEn: 'A flavourful, fibrous cut: seared hard on the outside and juicy inside. On a gas barbecue it is cooked over two heat zones with a thermometer: the probe decides the doneness, not the clock.',
+    servings: 6,
+    category: 'carnes',
+    ingredientGroups: [
+      {
+        name: 'Ingredientes',
+        items: [
+          '1 pieza de vacío de ternera (~2 kg)',
+          'Sal gruesa',
+          'Pimienta negra recién molida',
+        ],
+      },
+      {
+        name: 'Adobo (opcional)',
+        items: [
+          '4 cucharadas de aceite de oliva virgen extra',
+          '3 dientes de ajo picados',
+          '1 ramita de romero',
+          '1 ramita de tomillo',
+          'El zumo de ½ limón o un chorrito de vinagre',
+        ],
+      },
+    ],
+    ingredientGroupsEn: [
+      {
+        name: 'Ingredients',
+        items: [
+          '1 piece of beef flap/bavette (vacío) (~2 kg)',
+          'Coarse salt',
+          'Freshly ground black pepper',
+        ],
+      },
+      {
+        name: 'Marinade (optional)',
+        items: [
+          '4 tbsp extra virgin olive oil',
+          '3 cloves of garlic, minced',
+          '1 sprig of rosemary',
+          '1 sprig of thyme',
+          'Juice of ½ lemon or a splash of vinegar',
+        ],
+      },
+    ],
+    steps: [
+      'Saca el vacío de la nevera 45 a 60 minutos antes para atemperarlo, así se dora de forma más uniforme. No lo dejes fuera más de 2 horas.',
+      'Si vas a adobarlo, úntalo con la mezcla de aceite, ajo, romero, tomillo y el cítrico o vinagre un máximo de 30 a 60 minutos: el ácido actúa solo en superficie y en exceso reblandece la carne. No retires la telilla de grasa, protege la pieza y aporta sabor.',
+      'Sala con sal gruesa por ambas caras justo antes de cocinar y añade pimienta.',
+      'Prepara la barbacoa de gas en dos zonas: una directa a fuego fuerte para sellar y otra indirecta con los quemadores apagados y la tapa cerrada a 180 a 200 °C. Ten a mano un termómetro de sonda.',
+      'Sella la pieza en la zona directa: 2 a 4 minutos con la cara de la grasa hacia abajo y 2 a 3 minutos la cara magra, hasta formar costra. Vigila las llamaradas de la grasa y no la selles de más.',
+      'Pasa el vacío a la zona indirecta con la tapa cerrada y guíate por la sonda clavada en el centro de la parte más gruesa. En un corte fino como este bastan unos 15 a 35 minutos: el reloj engaña, manda el termómetro.',
+      'Retira la carne 3 a 5 °C antes del punto deseado, porque seguirá subiendo al reposar. Jugoso 52 a 55 °C, al punto 58 a 62 °C, hecho 66 a 70 °C o más.',
+      'Deja reposar 10 a 15 minutos en una tienda de campaña de aluminio, sin envolver apretado para no reblandecer la costra.',
+      'Corta siempre contra la fibra, en lonchas finas y con el cuchillo ligeramente inclinado. En el vacío la ternura depende sobre todo de este corte fino a contrahebra, no solo de la temperatura.',
+    ],
+    stepsEn: [
+      'Take the flap out of the fridge 45 to 60 minutes ahead so it comes to room temperature and browns more evenly. Do not leave it out for more than 2 hours.',
+      'If marinating, coat it with the oil, garlic, rosemary, thyme and citrus or vinegar mix for 30 to 60 minutes at most: the acid only acts on the surface and too much of it softens the meat. Do not remove the layer of fat, it protects the piece and adds flavour.',
+      'Season generously with coarse salt on both sides just before cooking and add pepper.',
+      'Set up the gas barbecue in two zones: a direct zone on high heat for searing and an indirect zone with the burners off and the lid closed at 180 to 200 °C. Keep a probe thermometer to hand.',
+      'Sear the piece over the direct zone: 2 to 4 minutes fat side down and 2 to 3 minutes on the lean side, until a crust forms. Watch for fat flare-ups and do not over-sear it.',
+      'Move the flap to the indirect zone with the lid closed and go by the probe pushed into the centre of the thickest part. A thin cut like this only needs about 15 to 35 minutes: the clock is misleading, the thermometer rules.',
+      'Pull the meat off 3 to 5 °C before the target, as it keeps rising while it rests. Juicy 52 to 55 °C, medium 58 to 62 °C, well done 66 to 70 °C or more.',
+      'Rest for 10 to 15 minutes in a loose aluminium foil tent, without wrapping it tightly so the crust does not go soft.',
+      'Always slice against the grain, in thin slices with the knife slightly angled. With flap, tenderness comes mostly from this thin cut across the grain, not just from temperature.',
+    ],
+    tip: {
+      text: 'El vacío es fibroso: para que quede tierno, córtalo muy fino a contrahebra o cocínalo un poco más (58 a 62 °C) para que la telilla gelatinice. En una pieza fina, el sellado inverso (primero indirecto suave y un golpe de fuego fuerte al final) da más margen para no pasarse. Seguridad: el punto jugoso de 52 a 55 °C solo es seguro en una pieza entera sin inyectar ni mechar; el mínimo oficial es 63 °C con 3 minutos de reposo, y embarazadas, mayores, niños o personas inmunodeprimidas deben comerla a 63 °C o más.',
+      author: 'Truco de Jaime',
+    },
+    tipEn: {
+      text: 'Flap is fibrous: for tenderness, slice it very thin across the grain or cook it a bit more (58 to 62 °C) so the membrane gelatinises. On a thin piece, a reverse sear (gentle indirect heat first, then a blast of high heat at the end) leaves more margin to avoid overcooking. Safety: the juicy 52 to 55 °C is only safe on a whole piece that has not been injected or needled; the official minimum is 63 °C with a 3-minute rest, and pregnant people, the elderly, children and the immunocompromised should eat it at 63 °C or above.',
+      author: 'Jaime\'s tip',
+    },
+  },
 ];
